@@ -1,4 +1,10 @@
 const SUPABASE_URL="https://mlgtqgohttllrhddgtcs.supabase.co";
+
+function closeM(){
+  const modal=document.getElementById("modal");
+  if(modal) modal.remove();
+  window._editSnapshot=null;
+}
 const SUPABASE_PUBLISHABLE_KEY="sb_publishable_U1yqsxU2wKtXquzRVh-2Hg_MsF9rqtY";
 let sb,currentUser=null,currentProfile=null,currentPage="dashboard",permissions={},cache={drawings:[],wls:[],parts:[]};
 const $=id=>document.getElementById(id), esc=v=>String(v??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
@@ -79,7 +85,24 @@ function detailGroups(type,fs){
 }
 
 function renderUsers(){let q=($('user_q')?.value||'').toLowerCase(),d=$('user_dept')?.value||'',p=$('user_plant')?.value||'';let a=(window._portalUsers||[]).filter(u=>(!d||u.department===d)&&(!p||u.plant_unit===p)&&(!q||JSON.stringify(u).toLowerCase().includes(q)));$('user_rows').innerHTML=a.map(u=>`<tr><td><b>${esc(u.employee_name)}</b><br><small>ID: ${esc(u.employee_id||'-')}<br>${esc(u.official_email||'-')}<br>WA: ${esc(u.mobile_no||'-')}</small></td><td><select id="plant_${u.id}">${(window._userPlants||DEFAULT_PLANTS).map(x=>`<option ${u.plant_unit===x?'selected':''}>${esc(x)}</option>`).join('')}</select></td><td><select id="dept_${u.id}">${(window._userDepts||DEFAULT_DEPARTMENTS).map(x=>`<option ${u.department===x?'selected':''}>${esc(x)}</option>`).join('')}</select></td><td><select id="role_${u.id}">${['Employee','Manager','QA','Development','Viewer','Admin'].map(x=>`<option ${u.role===x?'selected':''}>${x}</option>`).join('')}</select></td><td><select id="st_${u.id}">${['Pending','Approved','Rejected'].map(x=>`<option ${u.approval_status===x?'selected':''}>${x}</option>`).join('')}</select></td><td><label><input id="wa_${u.id}" type="checkbox" ${u.whatsapp_opt_in!==false?'checked':''}> WhatsApp</label><br><label><input id="em_${u.id}" type="checkbox" ${u.email_opt_in!==false?'checked':''}> Email</label></td><td>${['engineering_drawing','wls','master_part','scanning_dwm'].map(m=>`<div><b>${m}</b> <label><input id="${u.id}_${m}_view" type="checkbox" ${u._perms[m]?.can_view?'checked':''}>V</label> <label><input id="${u.id}_${m}_add" type="checkbox" ${u._perms[m]?.can_add?'checked':''}>A</label> <label><input id="${u.id}_${m}_edit" type="checkbox" ${u._perms[m]?.can_edit?'checked':''}>E</label></div>`).join('')}</td><td><button class="btn btn-primary" onclick="saveAccess('${u.id}')">Save</button></td></tr>`).join('')||'<tr><td colspan="8" class="empty">No users found.</td></tr>'}
-function users(){renderUsers()}
+async function users(){
+  if(!admin()){ return $('main').innerHTML='<div class="alert alert-error">Admin access required.</div>'; }
+  $('main').innerHTML='<div class="panel"><div class="small">Loading User Access & Approvals...</div></div>';
+  const [u,p,m]=await Promise.all([
+    sb.from('user_profiles').select('*').order('employee_name'),
+    sb.from('user_module_permissions').select('*'),
+    getRegistrationMasters()
+  ]);
+  if(u.error)return $('main').innerHTML=`<div class="alert alert-error">${esc(u.error.message)}</div>`;
+  if(p.error)return $('main').innerHTML=`<div class="alert alert-error">${esc(p.error.message)}</div>`;
+  window._userPlants=m.plants; window._userDepts=m.depts;
+  const perms={}; (p.data||[]).forEach(x=>{perms[x.user_id]??={}; perms[x.user_id][x.module]=x});
+  window._portalUsers=(u.data||[]).map(x=>({...x,_perms:perms[x.id]||{}}));
+  $('main').innerHTML=`<div class="page-title"><div><h1>User Access & Approvals</h1><p>Admin control for user approval, role, plant, department, notifications and module permissions.</p></div></div>
+  <div class="panel"><div class="searchbar advanced-searchbar"><input id="user_q" placeholder="Search employee, ID or email..." oninput="userFilters()"><select id="user_dept" onchange="userFilters()"><option value="">All Departments</option>${m.depts.map(x=>`<option>${esc(x)}</option>`).join('')}</select><select id="user_plant" onchange="userFilters()"><option value="">All Plants</option>${m.plants.map(x=>`<option>${esc(x)}</option>`).join('')}</select></div></div>
+  <div class="panel"><div class="tablewrap"><table><thead><tr><th>Employee</th><th>Plant</th><th>Department</th><th>Role</th><th>Approval</th><th>Notifications</th><th>Module Access<br><span class="small">V=View A=Add E=Edit</span></th><th>Action</th></tr></thead><tbody id="user_rows"></tbody></table></div></div>`;
+  renderUsers();
+}
 function userFilters(){renderUsers()}
 async function saveAccess(id){let r=await sb.from("user_profiles").update({plant_unit:$(`plant_${id}`).value,department:$(`dept_${id}`).value,role:$(`role_${id}`).value,approval_status:$(`st_${id}`).value,whatsapp_opt_in:$(`wa_${id}`).checked,email_opt_in:$(`em_${id}`).checked}).eq("id",id);if(r.error)return alert(r.error.message);for(const m of ["engineering_drawing","wls","master_part","scanning_dwm"]){let x=await sb.from("user_module_permissions").upsert({user_id:id,module:m,can_view:$(`${id}_${m}_view`).checked,can_add:$(`${id}_${m}_add`).checked,can_edit:$(`${id}_${m}_edit`).checked},{onConflict:"user_id,module"});if(x.error)return alert(x.error.message)}alert("User profile and access saved. History and notification queue updated.");users()}
 
