@@ -86,3 +86,24 @@ body{background:#eef5fb}
 
 /* v11 custom smart suggestions */
 .smart-input-wrap{position:relative}.smart-suggestions{display:none;position:absolute;left:0;right:0;top:calc(100% + 3px);max-height:240px;overflow-y:auto;background:#fff;border:1px solid #b9c8d6;border-radius:8px;box-shadow:0 10px 24px #17365d22;z-index:10000;padding:4px}.smart-suggestions.show{display:block}.suggestion-item{display:block;width:100%;border:0;background:#fff;text-align:left;padding:9px 10px;border-radius:6px;color:#17365d;cursor:pointer;font-size:13px}.suggestion-item:hover{background:#eaf3f9}.smart-field{position:relative;z-index:1}.login-developer{top:18px;bottom:auto;right:20px}.login-developer img{width:48px;height:48px}.login-developer b{font-size:12px}
+
+/* Development Department Internal Audit */
+.audit-meta-panel{background:linear-gradient(135deg,#f7fbff,#fff);border:1px solid #dbe6ef}
+.audit-meta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.audit-meta-grid .form-group{margin:0}.audit-meta-grid input{width:100%;box-sizing:border-box}
+.audit-kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:18px}
+.audit-kpis>div{background:#fff;border:1px solid #e0e6eb;border-radius:10px;padding:15px 16px;text-align:center;box-shadow:0 3px 10px #17365d08}
+.audit-kpis b{display:block;font-size:25px;color:#17365d}.audit-kpis span{font-size:11px;color:#71808d}.audit-kpis .good b{color:#197331}.audit-kpis .bad b{color:#b42318}.audit-kpis .ofi b{color:#946000}.audit-kpis .pending b{color:#66717c}
+.audit-history-title{margin-bottom:10px}.audit-history-wrap{max-height:300px}
+.audit-filterbar{display:grid;grid-template-columns:1.6fr 1fr 180px;gap:10px;margin-bottom:12px}
+.dev-audit-tablewrap{max-height:68vh}
+.dev-audit-tablewrap table{min-width:1700px}
+.dev-audit-tablewrap th{font-size:11px;white-space:normal;vertical-align:top}.dev-audit-tablewrap td{font-size:12px;white-space:normal;vertical-align:top;min-width:110px}
+.dev-audit-tablewrap td:nth-child(3){min-width:240px}.dev-audit-tablewrap td:nth-child(5){min-width:220px}.dev-audit-tablewrap td:nth-child(6){min-width:220px}.dev-audit-tablewrap td:nth-child(7){min-width:180px}
+.audit-result-select{width:120px;border:1px solid #d9e0e6;padding:6px 8px;border-radius:7px;font-weight:700}.audit-result-select.active{color:#197331;background:#e5f6e9}.audit-result-select.review{color:#946000;background:#fff2d9}.audit-result-select.obsolete{color:#b42318;background:#feeceb}.audit-result-select.pending{color:#66717c;background:#f4f6f8}
+.audit-remark-input{min-width:210px}.audit-small-input{min-width:120px}
+@media(max-width:1000px){.audit-meta-grid{grid-template-columns:repeat(2,1fr)}.audit-kpis{grid-template-columns:repeat(3,1fr)}.audit-filterbar{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){.audit-meta-grid,.audit-kpis,.audit-filterbar{grid-template-columns:1fr}}
+
+/* v11 smart suggestions retained and extended to 3D Scanning DWM/OEE */
+.scan-smart-field{position:relative;z-index:1}.scan-smart-field .field-hint{display:block;font-size:9px;color:#82909c;margin-top:4px}.scan-smart-field .smart-input-wrap{position:relative}.scan-smart-field textarea{width:100%;min-height:90px;resize:vertical}.scan-smart-suggestions{z-index:11000}
