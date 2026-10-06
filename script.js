@@ -155,6 +155,17 @@ function registerPlantMatches(x,type){
  if(plant==='ALL') return true;
  return recordPlants(type,x).includes(plant);
 }
+function uniqueFieldSuggestions(field,value=''){
+ const q=String(value??'').trim().toLowerCase();
+ const vals=new Set();
+ const sources=[...(cache?.drawings||[]),...(cache?.wls||[]),...(cache?.parts||[]),...(window._formHistoryRows||[])];
+ sources.forEach(row=>{
+  const v=row?.[field];
+  if(Array.isArray(v)) v.forEach(x=>{if(String(x??'').trim()) vals.add(String(x).trim())});
+  else if(v!==null&&v!==undefined&&String(v).trim()) vals.add(String(v).trim());
+ });
+ return [...vals].filter(v=>!q||v.toLowerCase().includes(q)).sort((a,b)=>a.localeCompare(b,undefined,{numeric:true,sensitivity:'base'})).slice(0,50);
+}
 function suggestionBoxId(type,field){return `suggestbox_${type}_${field}`}
 function renderSmartSuggestions(type,field,value){
  const box=$(suggestionBoxId(type,field)); if(!box)return;
