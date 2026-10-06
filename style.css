@@ -173,3 +173,23 @@ body{background:#eef5fb}
 .gantt-status-completed{background:#d9f3df;color:#176b31}.gantt-status-progress{background:#fff1c7;color:#8a6200}.gantt-status-planned{background:#e6f0fb;color:#1d5f91}.gantt-status-delayed{background:#fde0e0;color:#a32626}
 .assignment-hint{margin:8px 0 14px;padding:10px 14px;border:1px solid #dbe7f2;border-radius:10px;background:#f7fbff;color:#4b6278;font-size:13px}
 .multi-select{width:100%;min-height:145px;padding:8px;border:1px solid #cbd5e1;border-radius:8px;background:#fff;font:inherit}
+
+/* V19 cycle-time and capacity planning */
+.shift-plan-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.shift-plan-card{border:1px solid #dbe5ef;border-radius:12px;padding:14px;background:#fff}
+.shift-plan-card.shift-overflow{border:2px solid #c62828;background:#fff7f7}
+.shift-plan-head{display:flex;justify-content:space-between;gap:10px;margin-bottom:12px}
+.shift-plan-head span{font-size:12px;color:#667085}
+.shift-plan-numbers{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.shift-plan-numbers div{background:#f4f7fb;border-radius:8px;padding:8px;text-align:center}
+.shift-plan-numbers b{display:block;font-size:18px;color:#173f68}.shift-plan-numbers span{font-size:11px;color:#667085}
+.shift-ok{margin-top:10px;color:#18794e;font-size:12px;font-weight:700}
+.compact-alert{margin-top:10px;padding:8px!important}
+.capacity-warning{color:#b42318;font-weight:700}
+.shift-capacity-mini{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.shift-capacity-mini>div{padding:10px;border:1px solid #dbe5ef;border-radius:10px;background:#fff}
+.shift-capacity-mini b,.shift-capacity-mini span,.shift-capacity-mini small{display:block}.shift-capacity-mini span{font-weight:700;margin-top:4px}.shift-capacity-mini small{margin-top:4px;color:#18794e}
+.shift-capacity-mini .mini-overflow{border:2px solid #c62828;background:#fff7f7}.shift-capacity-mini .mini-overflow small{color:#b42318;font-weight:700}
+.scanning-subtabs{margin-bottom:14px}
+.bulk-select-panel{display:flex;align-items:center;justify-content:space-between;gap:12px}
+@media(max-width:1000px){.shift-plan-grid,.shift-capacity-mini{grid-template-columns:repeat(2,1fr)}}
