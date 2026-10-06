@@ -1,0 +1,178 @@
+plant_unit,item_code_wls,short_name,part_no,part_name,drawing_revision,customer_vendor,customer_name,moulding_process,material_grade,frequency,active_status,total_plan_qty,low_plan,medium_plan,high_plan,plan_months,dispatch_type,core_availability,remarks,pattern_cavities,plan_qty_cast,core_boxes,main_core_cavities,side_core_cavities
+MFPL,HM-1,ACK,12101ACK0000010,Cylinder Block (ACK) Black & Silver (AAE),05,Siddharth Engg.1,Hero Motocorp Ltd.,SM,,High,Active,206,,,,"JUN,OCT,NOV",Machined,Y,,40,120,3.0,5.0,
+MFPL,HM-2,KCC,12101-GBG-D000,"Cylinder Block (KCC) Silver, Black",16,"Siddharth Engg.1, 
+Satara auto",Hero Motocorp Ltd.,SM,,Medium,Active,38,,,,"JUL,DEC",Machined,Y,,8,16,3.0,5.0,
+MFPL,HM-3,Rotor Oil filter,15431-ACK-0000,Rotor Oil filter,00,PK Industries,Hero Motocorp Ltd.,SM,,,Active,18,,,,,Machined,Y,,8,0,1.0,1.0,
+MFPL,B-1,B104D,PF521022,Cylinder Block B104D,7,Powder Coating M/C Shop (U-3),Bajaj Auto Ltd.,SM,,Medium,Active,40,,,,"JUL,APR",Machined,Y,,8,16,4.0,4.0,
+MFPL,B-2,Platina,PF521027,Cylinder Block Platina 110cc,0,Powder Coating M/C Shop (U-3),Bajaj Auto Ltd.,SM,,Medium,Active,24,,,,"JUL,DEC",Machined,Y,,4,8,4.0,4.0,
+MFPL,B-3,5Port,24101631,Cylinder Block (5 Port),1,Mutha Eng. H-21,Bajaj Auto Ltd.,SM,,Low,Active,10,,,,JAN,As cast,Y,,2,2,2.0,2.0,4.0
+MFPL,B-4,K70,52DX0001,Cylinder Block Comp. (for K70),D,Powder Coating M/C Shop (U-3),Bajaj Auto Ltd.,SM,,Medium,Active,32,,,,"AUG,DEC",Machined,Y,,6,12,4.0,4.0,
+MFPL,B-5,Kick boss,BA103733,Bajaj Kick Boss,-,Mutha Eng. H-25,Bajaj Auto Ltd.,SM,,Low,Active,30,,,,JAN,As cast,N,,10,10,0.0,,
+MFPL,B-6,Kubota head,BB103338,Cylinder Head (Kubota Head),9,Powder Coating M/C Shop (U-3),Bajaj Auto Ltd.,SM,,Low,Active,16,,,,JAN,Machined,Y,,4,4,2.0,1.0,1.0
+MFPL,B-7,Manifold 9045,BB109045,Manifold Exhaust 9045,3,Mutha Eng. H-25,Bajaj Auto Ltd.,SM,,Low,Active,16,,,,FEB,As cast,Y,,4,4,2.0,2.0,2.0
+MFPL,B-8,"Manifold
+3730",BA103730,Manifold Exhaust 3730,2,Mutha Eng. H-25,Bajaj Auto Ltd.,SM,,Low,Active,13,,,,FEB,As cast,Y,,3,3,2.0,2.0,2.0
+MFPL,TM-1,SB 167,G4010167,Cylinder Block Pre-Honed with sai hole,p,Siddharth Engg. 2,TVS Motor Company,SM,,Low,Active,23,,,,FEB,Machined,Y,,5,5,4.0,3.0,
+MFPL,TM-2,WSB 558,G4011558,Cylinder Block Pre-Honed,0,Siddharth Engg. 2,TVS Motor Company,SM,,Medium,Active,32,,,,FEB,Machined,Y,,6,12,4.0,3.0,
+MFPL,TM-3,74cc,P1010149,Cylinder Block proof machined-XLN,a,Siddharth Engg. 2,TVS Motor Company,SM,,Low,Active,12,,,,MAR,Machined,Y,,2,2,3.0,2.0,4.0
+MFPL,TM-4,KS Block,N8010180,TVS Cylinder Block KS,L4,Siddharth Engg. 2,TVS Motor Company,SM,,Low,Active,14,,,,MAR,Machined,Y,,2,2,4.0,4.0,
+MFPL,TM-5,U370,G4011673,Cylinder Block Pre-Honed,C,Siddharth Engg. 2,TVS Motor Company,SM,,Low,Active,11,,,,MAR,Machined,Y,,1,1,4.0,3.0,
+MFPL,TM-6,SPORT,N8010657,Cylinder Block Pre-Honed (ES),C,Siddharth Engg. 2,TVS Motor Company,SM,,Low,Active,14,,,,APR,Machined,Y,,2,2,4.0,4.0,
+MFPL,TM-7,Star CITY,N8010677,Cylinder Block Pre-Honed,f,Siddharth Engg. 2,TVS Motor Company,SM,,Low,Active,14,,,,APR,Machined,Y,,2,2,4.0,4.0,
+MFPL,TM-8,BS6,NA010108,Cylinder Block Pre-honed (BS6),c,Siddharth Engg. 2,TVS Motor Company,SM,,Medium,Active,24,,,,APR,Machined,Y,,4,8,4.0,4.0,
+MFPL,TM-9,GX Block,N2010160,Cylinder Block (GX),0,Siddharth Engg. 2,TVS Motor Company,SM,,Low,Active,14,,,,APR,Machined,Y,,2,2,4.0,4.0,
+MFPL,J-1,Steering Linkage,401/A7340,Steering Linkage Casting,0,Mutha Eng. H-21,JCB Access Ltd.,SM,,Low,Active,8,,,,MAY,As cast,Y,,2,2,1.0,3.0,
+MFPL,MA-1,OPC,62.05103-5037 (18999261C1),Oil Pump Cover,d,Mutha Eng. H-21,MAN Nutzfahrzeuge AG Werk Nurnberg,SM,,Low,Active,8,,,,MAY,As cast,Y,,2,2,1.0,1.0,
+MFPL,HI-1,Cast Turbo,82757928,Cast Turbo Joint,B,Tenneco M/C Shop,Highway Industries (Tenneco Pvt. Ltd.),SM,,Low,Active,5,,,,MAY,As cast,Y,,1,1,1.0,1.0,
+MFPL,HI-2,DIFFUSER Flange,82784443,Diffuser ASM-DOC OUT-Flat FLANGE,00,Tenneco M/C Shop,Highway Industries (Tenneco Pvt. Ltd.),SM,,High,Active,37,,,,"NOV,MAY,JAN",As cast,Y,,7,21,1.0,1.0,
+MFPL,HI-3,INLET CONE,82856135,Inlet Cone - DOC,00,Tenneco M/C Shop,Highway Industries (Tenneco Pvt. Ltd.),SM,,High,Active,37,,,,"OCT,JUN,FEB",As cast,Y,,7,21,1.0,1.0,
+MFPL,HI-4,VISTA,82732315,DOC OUTLET DIFFUSER - VISTA,00,Tenneco M/C Shop,Highway Industries (Tenneco Pvt. Ltd.),SM,,Medium,Active,10,,,,"NOV,DEC",As cast,Y,,2,4,1.0,1.0,
+MFPL,HI-5,P702 LH,82806091 C,CONE- CONV P702 INLET CAST LH,C,Tenneco M/C Shop,Highway Industries (Tenneco Pvt. Ltd.),SM,,High,Active,32,,,,"JUL,SEP,APR",As cast,Y,,6,18,1.0,1.0,
+MFPL,HI-6,P702 RH,82806092 C,CONE- CONV P702 INLET CAST RH,C,Tenneco M/C Shop,Highway Industries (Tenneco Pvt. Ltd.),SM,,High,Active,32,,,,"JUN,SEP,AUG",As cast,Y,,6,18,1.0,1.0,
+MFPL,N-1,Manifold 405,1882405C2,Manifold Exhaust 405,f,Mutha Eng. H-21,Navistar Incorporation,SM,,,In Active,2,,,,,As cast,Y,,0,0,1.0,1.0,
+MFPL,N-2,Manifold 944,1844944C1,Manifold Exhaust 944,B,Mutha Eng. H-25,Navistar Incorporation,SM,,Low,Active,5,,,,JUN,As cast,Y,,1,1,1.0,1.0,
+MFPL,N-3,Manifold 521,1850521C1,Manifold Exhaust 521,-,Mutha Eng. H-25,Navistar Incorporation,SM,,Low,Active,7,,,,JUN,As cast,Y,,1,1,2.0,1.0,1.0
+MFPL,N-4,Manifold 581,3018581C1,Manifold Exhaust 581,-,Mutha Eng. H-25,Navistar Incorporation,SM,,Low,Active,5,,,,JUN,As cast,Y,,1,1,1.0,1.0,
+MFPL,N-5,Manifold 583,3018583C1,Manifold Exhaust 583,-,Mutha Eng. H-25,Navistar Incorporation,SM,,Low,Active,5,,,,JUL,As cast,Y,,1,1,1.0,1.0,
+MFPL,N-6,Manifold 748,1850748C2,Manifold Exhaust 748,-,Mutha Eng. H-25,Navistar Incorporation,SM,,Low,Active,5,,,,JUL,As cast,Y,,1,1,1.0,1.0,
+MFPL,N-7,Bracket 309,7095309C2,EGR Bracket 309,D,Mutha Eng. H-25,Navistar Incorporation,SM,,Low,Active,5,,,,JUL,As cast,Y,,1,1,1.0,1.0,
+MFPL,N-8,Manifold 324,1844324C2,Manifold Exhaust 324,-,Mutha Eng. H-25,Navistar Incorporation,SM,,Low,Active,5,,,,AUG,As cast,Y,,1,1,1.0,1.0,
+MFPL,N-9,Manifold 964,1844964C1,Manifold Exhaust 964,-,Mutha Eng. H-25,Navistar Incorporation,SM,,Low,Active,5,,,,AUG,As cast,Y,,1,1,1.0,1.0,
+MFPL,F-1,Faster Casting,0048_600_0005_000,Rough Casting (Faster),A,-,Faster,SM,,Low,Active,8,,,,APR,As cast,Y,,2,2,1.0,1.0,
+MFPL,O-1,TCV Valve,30100,TCV VALVE RAW HOUSING,,,Ognibene India Pvt. ltd,SM,,Low,Active,8,,,,SEP,As cast,Y,,2,2,1.0,1.0,
+MFPL,O-2,Modulation cover 780,010780,Modulation cover,,Mutha Eng. H-21,Ognibene India Pvt. ltd,SM,,Low,Active,26,,,,SEP,As cast,Y,,8,8,1.0,1.0,
+ME-U3,B-1,5 Port,35101123,Cylinder block 5 Port,5B,H-21,Bajaj Auto Ltd,SM,"Special Pearlitic Gray Cast Iron Pearlitic Matrix 90% And Ferrite 5% max.
+Graphite 90% of E type ASTM Graphite size 5 to 7 Hardness 200 to 240 BHN",Low,Active,3,,,,JAN,As cast,Y,,1,1,0.0,0.0,0.0
+ME-U3,B-2,Mega Brake drum 1003,AL151003,Brake Drum Front,5,H-21,Bajaj Auto Ltd,GS,SG 600/3 As per IS 1865:1974 Hardness 192 - 269,Low,Active,8,,,,JAN,Machined,Y,,2,2,1.0,4.0,0.0
+ME-U3,B-3,FWH 1047,AA151047,Hub Front Wheel EXPORT,3,H-21,Bajaj Auto Ltd,GS,SG 600/3 As per IS 1865:1974 Hardness 192 - 269 BHN,Low,Active,16,,,,JAN,Machined,Y,,4,4,2.0,6.0,6.0
+ME-U3,B-4,Bajaj Sat. 6 Pad,24131017,Bajaj Satellite Gear housing,12,MFPL,Bajaj Auto Ltd,GS,"500/7 Pearlitic Malleable Iron Grade P33/4 As per BS 3333, Min. U.T.S. 45 Kg/mm2 Hardness 170 - 229 BHN",Low,Active,56,,,,AUG,Machined,Y,,18,18,1.0,3.0,0.0
+ME-U3,B-5,Bajaj Sat. 7 Pad,24131018,Bajaj Satellite Gear housing,13,H-21,Bajaj Auto Ltd,GS,400/12,High,Active,92,,,,"MAY,APR,JAN",Machined,Y,,18,54,1.0,8.0,0.0
+ME-U3,B-6,Insert Brake Drum 1079,DG 151079,Insert Brake Drum 1079,,H-21,Bajaj Auto Ltd,Liner,1865:1974 SG 600/3,Low,Active,32,,,,FEB,,N,Model & Drg. N/A,10,10,1.0,5.0,0.0
+ME-U3,B-7,FWH 1136,2417 1136,Front Wheel Hub,3,H-21,Bajaj Auto Ltd,GS,1865:1974 SG 600/3,Low,Active,16,,,,FEB,Machined,Y,Model  N/A,4,4,2.0,6.0,6.0
+ME-U3,B-8,Ring 1004,AP 71004,Front Wheel Hub (Ring),,H-21,Bajaj Auto Ltd,GS,SG Iron 600 / 3 As per IS 1865 - 1991,Low,Active,16,,,,MAR,,Y,Model  N/A,4,4,2.0,6.0,6.0
+ME-U3,B-9,Compact Hub 1021,BH 131021,Hub (Compact Hub),0,H-21,Bajaj Auto Ltd,GS,600/3,Low,Active,38,,,,MAR,Machined,Y,Model  N/A,12,12,1.0,6.0,0.0
+ME-U3,B-10,Cargo Hub 1243,Al151243,Hub Front Cargo,,H-21,Bajaj Auto Ltd,GS,600/3,Medium,Active,34,,,,"JUL,APR",Machined,Y,,8,16,1.0,6.0,0.0
+ME-U3,B-11,RE-60 Front,BF131731,Hub Front 4Wh,,H-21,Bajaj Auto Ltd,GS,600/3,Low,Active,32,,,,MAR,Machined,Y,,10,10,1.0,3.0,0.0
+ME-U3,B-12,RE-60 Rear,BF131758,Hub Rear,,H-21,Bajaj Auto Ltd,GS,FG25,Low,Active,38,,,,FEB,Machined,Y,,12,12,1.0,3.0,0.0
+ME-U3,B-13,Bajaj Liner 1372,AA101372,LINER CYLINDER (Bajaj),,,Bajaj Auto Ltd,SM,Spheroidal Graphite Iron (IS:1865-1991) GR SG 600/3 Hardness 190-270 BHN,No,In Active,0,,,,,,N,Drawing N/A,0,0,0.0,0.0,0.0
+ME-U3,B-14,Manifold 611 (Shell),BA103611,Manifold Exhaust,,,Bajaj Auto Ltd,SM,Spheroidal Graphite Iron (IS:1865-1991) GR SG 600/3 Hardness 190-270 BHN,No,In Active,0,,,,,,Y,transfer to MFPL,0,0,0.0,0.0,0.0
+ME-U3,B-15,Manifold 645 (Shell),BB103645,Manifold Exhaust,,,Bajaj Auto Ltd,SM,Spheroidal Graphite Iron (IS:1865-1991) GR SG 600/3 Hardness 190-270 BHN,No,In Active,0,,,,,,Y,transfer to MFPL,0,0,0.0,0.0,0.0
+ME-U3,B-17,Hub 1084,AA151084,Hub Front,,H-21,Bajaj Auto Ltd,GS,SG 600/3 As per IS 1865:1974 Hardness 192 - 269,High,Active,24,,,,"JUL,APR,JAN",Machined,Y,,4,12,2.0,6.0,6.0
+ME-U3,B-18,Hub 1080,AA151080,Hub Front,,,Bajaj Auto Ltd,GS,SG 600/3 As per IS 1865:1974 Hardness 192 - 269,No,In Active,4,,,,,Machined,Y,,0,0,2.0,6.0,6.0
+ME-U3,B-19,Rear Hub 603,AZ131603,Hub Rear,,H-21,Bajaj Auto Ltd,GS,SG Iron 600 / 3 As per IS 1865 - 1991,Medium,Active,50,,,,"AUG,APR",Machined,Y,,12,24,1.0,4.0,0.0
+ME-U3,B-20,Front Hub 605,AZ131605,Hub Front,,H-21,Bajaj Auto Ltd,GS,SG Iron 600 / 3 As per IS 1865 - 1991,Medium,Active,46,,,,"AUG,APR",Machined,Y,,11,22,1.0,4.0,0.0
+ME-U3,B-21,FWH 1630,AH131630,Hub Front,,H-21,Bajaj Auto Ltd,GS,"SG.IRON Gr. S.G 600/3 AS PER
+IS:1865-1991",Low,Active,5,,,,AUG,Machined,Y,,1,1,1.0,1.0,0.0
+ME-U3,B-22,Rear Hub 1030,BB151030,Hub Rear FL,6,H-21,Bajaj Auto Ltd,GS,"SG.IRON Gr. S.G 600/3 AS PER
+IS:1865-1974",High,Active,52,,,,"JAN,JUN,MAR",Machined,Y,,10,30,1.0,5.0,0.0
+ME-U3,B-23,Rear Hub 1220,BH131220,Hub Rear,1,H-21,Bajaj Auto Ltd,GS,"SG.IRON Gr. S.G 600/3 AS PER
+IS:1865-1974",Low,Active,50,,,,SEP,Machined,Y,,16,16,1.0,3.0,0.0
+ME-U3,B-24,Bajaj Sat. 1617,BF551617,Case Differential,5,H-21,Bajaj Auto Ltd,GS,SG 500 / 7 as per : 1865-1991,Medium,Active,50,,,,"SEP,JUN",Machined,Y,,12,24,1.0,2.0,0.0
+ME-U3,B-25,Bajaj Sat. 1613,BG551613,Housing Gear Satelite,7,H-21,Bajaj Auto Ltd,GS,SG 500 / 7 as per : 1865-1991,Medium,Active,50,,,,"OCT,JUL",Machined,Y,,12,24,1.0,2.0,0.0
+ME-U3,B-26,Boxer K-70,52DX0001,Cylinder Block Comp. (for K70),,MFPL,Bajaj Auto Ltd,SM,,Medium,Active,4,,,,"OCT,JUL",Machined,Y,,1,2,0.0,0.0,0.0
+ME-U3,B-27,Hub 1665,AH131665,,,H-21,Bajaj Auto Ltd,GS,,Low,Active,3,,,,APR,Machined,Y,New Devp. Part,1,1,0.0,0.0,0.0
+ME-U3,T-1,FIP 3702,278922123702,FRONT ENGINE SUPPORT RIGHT,,H-25,TATA Motors Ltd,GS,,Low,Active,18,,,,FEB,,N,,6,6,0.0,0.0,0.0
+ME-U3,T-2,Bracket 3714,253423403714,BRACKET POWER STEERING PUMP,,H-25,TATA Motors Ltd,GS,,Low,Active,24,,,,FEB,Machined,N,,8,8,0.0,0.0,0.0
+ME-U3,T-3,Bracket 3721,252723403721,BRACKET 3721,,H-25,TATA Motors Ltd,GS,,No,In Active,0,,,,,Machined,Y,,0,0,0.0,0.0,0.0
+ME-U3,T-4,Maval Hub 3701,554533103701,FRONT HUB,,H-25,TATA Motors Ltd,GS,,No,In Active,14,,,,,Machined,Y,,6,0,1.0,4.0,0.0
+ME-U3,T-5,Bracket 3725,252723403725,BRACKET 3725,,H-25,TATA Motors Ltd,GS,,Low,Active,14,,,,MAY,Machined,Y,,4,4,1.0,2.0,0.0
+ME-U3,T-6,Manifold 5706,570614113701,EXHAUST MANIFOLD,,H-25,TATA Motors Ltd,GS,,Medium,Active,10,,,,"SEP,JAN",Machined,Y,,2,4,1.0,1.0,0.0
+ME-U3,T-7,Manifold 5709,570914113701,EXHAUST MANIFOLD,,H-25,TATA Motors Ltd,GS,,Low,Active,6,,,,JUN,Machined,Y,,2,2,0.0,0.0,0.0
+ME-U3,T-8,Engine Mounting Arm 3709,278922123709,ENGINE MTG ARM LH,,H-25,TATA Motors Ltd,GS,,Medium,Active,10,,,,"OCT,JUL",Machined,Y,,2,4,1.0,1.0,0.0
+ME-U3,T-9,Engine Mounting Arm 3710,278922123710,ENGINE MTG ARM RH,,H-25,TATA Motors Ltd,GS,,Medium,Active,10,,,,"NOV,AUG",Machined,Y,,2,4,1.0,1.0,0.0
+ME-U3,T-10,Engine Mounting Arm 3711,278922123711,ENGINE MTG ARM LH,,H-25,TATA Motors Ltd,GS,,Low,Active,10,,,,JUN,Machined,Y,,2,2,2.0,1.0,1.0
+ME-U3,T-11,Engine Mounting Arm 3712,278922123712,ENGINE MTG ARM RH,,H-25,TATA Motors Ltd,GS,,Low,Active,10,,,,JUN,Machined,Y,,2,2,2.0,1.0,1.0
+ME-U3,T-12,Pulley 7003,570623127003,PULLEY 7003,,H-25,TATA Motors Ltd,GS,,High,Active,32,,,,"NOV,AUG,MAY",Machined,Y,,6,18,1.0,2.0,0.0
+ME-U3,T-14,Oil Seal Housing 3702,581735303702,OIL SEL HOUSING,,H-25,TATA Motors Ltd,GS,,No,In Active,8,,,,,Machined,Y,,4,0,0.0,0.0,0.0
+ME-U3,T-15,Pinion Housing 3701,581735303701,PINION HOUSING,,H-25,TATA Motors Ltd,GS,,No,In Active,8,,,,,Machined,Y,,4,0,0.0,0.0,0.0
+ME-U3,T-18,Exhaust Adaptor 3713,570914113713,ADAPTER EXHAUST,,H-25,TATA Motors Ltd,GS,,Low,Active,20,,,,JUL,Machined,Y,Replace schedule adaptor 3725,6,6,1.0,1.0,0.0
+ME-U3,T-19,EGR Pipe 3757,253414113757,EGR PIPE TO EGR VALVE,,H-25,TATA Motors Ltd,GS,,High,Active,32,,,,"MAR,AUG,MAY",Machined,Y,,6,18,1.0,2.0,0.0
+ME-U3,T-20,Exhaust Elbow 3712,570914113712,EXHAUST ELBOW 3712,,H-25,TATA Motors Ltd,GS,,Low,Active,12,,,,JAN,Machined,Y,Replace schedule Elbow 3721,4,4,0.0,0.0,0.0
+ME-U3,T-21,Bracket 3715,253423403715,BRACKET 3715,,H-25,TATA Motors Ltd,GS,,Low,Active,14,,,,JAN,Machined,Y,,4,4,1.0,1.0,0.0
+ME-U3,T-24,TATA Cover 3705,2855262553705,TATA COVER,,H-25,TATA Motors Ltd,GS,,Low,Active,26,,,,JAN,Machined,Y,,8,8,1.0,2.0,0.0
+ME-U3,T-25,Shackle 3702,284532403701,SUPPORT REAR SHACKLE,,H-25,TATA Motors Ltd,GS,,Low,Active,29,,,,JUN,Machined,Y,,9,9,1.0,3.0,0.0
+ME-U3,T-26,Exhaust Elbow 3766,253414113766,ELBOW EXHAUST,,,TATA Motors Ltd,GS,,No,In Active,10,,,,,Machined,Y,,4,0,1.0,2.0,0.0
+ME-U3,T-27,Rear Hub 3707,581735603707,REAR HUB,,H-25,TATA Motors Ltd,GS,,Medium,Active,12,,,,"JUN,FEB",Machined,Y,,2,4,2.0,1.0,1.0
+ME-U3,T-28,Bracket 3719,252723403719,BRACKET,,H-25,TATA Motors Ltd,GS,,Low,Active,12,,,,SEP,Machined,N,,4,4,0.0,0.0,0.0
+ME-U3,T-29,Bracket 3704,252523403704,BRACKET FOR STEERING  PUMP,,H-25,TATA Motors Ltd,GS,,Low,Active,24,,,,DEC,Machined,N,,8,8,0.0,0.0,0.0
+ME-U3,T-32,Bracket 3718,252509113718,BRACKET 3718,,H-25,TATA Motors Ltd,GS,,Low,Active,5,,,,OCT,Machined,Y,New Devp. Part,1,1,1.0,1.0,0.0
+ME-U3,T-33,Exhaust Elbow 3721,570914113721,Exhaust Elbow 3721,,H-25,TATA Motors Ltd,GS,,Medium,Active,18,,,,"MAR,MAY",,Y,,4,8,1.0,2.0,0.0
+ME-U3,T-34,Adaptor 3725,570914113725,Adaptor Exhaust 3725,,H-25,TATA Motors Ltd,GS,,Medium,Active,26,,,,"MAR,MAY",,N,,6,12,1.0,2.0,0.0
+ME-U3,N-1,Pulley 299,3004299,Pulley Fan Drive,C1,H-25,Navistar Incorporation,GS,,Low,Active,5,,,,NOV,Machined,Y,Model  N/A,1,1,1.0,1.0,0.0
+ME-U3,N-3,Manifold 380,18833840,MANIFOLS EXHAUST REAR,C4,H-25,Navistar Incorporation,GS,,Low,Active,8,,,,NOV,Machined,Y,,2,2,1.0,1.0,0.0
+ME-U3,N-4,Pulley 590,3018590,PULLEY GROOVE CRANKSHAFT,C1,H-25,Navistar Incorporation,GS,,Low,Active,8,,,,DEC,Machined,Y,,2,2,1.0,1.0,0.0
+ME-U3,N-5,EGR Bracket 309,7095309,SUPPORT VALVE EGR,C2,H-25,Navistar Incorporation,GS,,Low,Active,9,,,,DEC,Machined,Y,,3,3,0.0,0.0,0.0
+ME-U3,N-6,Manifold 428,7098428,MANIFOLD EXHAUST FRONT,C3,H-25,Navistar Incorporation,GS,,High,Active,12,,,,"NOV,AUG,MAY",Machined,Y,,2,6,1.0,1.0,0.0
+ME-U3,N-7,Manifold 605,7098605,MANIFOLD EXHAUST MIDDLE,C3,H-25,Navistar Incorporation,GS,,High,Active,12,,,,"NOV,AUG,MAY",Machined,Y,,2,6,1.0,1.0,0.0
+ME-U3,N-8,Manifold 611,7098611,MANIFOLD EXHAUST REAR,C2,H-25,Navistar Incorporation,GS,,High,Active,12,,,,"NOV,AUG,MAY",Machined,Y,,2,6,1.0,1.0,0.0
+ME-U3,N-9,Doser Pipe 492,7096492,DUCT PIPE DOSER OUTLET,C2,H-25,Navistar Incorporation,GS,,No,In Active,6,,,,,Machined,Y,replace 732,2,0,1.0,1.0,0.0
+ME-U3,N-11,Manifold 296,7099296,MANIFOLD EXHAUST MIDDLE,C1,H-25,Navistar Incorporation,SM,,No,In Active,6,,,,,,Y,Model  N/A,2,0,1.0,1.0,0.0
+ME-U3,N-12,Pulley 634,4108634,PULLEY CRANKSHAFT,,H-25,Navistar Incorporation,SM,,No,In Active,2,,,,,,Y,Model  N/A,1,0,0.0,0.0,0.0
+ME-U3,N-13,Manifold 581,3018581,MANIFOLD EXHAUST REAR,C1,H-25,Navistar Incorporation,GS,,Low,Active,10,,,,DEC,Machined,Y,,2,2,2.0,1.0,3.0
+ME-U3,N-14,Manifold 583,3018583,MANIFOLD EXHAUT FRONT,C1,H-25,Navistar Incorporation,GS,,Low,Active,8,,,,DEC,Machined,Y,,2,2,1.0,1.0,0.0
+ME-U3,N-15,Manifold 405,1882405,MANIFOLD EXHAUST FRONT,C2,H-25,Navistar Incorporation,GS,,Low,Active,8,,,,FEB,Machined,Y,,2,2,1.0,1.0,0.0
+ME-U3,N-16,Manifold 324,1844324,MANIFOLD EXHAUST FRONT,C2,H-25,Navistar Incorporation,SM,,No,In Active,2,,,,,Machined,Y,Model  N/A,1,0,0.0,0.0,0.0
+ME-U3,N-17,Manifold 748,1850748,MANIFOLD EXHAUST REAR,C2,H-25,Navistar Incorporation,SM,,No,In Active,2,,,,,Machined,Y,Model  N/A,1,0,0.0,0.0,0.0
+ME-U3,N-18,Manifold 944,1844944,MANIFOLD CENTER  SECTION LOW MOUNT,C1,H-25,Navistar Incorporation,SM,,No,In Active,2,,,,,Machined,Y,Model  N/A,1,0,0.0,0.0,0.0
+ME-U3,N-19,Manifold 964,1844964,MANIFOLD REAR SECTION EGR,C1,H-25,Navistar Incorporation,SM,,No,In Active,2,,,,,Machined,Y,Model  N/A,1,0,0.0,0.0,0.0
+ME-U3,N-20,Navistar 988,1844988,MANIFOLD CENTER  SECTION LOW MOUNT,C1,H-25,Navistar Incorporation,GS,,Low,Active,6,,,,NOV,Machined,Y,Drawing N/A,2,2,0.0,0.0,0.0
+ME-U3,N-21,Manifold 085,1845085,MANIFOLD EXHAUST REAR SECTION,C1,H-25,Navistar Incorporation,GS,,Low,Active,8,,,,NOV,Machined,Y,Model  N/A,2,2,1.0,1.0,0.0
+ME-U3,N-22,Manifold 521,1850521,MANIFOLD CENTER EXHAUST,C1,H-25,Navistar Incorporation,GS,,Low,Active,8,,,,FEB,Machined,Y,Model &  Drg. N/A,2,2,1.0,1.0,0.0
+ME-U3,N-23,Manifold 522,1850522,MANIFOLD FRONT SECTION EXHAUST,C1,H-25,Navistar Incorporation,GS,,Low,Active,8,,,,FEB,Machined,Y,Model &  Drg. N/A,2,2,1.0,1.0,0.0
+ME-U3,N-24,Navistar 747,3807747,SEAT U BOLT FRONT SPRING,C2,H-25,Navistar Incorporation,GS,,Low,Active,14,,,,FEB,Machined,N,,4,4,1.0,1.0,0.0
+ME-U3,N-25,Navistar 744,4093744C2,SUPPORT FRT HANGER RH,C2,H-25,Navistar Incorporation,GS,,Low,Active,5,,,,MAR,Machined,Y,,1,1,1.0,1.0,0.0
+ME-U3,N-26,Navistar 570,4063570,SUPPORT SLIPPER BRACKET,C2,H-25,Navistar Incorporation,GS,,No,In Active,4,,,,,Machined,Y,,1,0,1.0,1.0,0.0
+ME-U3,N-27,Navistar 571,4063571,SUPPORT SLIPPER RH,C2,H-25,Navistar Incorporation,GS,,No,In Active,4,,,,,Machined,Y,,1,0,1.0,1.0,0.0
+ME-U3,N-28,Navistar 498,4064498,SUPPORT,C2,H-25,Navistar Incorporation,GS,,Low,Active,14,,,,MAR,Machined,Y,,4,4,1.0,8.0,0.0
+ME-U3,N-29,Navistar 538,4062538,SUPPORT,,H-25,Navistar Incorporation,GS,,Low,Active,8,,,,MAR,Machined,Y,,2,2,1.0,8.0,0.0
+ME-U3,N-30,Navistar 1333,40611333,SUPPORT REAR SHACLE BRACKET,,H-25,Navistar Incorporation,GS,,Low,Active,8,,,,DEC,Machined,Y,,2,2,1.0,8.0,0.0
+ME-U3,N-31,Navistar 997,3594997,STOP RER AXLE,C1,H-25,Navistar Incorporation,GS,,Low,Active,6,,,,DEC,Machined,N,,2,2,0.0,0.0,0.0
+ME-U3,N-32,Navistar 624,4063624,SUPPORT FRT HANGER RH,C3,H-25,Navistar Incorporation,GS,,No,In Active,2,,,,,Machined,N,,1,0,0.0,0.0,0.0
+ME-U3,N-33,Navistar 599,4066599,SUPPORT,,H-25,Navistar Incorporation,GS,,Low,Active,14,,,,MAR,Machined,Y,,4,4,1.0,8.0,0.0
+ME-U3,N-34,Navistar 1331,4061331,SUPPORT FRT HANGER LH,C3,H-25,Navistar Incorporation,GS,,No,In Active,2,,,,,Machined,Y,,1,0,0.0,0.0,0.0
+ME-U3,N-35,Navistar 686,4055686,SUPPORT OFFSET ENG MTG,C2,H-25,Navistar Incorporation,GS,,Low,Active,8,,,,MAY,Machined,Y,,2,2,1.0,1.0,0.0
+ME-U3,N-36,Navistar 687,4055687,SUPPORT OFFSET ENG MTG,C2,H-25,Navistar Incorporation,GS,,Low,Active,8,,,,MAY,Machined,Y,,2,2,1.0,1.0,0.0
+ME-U3,N-37,Navistar 584,4062584,SEAT UBOLT FRT,C3,H-25,Navistar Incorporation,GS,,Low,Active,14,,,,MAY,Machined,Y,,4,4,1.0,1.0,0.0
+ME-U3,N-38,Navistar 5006,4065006,NAVISTAR SEAT U BOLT,C3,H-25,Navistar Incorporation,GS,,Low,Active,14,,,,JUN,,Y,,4,4,1.0,1.0,0.0
+ME-U3,N-39,Navistar 5007,4065007,NAVISTAR SEAT U BOLT,C3,H-25,Navistar Incorporation,GS,,Low,Active,14,,,,JUN,,Y,,4,4,1.0,1.0,0.0
+ME-U3,N-40,Navistar 5008,4065008,NAVISTAR SEAT U BOLT,C3,H-25,Navistar Incorporation,GS,,Low,Active,14,,,,JUN,,Y,,4,4,1.0,1.0,0.0
+ME-U3,N-41,Navistar 991,4078991,NAVISTAR SEAT U BOLT,C2,H-25,Navistar Incorporation,GS,,Low,Active,14,,,,JUL,,Y,,4,4,1.0,1.0,0.0
+ME-U3,N-42,Navistar 5001,3595001,STOP REAR AXLE,C2,H-25,Navistar Incorporation,GS,,Low,Active,6,,,,JUL,,N,,2,2,0.0,0.0,0.0
+ME-U3,N-43,Navistar 7747,3807747,NAVISTAR SEAT U BOLT,C2,H-25,Navistar Incorporation,GS,,Low,Active,3,,,,JUL,Machined,N,,1,1,0.0,0.0,0.0
+ME-U3,N-44,Navistar 1788,3821788,SUPPORT FRONT SPRING RH,C2,H-25,Navistar Incorporation,GS,,No,In Active,4,,,,,Machined,Y,,1,0,1.0,1.0,0.0
+ME-U3,N-45,Navistar 1793,3821793,SUPPORT FRONT SPRING LH,C2,H-25,Navistar Incorporation,GS,,No,In Active,4,,,,,Machined,Y,,1,0,1.0,1.0,0.0
+ME-U3,N-46,Navistar 4090,414090,STOP REAR AXLE 3.50 LG,C2,H-25,Navistar Incorporation,GS,,No,In Active,4,,,,,Machined,Y,,2,0,0.0,0.0,0.0
+ME-U3,N-47,Navistar 528,3548528,NAVISTAR 528,C2,H-25,Navistar Incorporation,GS,,Low,Active,5,,,,SEP,Machined,Y,New Devp. Part,1,1,1.0,1.0,0.0
+ME-U3,N-48,Navistar 529,3548529,NAVISTAR 529,C2,H-25,Navistar Incorporation,GS,,Low,Active,5,,,,OCT,Machined,Y,New Devp. Part,1,1,1.0,1.0,0.0
+ME-U3,N-49,Pulley 221,7100221,PULLEY FAN DRIVE,C1,H-25,Navistar Incorporation,GS,,Low,Active,6,,,,MAY,Machined,N,,2,2,0.0,0.0,0.0
+ME-U3,N-50,Pulley 330,7101330,PULLEY FEPTO,C1,H-25,Navistar Incorporation,GS,,Low,Active,6,,,,MAY,Machined,N,,2,2,0.0,0.0,0.0
+ME-U3,N-51,Pulley 710,4368710,PULLEY ACC DRIVE,C1,H-25,Navistar Incorporation,GS,,Low,Active,12,,,,MAY,Machined,N,,4,4,0.0,0.0,0.0
+ME-U3,N-52,Rear axel 987,3594987,STOP REAR AXLE,,H-25,Navistar Incorporation,GS,,Low,Active,6,,,,NOV,Machined,Y,New Devp. Part,2,2,0.0,0.0,0.0
+ME-U3,TM-1,TVS Sat. 1199,G2081199,HOUSING DIFFERENTIAL,,H-21,TVS Motors Company Ltd,GS,SG500/7 Hardness 170 - 241 BHN,High,Active,45,,,,"DEC,SEP,JUL",Machined,Y,,9,27,,8.0,0.0
+ME-U3,TM-2,Trailing arm,G2100210,TRILLING ARM,,H-21,TVS Motors Company Ltd,GS,500/7,High,Active,24,,,,"DEC,SEP,JUL",Machined,Y,,4,12,2.0,6.0,6.0
+ME-U3,J-1,JCB SP,332/X6020,CASTING WHEEL HUB SP,,H-21,JCB Manufacturing Incorporation,GS,,Low,Active,7,,,,OCT,,Y,,1,1,2.0,1.0,2.0
+ME-U3,J-2,JCB LP,332/X1193,CASTING WHEEL HUB LP,,H-21,JCB Manufacturing Incorporation,GS,,Low,Active,3,,,,NOV,,Y,,1,1,,1.0,0.0
+ME-U3,J-3,JCB Tipping Lever 8812,400/C8812,Tipping lever 8812,,H-21,JCB Manufacturing Incorporation,GS,,Low,Active,24,,,,NOV,Machined,Y,,8,8,,2.0,0.0
+ME-U3,J-4,JCB Bucket link 9016,400/C9016,CAST BUCKET LINK DE,,H-21,JCB Manufacturing Incorporation,GS,,Low,Active,10,,,,NOV,,Y,,2,2,2.0,1.0,6.0
+ME-U3,J-5,JCB Bucket link 8423,DE400-D8423,CAST BUCKET LINK WITH EYE,,H-21,JCB Manufacturing Incorporation,GS,,Low,Active,10,,,,SEP,,Y,,2,2,2.0,1.0,6.0
+ME-U3,J-6,JCB Tipping Link 4842,401/K4842,Tipping link 4842,,H-21,JCB Manufacturing Incorporation,GS,,Low,Active,12,,,,OCT,,Y,,4,4,,2.0,0.0
+ME-U3,J-7,JCB Bucket Link 5102,401/K5102,CAST BUCKET LINK DE,,H-21,JCB Manufacturing Incorporation,GS,,Low,Active,6,,,,OCT,,Y,,2,2,,6.0,0.0
+ME-U3,J-8,JCB Tipping Lever 6464,335/H6464,CAST TRIPPING LEVER DE,,H-21,JCB Manufacturing Incorporation,GS,,Low,Active,12,,,,DEC,,Y,,4,4,,2.0,0.0
+ME-U3,J-9,Adaptor 6197,320/B6197,TURBO ADAPTER 3 INCH CASTING,,H-21,JCB Manufacturing Incorporation,GS,,Low,Active,3,,,,DEC,,Y,New Devp. Part,1,1,,3.0,0.0
+ME-U3,H-1,Spacer Block 808,2801808,SPCER BLOCK  808,,H-25,HAMM,GS,,No,In Active,2,,,,,,N,Trnsfer to DI,1,0,0.0,0.0,0.0
+ME-U3,H-2,Spacer Block 804,2801804,SPACER BLOCK 804,,H-25,HAMM,GS,,No,In Active,2,,,,,,N,Trnsfer to DI,1,0,0.0,0.0,0.0
+ME-U3,H-3,Spacer Block 894,2256894,SPACER BLOCK  894,,H-25,HAMM,GS,,No,In Active,2,,,,,,Y,,1,0,0.0,0.0,0.0
+ME-U3,H-4,Spacer Block 864,2235864,SPACER BLCK 864,,H-25,HAMM,GS,,No,In Active,2,,,,,,Y,,1,0,0.0,0.0,0.0
+ME-U3,H-5,Spacer Block 259,2417259,SPACER BLOCK 259,3,H-25,HAMM,GS,,Low,Active,3,,,,NOV,,N,,1,1,0.0,0.0,0.0
+ME-U3,H-6,Unbalance 0038,2100038,UNBALANCE 0038,3,H-25,HAMM,GS,,Low,Active,12,,,,NOV,,N,,4,4,0.0,0.0,0.0
+ME-U3,H-7,Ballast 113,2072113,BALLAST 113,,H-25,HAMM,GS,,No,In Active,4,,,,,,N,,2,0,0.0,0.0,0.0
+ME-U3,H-8,Bearing Flange 3143,2073143,BEARING FLANGE,5,H-25,HAMM,GS,,Low,Active,3,,,,NOV,,Y,New Devp. Part,1,1,0.0,0.0,0.0
+ME-U3,H-9,Bearing Flange 1361,2031361,BEARING FLANGE,1,H-25,HAMM,GS,,Low,Active,3,,,,DEC,,Y,New Devp. Part,1,1,0.0,0.0,0.0
+ME-U3,MM-2,End Cap 372,8526372,CASTING END CAP 372,,H-25,Mahindra & Mahindra,GS,,Medium,Active,16,,,,"DEC,OCT",,Y,,4,8,,3.0,0.0
+ME-U3,MM-3,End Cap 392,310392,CASTING END CAP 392,,H-25,Mahindra & Mahindra,GS,,Medium,Active,40,,,,"DEC,OCT",,Y,,10,20,,3.0,0.0
+ME-U3,MM-4,End Cap 650,1557650,CASTING END CAP 650,,H-25,Mahindra & Mahindra,GS,,High,Active,20,,,,"DEC,OCT,MAY",,Y,,4,12,,3.0,0.0
+ME-U3,MM-5,End Cap 894,8836894,CASTING END CAP 894,,H-25,Mahindra & Mahindra,GS,,High,Active,20,,,,"DEC,NOV,SEP",,Y,,4,12,,3.0,0.0
+ME-U3,G-1,Coupler 190,A0000100190,MACHINING SAE COUPLER,B,H-25,Generac,GS,,High,Active,20,,,,"OCT,AUG,MAY",,Y,,4,12,,2.0,0.0
+ME-U3,G-2,Manifold 13333,10000013333,MANIFOLD EXHAUST NA MACH FOUR CYL GPS,,H-25,Generac,GS,,Low,Active,3,,,,DEC,,Y,New Devp. Part,1,1,,1.0,0.0
+ME-U3,O-1,Gland stud 850,199010850,CASTING GLAND LH,XA,H-21,Ognibene Power,SM,,No,In Active,4,,,,,,N,,2,0,0.0,0.0,0.0
+ME-U3,O-2,Gland stud 860,199010860,CASTING GLAND RH,,H-21,Ognibene Power,SM,,No,In Active,4,,,,,,N,,2,0,0.0,0.0,0.0

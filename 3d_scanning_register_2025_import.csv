@@ -1,0 +1,478 @@
+task_date,plant_unit,part_short_name,material_type,cavity_note,received_qty,unit,customer_name,priority,work_type,work_details,reason,inspection_date,work_status,observation,checker_status,final_result,completion_date,reports_sent_status,remark,source_sr_no
+2025-01-04,MF,Platina,Loose Pattern,MF- 7 to 10,4.0,SE,Bajaj Auto Ltd,Low,Scan + Rep,New development patterns,NPD Tooling,2025-01-05,Completed,Found Ok as per CAD model,Approved,OK,2025-01-07,Y,,1
+2025-01-05,MF,B104D,Main Core Box,02 sets,2.0,SE,Bajaj Auto Ltd,Medium,Scan + Rep,New development patterns,NPD Tooling,2025-01-06,Completed,Found Ok as per CAD model,Approved,OK,2025-01-08,Y,,2
+2025-01-05,MF,B104D,Big Fin Core Box,04 sets,4.0,SE,Bajaj Auto Ltd,Medium,Scan + Rep,New development patterns,NPD Tooling,2025-01-06,Completed,Found Ok as per CAD model,Approved,OK,2025-01-08,Y,,3
+2025-01-05,MF,B104D,Small Fin Core Box,03 sets,3.0,SE,Bajaj Auto Ltd,Medium,Scan + Rep,New development patterns,NPD Tooling,2025-01-06,Completed,Found Ok as per CAD model,Approved,OK,2025-01-08,Y,,4
+2025-01-05,MF,B104D,Pocket Core Box,02 sets,2.0,SE,Bajaj Auto Ltd,Medium,Scan + Rep,New development patterns,NPD Tooling,2025-01-06,Completed,Found Ok as per CAD model,Approved,OK,2025-01-08,Y,,5
+2025-01-08,MF,Platina,Loose Pattern,MF- 1 & 2,2.0,SE,Bajaj Auto Ltd,High,Scan + Rep,Regular production pattern insp.,Check pattern wearout condition,2025-01-08,Completed,Found excess material on print area,Approved,OK,2025-01-08,Y,,6
+2025-01-08,U3,Elbow 3726,Casting,ME-1 to 4,4.0,EA,TATA Motors Ltd,High,Report,New casting sample inspection,New casting sample inspection,2025-01-08,Completed,Surface profile 2mm failed due to excess material found on as cast surface(Measured approx-8mm),,,,,,7
+2025-01-08,U3,TATA Cover 3705,Casting,ME-1 to 6,18.0,EA,TATA Motors Ltd,High,Report,New casting sample inspection,New casting sample inspection,2025-01-08,Completed,Change tolerance standard as per S. Sutar sir instructions,,,,,,8
+2025-01-08,U3,JCB 5699,Casting,ME-1,1.0,EA,JCB Manufacturing Incorporation,High,Report,Regular inspection,new sample dimensional report,2025-01-08,Completed,Found excess material approx.-1mm,,,,,,9
+2025-01-08,U3,Manifold 7384,Casting,ME-1,6.0,EA,Generac,High,Report,Dimensional and GD&T report,Customer requirement,2025-01-08,Completed,Maximum number of dimensions are failed,,,,,,10
+2025-01-08,U3,Manifold 7385,Casting,ME-1,6.0,EA,Generac,High,Report,Dimensional and GD&T report,Customer requirement,2025-01-08,Completed,Less material found on below flange area,,,,,,11
+2025-01-08,MF,JLR LH Deflector,Comparison,MF-1,1.0,EA,Jaguar & Land Rover,High,Report,Cust. vs Cast M.,Surface profile analysis,2025-01-08,Completed,Surface profile 2mm failed,,,,,,12
+2025-01-08,U3,JCB 2045,Comparison,MF-1,1.0,EA,JCB Manufacturing Incorporation,High,Report,Casting Model vs Scanned Casting,Regular inspection for customer requirement,2025-01-12,Completed,Found Excess material at ID & Less at OD location,,,,,,13
+2025-01-08,U3,JCB 333,Comparison,MF-1,1.0,EA,JCB Manufacturing Incorporation,High,Report,2D vs 3D mutha model & Customer model vs Mutha model,CAD model cross check,2025-01-13,Completed,Customer model vs mutha model comp found ok,,,,,,14
+2025-01-08,U3,JCB 6489,Comparison,MF-1,1.0,EA,JCB Manufacturing Incorporation,High,Report,2D vs 3D mutha model & Customer model vs Mutha model,CAD model cross check,2025-01-13,Completed,Customer model vs mutha model comp found ok,,,,,,15
+2025-01-08,MF,JLR LH Deflector,Casting,MF-1 & 2,8.0,EA,Jaguar & Land Rover,High,Scan + Rep,1st & 2nd sample inspection,To acheive surface profile 2.00mm,2025-01-13,Completed,Surface profile 2mm failed,,,,,,16
+2025-01-08,MF,JLR LH Deflector,Machined Casting,MF-1 & 2,4.0,EA,Jaguar & Land Rover,High,Scan + Rep,2st sample inspection,To acheive surface profile 2.00mm,2025-01-13,Completed,Surface profile 2mm failed,,,,,,17
+2025-01-08,MF,JLR RH Deflector,Casting,MF-1 & 2,10.0,EA,Jaguar & Land Rover,High,Scan + Rep,1st & 2nd sample inspection,To acheive surface profile 2.00mm,2025-01-13,Completed,Surface profile 2mm failed,,,,,,18
+2025-01-12,DI,AWJ CRANKASE,Casting,DI- 12 to 15,4.0,EA,Tecumseh,Medium,Scan + Rep,Casting Inspection,Customer requirement,2025-01-13,Completed,Referance Linear dimension 4.078 inch found failed due to not ok on CAD model,,,,,,19
+2025-01-12,DI,Air Intake Pipe 3846,Casting,DI- 1 to 3,3.0,EA,TATA Motors Ltd,High,Scan + Rep,Customer Complaint,Customer requirement after raised complaint,2025-01-13,Completed,Found less material on casting surface,,,,,,20
+2025-01-12,MF,Platina,Big Fin Core Box,01 Set,1.0,SE,Bajaj Auto Ltd,High,Scan + Rep,Regular inspection,Check Wear out details,2025-01-13,Completed,Found Ok as per CAD model,,,,,,21
+2025-01-12,MF,JLR LH Deflector,Casting,MF-1 & 2,22.0,EA,Jaguar & Land Rover,High,Report,Colour scale change in reports,To acheive surface profile 2.00mm,2025-01-13,Completed,Change colour scaling but still excess material found on casting,,,,,,22
+2025-01-12,U3,Rear Hub 3707,Casting,ME-1,1.0,EA,TATA Motors Ltd,High,Report,Dimensional report,Customer requirement,2025-01-13,Completed,Only check CAD model dimension-163,,,,,,23
+2025-01-12,DI,Manifold 1403,Casting,DI-2 & 5,2.0,EA,TATA Motors Ltd,High,Scan + Rep,Boss height check from pont a,Boss height increased on casting (ME-05),2025-01-13,Completed,Less material found on Boss face area after modification casting,,,,,,24
+2025-01-12,MF,Hatz 941_303,Loose Pattern,MF-1,1.0,SE,Hatz,High,Scan + Rep,NPD old patterns scan,Old pattern comparison with customer model,2025-01-13,Completed,Compare with Casting model & found less material between fins OD area,,,,,,25
+2025-01-12,MF,Hatz 911_0202,Loose Pattern,MF-1,1.0,SE,Hatz,High,Scan + Rep,NPD old patterns scan,Old pattern comparison with customer model,2025-01-13,Completed,Compare with Casting model & found less material between fins OD area,,,,,,26
+2025-01-12,MF,Hatz 631,Loose Pattern,MF-1,1.0,SE,Hatz,High,Scan + Rep,NPD old patterns scan,Old pattern comparison with customer model,2025-01-13,Completed,Compare with Casting model & found less material between fins OD area,,,,,,27
+2025-01-12,MF,Hatz 901_4602,Loose Pattern,MF-1,1.0,SE,Hatz,High,Scan + Rep,NPD old patterns scan,Old pattern comparison with customer model,2025-01-13,Completed,Compare with Casting model & found less material between fins OD area,,,,,,28
+2025-01-12,MF,Hatz 29203,Loose Pattern,MF-1,1.0,SE,Hatz,High,Scan + Rep,NPD old patterns scan,Old pattern comparison with customer model,2025-01-13,Completed,Compare with Casting model & found less material between fins OD area,,,,,,29
+2025-01-12,MF,Hatz 1081,Loose Pattern,MF-1,1.0,SE,Hatz,High,Scan + Rep,NPD old patterns scan,Old pattern comparison with customer model,2025-01-13,Completed,Compare with Casting model & found less material between fins OD area,,,,,,30
+2025-01-12,U3,MANIFOLD 3755,Casting,ME-1 & 2,2.0,EA,TATA Motors Ltd,High,Scan + Rep,check dimensions,Customer complaint about flange radius,2025-01-13,Completed,R30 radius failed on ME-02,,,,,,31
+2025-01-12,U3,Other Material,Other,01 nos,1.0,SE,TATA Motors Ltd,High,Scan + Rep,Align with specific location,Customer complaint about flange radius,2025-01-13,Completed,All radiuses not form on templet guage,,,,,,32
+2025-01-13,DI,Manifold A0001711285,Casting,DI-1 to 3,3.0,EA,TATA Motors Ltd,High,Scan + Rep,check all casting reference dimensions,Customer requirement,2025-01-13,Completed,Found less material on Referance datum points Y1 & Y2 boss od,,,,,,33
+2025-01-13,MF,ACK,Loose Pattern,MF- 51 (C) & 52 (D),2.0,SE,Hero Motocorp Ltd.,Low,Scan + Rep,NPD Tooling inspection,NPD Tooling,2025-01-15,Completed,Found Ok as per CAD model,,,,,,34
+2025-01-13,MF,KCC,Loose Pattern,MF- 48 (A) & 49 (B),2.0,SE,Hero Motocorp Ltd.,Low,Scan + Rep,NPD Tooling inspection,NPD Tooling,2025-01-15,Completed,Found Ok as per CAD model,,,,,,35
+2025-01-13,MF,SPORT,Loose Pattern,MF-3 & 4,2.0,SE,TVS Motors Company Ltd,Medium,Scan + Rep,NPD Tooling inspection,NPD Tooling,2025-01-13,Completed,"MF-3 ,Cope pattern found less material",,,,,,36
+2025-01-13,U3,Other Material,Other,01 nos,1.0,SE,TATA Motors Ltd,High,Report,Change template location & add R30 radius,Customer requirement,2025-01-13,Completed,R30 -circle measure in polyworks approximately,,,,,,37
+2025-01-13,U3,FWH 1047,HP Pattern,ME-1 to 8,1.0,SE,Bajaj Auto Ltd,High,Report,Cope vs Drag Comparison report,To check Cope vs Drag pattern cavity shift analysis PPT,2025-01-13,Completed,Deviation upto Max. -0.15 mm,Conditional,Conditional,2025-01-13,Y,,38
+2025-01-15,MF,SPORT,Loose Pattern,MF-3_Cope,1.0,SE,TVS Motors Company Ltd,High,Report,Inspection as per CAD model,In previous MF-3 Cope Pattern found abnormality . This is Star city pattern,2025-01-15,Completed,Found ok as per Sport CAD model,,,,,,39
+2025-01-15,DI,Manifold A0001711285,Casting,DI-1 to 3,3.0,EA,Generac,High,Report,Revised report with modified CAD model,Revised report with modified CAD model,2025-01-15,Completed,DI-3 found less material on reference datum point Y1 & Y2,,,,Y,,40
+2025-01-15,U3,A0000515390_ Manifold 474,Main Core Box,01 Set,1.0,SE,Generac,High,Report,NPD Tooling inspection,report send to supplier,2025-01-15,Completed,Found Ok as per CAD model,,,,Y,,41
+2025-01-16,U3,MANIFOLD 3755,Casting,ME-1 & 2,4.0,EA,TATA Motors Ltd,High,Report,only deviation report as it is send-02 nos & all radius dimensional report,Customer requirement,2025-01-16,Completed,less material found on as cast area & ME-02 cavity R30 radius result failed.,,,,Y,,42
+2025-01-16,U3,JCB 2045,Casting,ME-1,1.0,EA,JCB Manufacturing Incorporation,High,Report,Reports with updated CAD model,found less material on OD as per Casting model,2025-01-16,Completed,Found minor less material on casting,,,,,,43
+2025-01-16,MF,KS Block,Loose Pattern,MF-3 & 4,2.0,SE,TVS Motors Company Ltd,High,Scan + Rep,NPD Tooling inspection,NPD Tooling,2025-01-16,Completed,Found Ok as per CAD model,,,,,,44
+2025-01-17,H25,Turbo Adaptor 6197/6198,Machined Casting,ME-1 & 2,2.0,SE,JCB Manufacturing Incorporation,High,Scan + Rep,Dimensional report,customer requirement,2025-01-17,Completed,found ok as per CAD model,,,,,,45
+2025-01-17,U3,Elbow 3726,Casting,ME-1 to 4,4.0,EA,TATA Motors Ltd,High,Report,Make reports with customer model,Customer requirement,2025-01-17,Completed,surface profile req.-2mm and observed above 7mm due to excess materisl found on as cast surface,,,,,,46
+2025-01-17,MF,B104D,Casting,MF-11 to 14,4.0,EA,Bajaj Auto Ltd,High,Scan + Rep,Dimensional report,New tooling 1st sample castings,2025-01-17,Completed,Found Ok as per CAD model,,,,,,47
+2025-01-17,MF,SPORT,Casting,MF-3 & 4,2.0,EA,TVS Motors Company Ltd,High,Scan + Rep,Regular report,As per inspection plan,2025-01-17,Completed,Found Ok as per CAD model,,,,,,48
+2025-01-17,U3,MANIFOLD 3755,Casting,ME-2,1.0,EA,TATA Motors Ltd,Medium,Scan + Rep,Dimensional report,R30 radius check as per customer requirement,2025-01-17,Completed,R30 radius failed again,,,,,,49
+2025-01-17,U3,Sediment Trap 7208,Casting,ME-1,1.0,EA,Generac,Medium,Scan + Rep,Dimensional report,1st sample casting report for customer requirement,2025-01-18,Completed,Surface profile 1.8mm fail & hexagonal length 33 mm failed,,,,,,50
+2025-01-17,U3,FLYWHEEL 36207,Casting,ME-1,1.0,EA,Generac,Medium,Scan + Rep,Dimensional report,Dimensional report,2025-01-18,Completed,"Surface profile fail against 5mm & ID failed due to the customer drawing not match with Casting model (Dim found-107.117 against drg-112 , on cad model-113.441",,,,,,51
+2025-01-18,MF,B104D,Casting,MF-11 to 14,4.0,EA,Bajaj Auto Ltd,High,Scan + Rep,Dimensional report,New tooling 2nd sample castings,2025-01-17,Completed,Found Ok as per CAD model,,,,,,52
+2025-01-18,MF,ACK,Fin Core Box,02 fin half & 1 plan half,3.0,SE,Hero Motocorp Ltd.,Low,Scan + Rep,NPD Tooling inspection,New tooling inspection,2025-01-18,Completed,Found Ok as per CAD model,,,,,,53
+2025-01-18,MF,KCC,Pocket Core Box,01 set,1.0,SE,Hero Motocorp Ltd.,Low,Scan + Rep,NPD Tooling inspection,New tooling inspection,2025-01-18,Completed,Found Ok as per CAD model,,,,,,54
+2025-01-18,DI,Manifold A0001711285,Casting,DI- 1 to 3,9.0,EA,Generac,High,Scan + Rep,Dimensional report,Check all casting dimensions,2025-01-20,Completed,Found deviations on casting surfaces,,,,,,55
+2025-01-18,MF,K70,Casting,MF-14,1.0,EA,Bajaj Auto Ltd,High,Scan + Rep,Dimensional report,Check casting shift issue,2025-01-18,Completed,Casting found ok as per Casting model but found minor deviation on ID & OD,,,,,,56
+2025-01-19,MF,Hatz 631,Casting,MF-1,2.0,EA,Hatz,High,Scan + Rep,NPD Part,NPD part 1st sample casting inspection,2025-01-19,Completed,Casting found ok as per CAD model,,,,,,57
+2025-01-19,DI,MANIFOLD 4538,Die,01 Set,1.0,SE,Generac,High,Scan + Rep,Tooling inspection as per plan,Tooling inspection as per plan,2025-01-20,Completed,Found Ok as per CAD model,,,,,,58
+2025-01-19,DI,MANIFOLD 4538,Main Core Box,01 Set,1.0,SE,Generac,High,Scan + Rep,Tooling inspection as per plan,Tooling inspection as per plan,2025-01-20,Completed,Found Ok as per CAD model,,,,,,59
+2025-01-19,MF,BS6,Loose Pattern,MF-5 & 6,2.0,SE,TVS Motors Company Ltd,High,Scan + Rep,NPD Tooling inspection,New tooling inspection,2025-01-20,Completed,NPD Tooling inspection,,,,,,60
+2025-01-20,MF,74cc,Casting,MF-5 & 6,2.0,EA,TVS Motors Company Ltd,High,Scan + Rep,Casting inspection as per yearly plan,Casting inspection as per yearly plan,2025-01-20,Completed,Found Ok as per CAD model,,,,,,61
+2025-01-22,U3,Rear Hub 5506,Casting,ME-1,1.0,EA,TATA Motors Ltd,High,Report,dimensional report,Dimensions as per layout report,2025-01-22,Completed,Radius found failed as per cad model,,,,,,62
+2025-01-22,DI,Manifold A0001711285,Casting,DI- 1 to 3,9.0,EA,Generac,High,Scan + Rep,dimensional report,2nd batch for inspection due to 1st batch not ok as per CAD model,2025-01-22,Completed,Surface profile failed,,,,,,63
+2025-01-24,DI,Manifold A0001711285,Casting,DI- 1 to 3,9.0,EA,Generac,High,Report,dimensional report,Surface profile analysis with devp team,2025-01-24,Completed,All 3 surface profiles check with customer model,,,,,,64
+2025-01-24,DI,Rotor Oil filter,Main Core Box,Set 01,1.0,SE,Hero Motocorp Ltd.,High,Scan + Rep,regular inspection,yearly tooling inspection as per plan,2025-01-24,Completed,Found Ok as per CAD model,,,,,,65
+2025-01-25,DI,Manifold A0001711285,Casting,DI- 1 to 3,9.0,EA,Generac,High,Report,Customer requirement,Tolerance change as per requirement 1.1 mm per side due to overall surface profile required 2.2 mm,2025-01-25,Completed,Casting found ok as per cad model but surface profile not ok,,,,,,66
+2025-01-25,MF,JLR RH Deflector,Casting,MF-1 & 2,4.0,EA,Jaguar & Land Rover,High,Scan + Rep,New sample castings inspection,Check New sample castings surface profile,2025-01-25,Completed,Excess & less Material found on as cast area,,,,,,67
+2025-01-25,MF,Platina,Pocket Core Box,Set 01,1.0,SE,Bajaj Auto Ltd,High,Scan + Rep,Regular inspection,Inspection for Checking wear out condition,2025-01-27,Completed,Fix half CB less material found on 04 cavities,,,,,,68
+2025-01-27,MF,JLR RH Deflector,Loose Pattern,Set 01,1.0,SE,Jaguar & Land Rover,High,Report,JLR_Deflector rear-RH_SELA-101F62-AA_Pattern_OLD vs NEW,Check remove material on modified pattern,2025-01-27,Completed,Material remove on modified pattern as per requirement,,,,,,69
+2025-01-27,MF,JLR LH Deflector,Casting,MF-1 & 2,4.0,EA,Jaguar & Land Rover,High,Scan + Rep,4th sample castings,Check surface profile of 4th sample casting insp.,2025-01-27,Completed,Profile Fail as per CAD model,,,,,,70
+2025-01-29,MF,JLR RH Deflector,Casting,MF-1 & 2,4.0,EA,Jaguar & Land Rover,High,Report,4th sample castings,compare surface profile with other sample,2025-01-29,Completed,Profile Fail as per CAD model,,,,,,71
+2025-01-30,MF,Other Material,Other,Other,0.0,SE,Other,,Other,Other,Cabin exchange with quality deparment,2025-02-04,Completed,better movement,,,,,,72
+2025-01-30,DI,Manifold A0001711285,Casting,DI- 1 to 3,3.0,EA,Generac,High,Report,Alinement change to best fit to target alignment,For checking the surface profile with target alignment to achieve desired profile,2025-01-30,Completed,Profile Fail as per CAD model,,,,,,73
+2025-01-31,MF,JLR LH Deflector,Comparison,ME-1 & 2,4.0,EA,Jaguar & Land Rover,High,Report,Compare the new model send by customer with old model,New casting sample inspection,2025-03-31,Completed,model send by customer hs nothing change on it,,,,,,74
+2025-01-31,MF,JLR RH Deflector,Comparison,ME-1 & 2,4.0,EA,Jaguar & Land Rover,High,Report,Compare the new model send by customer with old model,Verify CAD model,2025-01-31,Completed,model send by customer hs nothing change on it,,,,,,75
+2025-02-05,DI,MANIFOLD 4538,Casting,DI-3 & 4,4.0,EA,Generac,High,Scan + Rep,regular checking,Regular Inspection,2025-02-05,Completed,Profile Fail as per CAD model,,,,,,76
+2025-02-07,MF,JLR RH Deflector,Casting,MF- 1 & 2,4.0,EA,Jaguar & Land Rover,High,Scan + Rep,Profile fail,Regular Inspection,2025-02-07,Completed,Profile Fail as per CAD model,,,,,,77
+2025-02-07,MF,KS Block,Casting,MF-3 & 4,2.0,EA,TVS Motors Company Ltd,High,Scan + Rep,regular checking,Regular Inspection,2025-02-07,Completed,Found Ok as per CAD model,,,,,,78
+2025-02-07,MF,Improvement,Other,-,,SE,MFPL,,Documentation,KIZEN,Monthly Activity,2025-02-07,Completed,Found Ok as per CAD model,,,,,,79
+2025-02-08,U3,TVS Sat. 1199,HP Pattern,-,1.0,SE,TVS Motors Company Ltd,High,Scanning,SHIFT FOUND,Check Cavity mounting shift or not,2025-02-08,Completed,Scanning completed,,,,,,80
+2025-02-08,DI,MANIFOLD 4555,Casting,DI - 1 to 3,9.0,EA,Generac,Medium,Report,less material & profile is not ok 1285,New casting sample inspection,2025-02-08,Completed,Profile Fail as per CAD model,,,,,,81
+2025-02-08,DI,MANIFOLD 4555,Casting,DI - 3 &4,4.0,EA,Generac,Medium,Report,less material & profile is not ok 4555,New casting sample inspection,2025-02-08,Completed,Profile Fail as per CAD model,,,,,,82
+2025-02-09,U3,JCB 5708,Casting,ME - 01,1.0,EA,JCB Manufacturing Incorporation,Medium,Scan + Rep,Development activity,Regular Inspection,2025-02-09,Completed,Found Ok as per CAD model,,,,,,83
+2025-02-09,MF,Hatz 901_4602,Casting,MF -1 &2,2.0,EA,Hatz,High,Scan + Rep,New sample castings inspection,New tooling 2nd sample castings,2025-02-09,Completed,Found Ok as per CAD model,,,,,,84
+2025-02-09,MF,Hatz 1081,Casting,MF - 1 & 2,2.0,EA,Hatz,High,Scan + Rep,New Development,New tooling 2nd sample castings,2025-02-09,Completed,Found Ok as per CAD model,,,,,,85
+2025-02-10,U3,Sediment Trap 7208,Casting,ME -01,1.0,EA,Generac,High,Scan + Rep,DIMENSTIONS FAIL,Regular Inspection,2025-02-10,Completed,Profile Not Acheive,,,,,,86
+2025-02-10,MF,Hatz 901_4602,Casting,MF -1 &2,2.0,EA,Hatz,High,Report,New sample castings inspection,New casting sample inspection,2025-02-10,Completed,Found Ok as per CAD model,,,,,,87
+2025-02-10,MF,Hatz 1081,Casting,MF -1 &2,2.0,EA,Hatz,High,Report,New sample castings inspection,New casting sample inspection,2025-02-10,Completed,Found Ok as per CAD model,,,,,,88
+2025-02-12,U3,Elbow 3701,Main Core Box,1 SET,1.0,SE,TATA Motors Ltd,High,Scanning,New Development,New tooling inspection,2025-02-12,Completed,Scanning completed,,,,,,89
+2025-02-12,U3,TATA ELBOW 3721,Main Core Box,1 SET,1.0,SE,TATA Motors Ltd,High,Scanning,New Development,New tooling inspection,2025-02-12,Completed,Scanning completed,,,,,,90
+2025-02-12,U3,BTS 5,Main Core Box,1 SET,1.0,SE,BTS 5,High,Scanning,After modification,after modification,2025-02-12,Completed,Scanning completed,,,,,,91
+2025-02-12,U3,Rear Hub 3716,Main Core Box,1 SET,1.0,SE,TATA Motors Ltd,High,Scanning,After modification,after modification,2025-02-12,Completed,Scanning completed,,,,,,92
+2025-02-12,U3,JCB 3460,Main Core Box,1 SET,1.0,SE,JCB Manufacturing Incorporation,High,Scanning,New Development,New tooling inspection,2025-02-12,Completed,Scanning completed,,,,,,93
+2025-02-13,DI,MANIFOLD 4555,Casting,DI - 1 to 3,9.0,EA,Generac,High,Report,Customer requirement,New casting sample inspection,2025-02-13,Completed,Profile Fail as per CAD model,,,,,,94
+2025-02-13,U3,Manifold 3708,Casting,ME- 01,1.0,EA,TATA Motors Ltd,Medium,Scanning,Customer requirement,re inspection for achieving surface profile as per customer requirement,2025-02-13,Completed,Scanning completed,,,,,,95
+2025-02-13,U3,Rear Hub 3716,Casting,ME -1 to 3,6.0,EA,TATA Motors Ltd,High,Scan + Rep,regular checking,Regular Inspection,2025-02-13,Completed,Found excess material,,,,,,96
+2025-02-13,U3,TVS Sat. 1199,HP Pattern,1 SET,1.0,SE,TVS Motors Company Ltd,High,Report,After modification,NPD Tooling cavity shifting check,2025-02-13,Completed,Found shift in pattern as per CAD model,,,,,,97
+2025-02-14,DI,Generac Alternator 4436,Casting,DI - 1 & 2,2.0,EA,Generac,Medium,Scan + Rep,regular checking,Regular Inspection,2025-02-14,Completed,Profile Fail as per CAD model becuse geting area,,,,,,98
+2025-02-14,DI,MANIFOLD 4555,Casting,DI - 1 & 2,4.0,EA,Generac,Medium,Report,Check Surface profile,Surface profile check,2025-02-14,Completed,Profile Fail as per CAD model,,,,,,99
+2025-02-14,DI,MANIFOLD 4538,Die,1 SET,1.0,SE,Generac,High,Report,Dimensional report,Dimensional report,2025-02-14,Completed,Found Ok as per CAD model,,,,,,100
+2025-02-15,U3,HUB 1688,Main Core Box,1 SET,1.0,SE,Bajaj Auto Ltd,High,Scanning,After modification,After tooling modification,2025-02-15,Completed,Scanning completed,,,,,,101
+2025-02-15,U3,FTA 210,Main Core Box,1 SET,1.0,SE,Bajaj Auto Ltd,High,Scanning,After modification,After tooling modification,2025-02-15,Completed,Scanning completed,,,,,,102
+2025-02-15,DI,Generac Alternator 4436,Casting,DI - 1 & 2,2.0,EA,Generac,Medium,Report,customer requirement,New casting sample inspection,2025-02-15,Completed,Profile Fail as per CAD model becuse geting area,,,,,,103
+2025-02-15,U3,JCB 4436,HP Pattern,1 SET,1.0,SE,JCB Manufacturing Incorporation,High,Scan + Rep,New development tooling,Regular Inspection,2025-02-15,Completed,Found Ok as per CAD model,,,,,,104
+2025-02-16,U3,BTS 5,HP Pattern,1 SET,1.0,SE,BTS 5,Medium,Scanning,New development tooling,NPD Tooling,2025-02-16,Completed,Scanning completed,,,,,,105
+2025-02-16,U3,spigot 1057,Main Core Box,1 SET,1.0,SE,Bajaj Auto Ltd,Medium,Scanning,Inspection,Regular Inspection,2025-02-16,Completed,Scanning completed,,,,,,106
+2025-02-16,U3,Bracket 3725,Main Core Box,1 SET,1.0,SE,Bajaj Auto Ltd,Medium,Scanning,New development tooling,Regular Inspection,2025-02-16,Completed,Scanning completed,,,,,,107
+2025-02-16,DI,DH121332,Loose Pattern,1 SET,1.0,SE,Bajaj Auto Ltd,High,Report,New development tooling,NPD Tooling,2025-02-16,Completed,Found Ok as per CAD model,,,,,,108
+2025-02-16,DI,DH121332,Main Core Box,1 SET,1.0,SE,Bajaj Auto Ltd,High,Report,New development tooling,NPD Tooling,2025-02-16,Completed,Found Ok as per CAD model,,,,,,109
+2025-02-16,DI,AWJ CRANKASE,Loose Pattern,1 SET,1.0,SE,Emerson,High,Report,New development tooling,NPD Tooling,2025-02-16,Completed,Found Ok as per CAD model,,,,,,110
+2025-02-17,U3,BTS 5,Main Core Box,1 SET,1.0,SE,BTS 5,Medium,Report,New development tooling,NPD Tooling,2025-02-17,Completed,Found Ok as per CAD model,,,,,,111
+2025-02-17,U3,BTS 5,Side Core Box,1 SET,1.0,SE,BTS 5,Medium,Report,New development tooling,NPD Tooling,2025-02-17,Completed,Found Ok as per CAD model,,,,,,112
+2025-02-17,U3,Rear Hub 3716,Main Core Box,1 SET,1.0,SE,TATA Motors Ltd,Medium,Report,New develpment,NPD Tooling,2025-02-17,Completed,Found Ok as per CAD model,,,,,,113
+2025-02-17,DI,BODY CASTING 99,Casting,DI -1 to 4,4.0,EA,Emerson,Medium,Report,Customer requirement,New casting sample inspection,2025-02-17,Completed,Dimestions fail as per CAD model,,,,,,114
+2025-02-17,U3,Elbow 3701,Main Core Box,1 SET,1.0,SE,TATA Motors Ltd,Medium,Report,New develpment,NPD Tooling,2025-02-17,Completed,Found Ok as per CAD model,,,,,,115
+2025-02-17,U3,MANIFOLD 3755,Casting,ME -1,1.0,EA,TATA Motors Ltd,Medium,Report,Customer requirement,New casting sample inspection,2025-02-17,Completed,Profile Not Acheive,,,,,,116
+2025-02-17,U3,Manifold 13333,Casting,ME -1,1.0,EA,Generac,Medium,Report,Customer requirement,New casting sample inspection,2025-02-17,Completed,found minor excess material & fail profile,,,,,,117
+2025-02-17,U3,TATA ELBOW 3721,Main Core Box,1 SET,1.0,SE,TATA Motors Ltd,Medium,Report,New develpment,NPD Tooling,2025-02-17,Completed,Found Ok as per CAD model,,,,,,118
+2025-02-19,U3,Rear Hub 3716,Casting,ME - 1 to 3,6.0,EA,TATA Motors Ltd,High,Scanning,regular checking,Arpha line vs HP Line,2025-02-19,Completed,Scanning completed,,,,,,119
+2025-02-19,MF,SPORT,Casting,MF - 1 &2,4.0,EA,TVS Motors Company Ltd,High,Scan + Rep,regular checking,Regular Inspection,2025-02-19,Completed,Found Ok as per CAD model,,,,,,120
+2025-02-19,U3,MANIFOLD 3755,Casting,ME -01,1.0,EA,TATA Motors Ltd,High,Report,Dimensional report,New casting sample inspection,2025-02-19,Completed,Profile Fail,,,,,,121
+2025-02-20,U3,Rear Hub 3716,Casting,ME - 1 to 3,6.0,EA,TATA Motors Ltd,High,Report,LESS MATERIAL,New casting sample inspection,2025-02-20,Completed,Inner diameter has less material.,,,,,,122
+2025-02-20,U3,Rear Hub 3716,HP Pattern,1 SET,1.0,SE,Bajaj Auto Ltd,Medium,Scanning,New develpment,NPD Tooling,2025-02-20,Completed,Scanning completed,,,,,,123
+2025-02-20,U3,Bracket 3721,HP Pattern,1 SET,1.0,SE,Bajaj Auto Ltd,Medium,Scanning,New develpment,NPD Tooling,2025-02-20,Completed,Scanning completed,,,,,,124
+2025-02-21,U3,Rear Hub 3716,HP Pattern,1 SET,1.0,SE,Bajaj Auto Ltd,Medium,Report,New develpment,NPD Tooling,2025-02-21,Completed,Found shift in pattern as per CAD model,,,,,,125
+2025-02-21,U3,Bracket 3721,HP Pattern,1 SET,1.0,SE,Bajaj Auto Ltd,Medium,Report,New develpment,NPD Tooling,2025-02-21,Completed,Found Ok as per CAD model,,,,,,126
+2025-02-21,U3,Elbow 3701,HP Pattern,1 SET,1.0,SE,TATA Motors Ltd,Medium,Scanning,New develpment,NPD Tooling,2025-02-21,Completed,Scanning completed,,,,,,127
+2025-02-21,U3,TVS Sat. 1199,HP Pattern,1 SET,1.0,SE,TVS Motors Company Ltd,High,Report,Check Cavity wise shifting,NPD Tooling,2025-02-21,Completed,Found shift in pattern as per CAD model,,,,,,128
+2025-02-21,U3,Other Material,Other,OTHER,1.0,EA,MFPL,High,Documentation,Excel,Material details,2025-02-21,Completed,Found Ok as per CAD model,,,,,,129
+2025-02-22,U3,BTS 5,HP Pattern,1 nos,1.0,SE,BTS 5,Medium,Scanning,New development tooling,NPD Tooling,2025-02-22,Completed,Scanning completed,,,,,,130
+2025-02-22,U3,Manifold 7384,Casting,ME -01,1.0,EA,Generac,Medium,Scanning,Report required as per CSR,Report required as per CSR,2025-02-22,Completed,Scanning completed,,,,,,131
+2025-02-22,U3,Manifold 7385,Casting,ME -01,1.0,EA,Generac,Medium,Scanning,Report required as per CSR,Report required as per CSR,2025-02-22,Completed,Scanning completed,,,,,,132
+2025-02-22,DI,JZ581448,Casting,ME - 1 to 5,5.0,EA,Bajaj Auto Ltd,High,Scanning,New develpment,New casting sample inspection,2025-02-22,Completed,Scanning Complated,,,,,,133
+2025-02-22,DI,JZ581443,Casting,ME - 1 to 6,6.0,EA,Bajaj Auto Ltd,High,Scanning,New develpment,New casting sample inspection,2025-02-22,Completed,Scanning Complated,,,,,,134
+2025-02-23,DI,JZ581448,Casting,ME - 1 to 5,5.0,EA,Bajaj Auto Ltd,High,Report,New develpment,New casting sample inspection,2025-02-23,Completed,Found Ok as per CAD model,,,,,,135
+2025-02-23,DI,JZ581443,Casting,ME - 1 to 6,6.0,EA,Bajaj Auto Ltd,High,Report,New develpment,New casting sample inspection,2025-02-23,Completed,Found Ok as per CAD model,,,,,,136
+2025-02-23,U3,Manifold 7384,Casting,ME -01,1.0,EA,Generac,Medium,Report,Report required as per CSR,Report required as per CSR,2025-02-23,Completed,Profile Not Acheive,,,,,,137
+2025-02-23,U3,Manifold 7385,Casting,ME -01,1.0,EA,Generac,Medium,Report,Report required as per CSR,Report required as per CSR,2025-02-23,Completed,Profile Not Acheive,,,,,,138
+2025-02-23,DI,BODY CASTING 99,Casting,DI - 1 to 4,4.0,EA,Emerson,High,Report,Dimensional report,Dimensional report,2025-02-23,Completed,Dimestions fail as per CAD model,,,,,,139
+2025-02-23,U3,spigot 1057,HP Pattern,1 SET,1.0,SE,Bajaj Auto Ltd,Medium,Scanning,New development tooling,NPD Tooling,2025-02-23,Completed,Scanning completed,,,,,,140
+2025-02-23,U3,Rear Hub 3707,Side Core Box,1 SET,1.0,SE,TATA Motors Ltd,Medium,Scanning,Regular inspection,As per Plan,2025-02-23,Completed,Scanning completed,,,,,,141
+2025-02-24,U3,Bajaj Sat. 7 Pad,HP Pattern,1 SET,1.0,SE,Bajaj Auto Ltd,Medium,Scan + Rep,Regular inspection,As per Plan,2025-02-24,Completed,Found Ok as per CAD model,,,,,,142
+2025-02-24,U3,Intake Manifold 1465,Machined Casting,DI-1 to 5,5.0,EA,Bajaj Auto Ltd,Medium,Scan + Rep,Machine shop requirement,Machine shop requirement,2025-02-24,Completed,Found Ok as per CAD model,,,,,,143
+2025-02-24,MF,JLR LH Deflector,Casting,MF-1,2.0,EA,Jaguar & Land Rover,Medium,Report,Report date change,Report date change,2025-02-24,Completed,Profile Fail as per CAD model,,,,,,144
+2025-02-26,U3,JCB 3460,Main Core Box,1 SET,1.0,SE,JCB Manufacturing Incorporation,Medium,Report,New develpment,NPD Tooling,2025-02-26,Completed,Found Ok as per CAD model,,,,,,145
+2025-02-26,U3,spigot 1057,Loose Pattern,1 set,1.0,SE,Bajaj Auto Ltd,Medium,Report,New develpment,NPD Tooling,2025-02-26,Completed,Found Ok as per CAD model,,,,,,146
+2025-02-27,MF,JLR LH Deflector,Casting,MF - 1& 2,2.0,EA,Jaguar & Land Rover,Medium,Scan + Rep,Regular checking,New tooling 2nd sample castings,2025-02-27,Completed,Profile Fail as per CAD model,,,,,,147
+2025-02-27,MF,JLR RH Deflector,Casting,MF - 1& 2,2.0,EA,Jaguar & Land Rover,Medium,Scan + Rep,Regular checking,New tooling 2nd sample castings,2025-02-27,Completed,Profile Fail as per CAD model,,,,,,148
+2025-02-28,MF,SPORT,Casting,MF - 1& 2,4.0,EA,TVS Motors Company Ltd,Medium,Scan + Rep,Regular checking,Regular Inspection,2025-02-28,Completed,Found Ok as per CAD model,,,,,,149
+2025-03-01,MF,74cc,Casting,MF - 5 7 6,4.0,EA,TVS Motors Company Ltd,Medium,Scan + Rep,Regular checking,Regular Inspection,2025-03-01,Completed,Found Ok as per CAD model,,,,,,150
+2025-03-02,DI,MANIFOLD 4555,Casting,DI -1 &2,2.0,EA,Generac,High,Scan + Rep,PROFILE FAIL,Regular Inspection,2025-03-02,Completed,Profile Fail as per CAD model,,,,,,151
+2025-03-02,DI,MANIFOLD 4555,CORE,DI -1 &2,2.0,SE,Generac,High,Scan + Rep,EXCESS SAND CHECKING,Regular Inspection,2025-03-02,Completed,Found Ok as per CAD model,,,,,,152
+2025-03-03,MF,ACK,Casting,MF -45,1.0,EA,Hero Motocorp Ltd.,Medium,Scan + Rep,Dimesional laypout,Regular Inspection,2025-03-03,Completed,Found Ok as per CAD model,,,,,,153
+2025-03-05,MF,KS Block,Casting,MF -1 & 2,4.0,EA,TVS Motors Company Ltd,Medium,Scan + Rep,Regular checking,Regular Inspection,2025-03-05,Completed,Found Ok as per CAD model,,,,,,154
+2025-03-06,MF,BS6,Casting,MF - 3&4,4.0,EA,TVS Motors Company Ltd,Medium,Scanning,Regular checking,As per plan 24-25,2025-03-06,Completed,Scanning Completed,,,,,,155
+2025-03-07,U3,Bajaj Sat. 7 Pad,HP Pattern,1 SET,1.0,SE,Bajaj Auto Ltd,Medium,Report,SHIFT CHECK,NPD Tooling,2025-03-07,Completed,Found Ok as per CAD model,,,,,,156
+2025-03-07,U3,TVS Sat. 1199,Main Core Box,1 SET,1.0,SE,Bajaj Auto Ltd,Medium,Report,Regular checking,NPD Tooling,2025-03-07,Completed,Found Ok as per CAD model,,,,,,157
+2025-03-08,U3,Manifold 7384,Casting,ME - 1,1.0,EA,Generac,Medium,Report,Customer requirement,New casting sample inspection,2025-03-08,Completed,Profile Not Acheive,,,,,,158
+2025-03-08,U3,Manifold 7385,Casting,ME - 1,1.0,EA,Generac,Medium,Report,customer requirement,New casting sample inspection,2025-03-08,Completed,Profile Not Acheive,,,,,,159
+2025-03-09,MF,P702 RH,Casting,MF -1 & 2,2.0,EA,Highway Industries (Tenneco Pvt. Ltd.),High,Scanning,To check the diamter and parting line excess material.,As per plan 24-25,2025-03-09,Completed,Scanning Completed,,,,,,160
+2025-03-09,U3,ELBOW 3701,Casting,ME -1 & 2,2.0,EA,TATA Motors Ltd,Medium,Scanning,new develpment,New casting sample inspection,2025-03-09,Completed,Scanning completed,,,,,,161
+2025-03-09,U3,ELBOW 3701,Casting,ME-1,1.0,EA,TATA Motors Ltd,Medium,Scanning,new develpment,New casting sample inspection,2025-03-09,Completed,Scanning completed,,,,,,162
+2025-03-10,MF,P702 RH,Casting,MF -1 & 2,2.0,EA,Highway Industries (Tenneco Pvt. Ltd.),High,Report,To check the diamter and parting line excess material.(8 times report making),New casting sample inspection,2025-03-10,Completed,Found Ok as per CAD model,,,,,,163
+2025-03-10,U3,ELBOW 3701,Casting,ME -1 & 2,2.0,EA,TATA Motors Ltd,Medium,Scanning,new develpment,PROFILE FAIL,2025-03-10,Completed,Scanning completed,,,,,,164
+2025-03-10,MF,Manifold 7384,Casting,ME- 1,1.0,EA,Generac,Medium,Report,REGULARE,CALL to polyworks customer care,2025-03-10,Completed,dimensions not get accurate,,,,,,165
+2025-03-12,MF,P702 RH,Casting,MF - 1,2.0,EA,Highway Industries (Tenneco Pvt. Ltd.),Medium,Scanning,REGULARE,REGULARE,2025-03-12,Completed,Scanning Completed,,,,,,166
+2025-03-12,MF,P702 LH,Casting,MF - 1,2.0,EA,Highway Industries (Tenneco Pvt. Ltd.),Medium,Scanning,REGULARE,REGULARE,2025-03-12,Completed,Scanning Completed,,,,,,167
+2025-03-13,MF,Cast Turbo,Casting,ME- 1,1.0,EA,Highway Industries (Tenneco Pvt. Ltd.),Medium,Scanning,FOR AUDIT REPEAT SCANNING,REGULARE,2025-03-13,Completed,Scanning Completed,,,,,,168
+2025-03-13,MF,DIFFUSER Flange,Casting,ME- 1,1.0,EA,Highway Industries (Tenneco Pvt. Ltd.),Medium,Scanning,FOR AUDIT REPEAT SCANNING,REGULARE,2025-03-13,Completed,Scanning Completed,,,,,,169
+2025-03-13,MF,INLET CONE,Casting,ME- 1,1.0,EA,Highway Industries (Tenneco Pvt. Ltd.),Medium,Scanning,FOR AUDIT REPEAT SCANNING,REGULARE,2025-03-13,Completed,Scanning Completed,,,,,,170
+2025-03-14,DI,PIPE 3821,Die,DI - 1& 2,1.0,SE,TATA Motors Ltd,High,Scanning,new develpment,New Development Inspection,2025-03-14,Completed,Scanning Complated,,,,,,171
+2025-03-14,DI,PIPE 3821,Main Core Box,DI - 1& 2,1.0,SE,TATA Motors Ltd,High,Scanning,new develpment,New Development Inspection,2025-03-14,Completed,Scanning Complated,,,,,,172
+2025-03-14,DI,PIPE 3821,Casting,DI - 1& 2,2.0,EA,TATA Motors Ltd,High,Scanning,new develpment,New Development Inspection,2025-03-14,Completed,Scanning Complated,,,,,,173
+2025-03-15,DI,PIPE 3821,Die,DI - 1& 2,1.0,SE,TATA Motors Ltd,High,Report,new develpment,NPD Tooling,2025-03-15,Completed,Found Ok as per CAD model,,,,,,174
+2025-03-15,DI,PIPE 3821,Main Core Box,DI - 1& 2,1.0,SE,TATA Motors Ltd,High,Report,new develpment,NPD Tooling,2025-03-15,Completed,Found Ok as per CAD model,,,,,,175
+2025-03-15,DI,PIPE 3821,Casting,DI - 1& 2,2.0,EA,TATA Motors Ltd,High,Report,new develpment,New casting sample inspection,2025-03-15,Completed,found less material as per CAD model,,,,,,176
+2025-03-16,MF,ACK,Fin Core Box,"mf- 1,2,3",3.0,SE,Hero Motocorp Ltd.,High,Scanning,REGULARE,REGULARE,2025-03-16,Completed,Scanning Completed,,,,,,177
+2025-03-16,DI,PIPE 3821,Die,DI - 1& 2,1.0,SE,TATA Motors Ltd,High,Report,new develpment,NPD Tooling,2025-03-16,Completed,Found Ok as per CAD model,,,,,,178
+2025-03-16,DI,PIPE 3821,Main Core Box,DI - 1& 2,1.0,SE,TATA Motors Ltd,High,Report,new develpment,NPD Tooling,2025-03-16,Completed,Found Ok as per CAD model,,,,,,179
+2025-03-16,DI,PIPE 3821,Casting,DI - 1& 2,2.0,EA,TATA Motors Ltd,High,Report,new develpment,New casting sample inspection,2025-03-16,Completed,found less material as per CAD model,,,,,,180
+2025-03-16,U3,Exhaust Manifold 690,Casting,ME- 01,1.0,EA,Navistar Incorporation,High,Scanning,REGULARE,Customer Audit,2025-03-16,Completed,Scanning completed,,,,,,181
+2025-03-16,U3,Exhaust Manifold 690,Loose Pattern,ME- 01,1.0,EA,Navistar Incorporation,High,Scanning,REGULARE,Customer Audit,2025-03-16,Completed,Scanning completed,,,,,,182
+2025-03-17,MF,INLET CONE,Casting,"MF - 1,2,4,5",4.0,EA,Highway Industries (Tenneco Pvt. Ltd.),Medium,Report,REGULARE,New casting sample inspection,2025-03-17,Completed,Found Ok as per CAD model,,,,,,183
+2025-03-17,MF,Cast Turbo,Casting,MF-1,1.0,EA,Highway Industries (Tenneco Pvt. Ltd.),Medium,Report,REGULARE,New casting sample inspection,2025-03-17,Completed,Found Ok as per CAD model,,,,,,184
+2025-03-17,DI,PIPE 3821,Casting,DI - 1& 2,2.0,EA,TATA Motors Ltd,High,Report,new develpment,WITH CASTING MODEL,2025-03-17,Completed,found less material as per CAD model,,,,,,185
+2025-03-17,MF,ACK,Loose Pattern,MF - 1,1.0,SE,Hero Motocorp Ltd.,High,Scan + Rep,REGULAR,Check the excess material,2025-03-17,Completed,Found Ok as per CAD model,,,,,,186
+2025-03-19,MF,ACK,Casting,"MF - 33,34",2.0,EA,Hero Motocorp Ltd.,Medium,Scan + Rep,REGULAR,For customer audit,2025-03-19,Completed,Found Ok as per CAD model,,,,,,187
+2025-03-19,MF,ACK,Pocket Core Box,MF-A,1.0,EA,Hero Motocorp Ltd.,Scanning,REGULAR,REGULAR,Check the excess material,2025-03-19,Completed,Found Ok as per CAD model,,,,,,188
+2025-03-20,MF,ACK,Pocket Core Box,MF-A,,SE,Hero Motocorp Ltd.,High,Scanning,REGULAR,Check the excess material,2025-03-20,Completed,Scanning Completed,,,,,,189
+2025-03-21,MF,Other Material,Other,ALL,20.0,EA,Highway Industries (Tenneco Pvt. Ltd.),High,Report,"For audit making report of highway parts casting, corebox, pattern",,2025-03-21,Completed,Found Ok as per CAD model,,,,,,190
+2025-03-21,MF,ACK,Pocket Core Box,MF-A,1.0,SE,Hero Motocorp Ltd.,High,Report,REGULAR,Check the excess material,2025-03-21,Completed,Found Ok as per CAD model,,,,,,191
+2025-03-22,MF,ACK,Casting,"MF - 49,50",2.0,EA,Hero Motocorp Ltd.,Medium,Scan + Rep,REGULAR,For customer audit,2025-03-22,Completed,Found Ok as per CAD model,,,,,,192
+2025-03-23,U3,Other Material,Other,other,0.0,SE,,High,Scanning,going to unit 3 to learn set up of gom scannig machine,to learn the gom scanning machine,2025-03-23,Completed,Scanning completed,,,,,,193
+2025-03-24,MF,TCV Valve,Casting,"MF - 1,2",2.0,EA,Ognibene India Pvt. ltd,Medium,Scan + Rep,REGULAR,REGULARE,2025-03-24,Completed,Found Ok as per CAD model,,,,,,194
+2025-03-26,MF,JLR LH Deflector,Casting,other,4.0,EA,Jaguar & Land Rover,High,Report,ECN,ECN,2025-03-26,Completed,Material Added,,,,,,195
+2025-03-26,MF,JLR RH Deflector,Casting,other,4.0,EA,Jaguar & Land Rover,High,Report,ECN,ECN,2025-03-26,Completed,Material Added,,,,,,196
+2025-03-27,MF,Platina,Casting,"DI-1(MF - 1,2)",2.0,EA,Bajaj Auto Ltd,High,Scan + Rep,New Development,New Development Inspection,2025-03-27,Completed,EP port face material found less,,,,,,197
+2025-03-28,DI,Air intake Elbow 3827,Main Core Box,"DI - 1,2",1.0,SE,TATA Motors Ltd,High,Scanning,New Development,New Development Inspection,2025-03-28,Completed,Scanning Complated,,,,,,198
+2025-03-28,DI,Air intake Elbow 3827,Die,"DI - 1,2",1.0,SE,TATA Motors Ltd,High,Scanning,New Development,New Development Inspection,2025-03-28,Completed,Scanning Complated,,,,,,199
+2025-03-29,DI,Air intake Elbow 3827,Casting,"DI - 1,2",2.0,EA,TATA Motors Ltd,High,Scanning,New Development,New Development Inspection,2025-03-29,Completed,Scanning Complated,,,,,,200
+2025-03-29,DI,PIPE 3821,Casting,"DI - 1,2",2.0,EA,TATA Motors Ltd,High,Scanning,Regular inspection,New Development Inspection,2025-03-29,Completed,Scanning Complated,,,,,,201
+2025-04-02,DI,Air intake Elbow 3827,Casting,"DI - 1,2",2.0,EA,TATA Motors Ltd,High,Report,New Development,New Development Inspection,2025-04-02,Completed,found less material as per CAD model,,,,,,202
+2025-04-02,DI,PIPE 3821,Casting,"DI - 1,2",2.0,EA,TATA Motors Ltd,High,Report,Regular inspection,New Development Inspection,2025-04-02,Completed,found less material as per CAD model,,,,,,203
+2025-04-02,MF,JLR LH Deflector,Casting,"MF - 1,2",2.0,EA,Jaguar & Land Rover,High,Report,Regular inspection,To compare the new machine & casting model,2025-04-02,Completed,profile achived upto 3.5mm,,,,,,204
+2025-04-02,MF,JLR RH Deflector,Casting,"MF - 1,2",2.0,EA,Jaguar & Land Rover,High,Report,Regular inspection,To compare the new machine & casting model,2025-04-02,Completed,profile achived upto 3.5mm,,,,,,205
+2025-04-03,MF,Other Material,Other,other,0.0,EA,MFPL,High,Report,Excel making and check the data added to excel,Excel making and check the data added to excel,2025-04-03,Completed,completed,,,,,,206
+2025-04-03,MF,TCV Valve,Casting,"MF - 1-1,1-2",2.0,EA,Ognibene India Pvt. ltd,Low,Report,Regular inspection,Regular inspection,2025-04-03,Completed,Excess material found on surface of cating,,,,,,207
+2025-04-04,MF,TCV Valve,Casting,"MF - 1,2",2.0,EA,Ognibene India Pvt. ltd,Medium,Report,REGULAR,REGULARE,2025-04-04,Completed,Found Ok as per CAD model,,,,,,208
+2025-04-05,MF,Platina,Casting,"DI-1(MF - 1,2)",2.0,EA,Bajaj Auto Ltd,High,Report,New Development,New Development Inspection,2025-04-05,Completed,EP port face material found less,,,,,,209
+2025-04-05,U3,Other Material,Other,Other,0.0,EA,Other,Medium,Other,Going to U3 for GOM scanning machine scanning casting STL model,Going to U3 for GOM scanning machine scanning casting STL model,2025-04-05,Completed,to prepare the casting for scanning it well take time near 10 min,,,,,,210
+2025-04-06,MF,KS Block,Loose Pattern,MF-1 & 2,2.0,SE,TVS Motors Company Ltd,High,Scan + Rep,Regular inspection,Regular inspection for checking worn out condition of loose patterns,2025-04-06,Completed,Less material found on top of the fin (Fins are worn out),,,,,,211
+2025-04-06,U3,Manifold 7385,Casting,ME-1,1.0,EA,Generac,High,Scan + Rep,New sample casting inspection,Check dimensions as per casting drawing,2025-04-06,Completed,"Excess material found up to 1.5mm on as cast X datum, surface profile & datum alignment found not ok",,,,,,212
+2025-04-06,MF,KS Block,Loose Pattern,MF-2,1.0,EA,TVS Motors Company Ltd,High,Scan + Rep,Pattern scanned after modification (welding),Worn out loose pattern inspection after modification,2025-04-06,Completed,Found ok as per CAD model,,,,,,213
+2025-04-07,U3,Coupler 190,Casting,ME-5 to 10,6.0,EA,Generac,High,Scan(U3)+Rep(MF),Regular inspection,,,Completed,Found ok as per CAD model,,,,,,214
+2025-04-07,U3,Generac Alternator 4436,Casting,ME-1 & 2,2.0,EA,Generac,Medium,Scan(U3)+Rep(MF),Regular inspection,,,Completed,Found ok as per CAD model,,,,,,215
+2025-04-09,MF,ACK,Loose Pattern,MF-33 & 34,2.0,SE,Hero Motocorp Ltd.,High,Scan + Rep,Regular inspection,Check pattern worn out condition on print area,2025-04-09,Completed,Found ok as per CAD model,,,,,,216
+2025-04-09,MF,ACK,Other,Patt & CB,2.0,SE,Hero Motocorp Ltd.,High,Analysis,Check clearance between Corebox opening& Patterns fins closing dimensions,Check clearance between Corebox opening& Patterns fins closing dimensions,2025-04-09,Completed,Found ok as per CAD model,,,,,,217
+2025-04-10,U3,Exhaust Manifold 3725,Casting,ME-1 & 2,2.0,EA,TATA Motors Ltd,High,Scan(U3)+Rep(MF),New part development 1st sample,New part development 1st sample casting inspection,2025-04-10,Completed,Found all radius not ok as per CAD model on both cavities,,,,,,218
+2025-04-11,U3,Manifold 13333,Casting,ME-2,1.0,EA,Generac,High,Scan(U3)+Rep(MF),Sample casting inspection,New sample casting inspection for machining feedback,,,Found excess material on flange,,,,,,219
+2025-04-12,MF,Other Material,Other,-,1.0,EA,MFPL,,Other,Polywork Software maintenance activity,,,,,,,,,,220
+2025-04-13,MF,Other Material,Other,-,1.0,EA,MFPL,,Other,Polywork Software maintenance activity,,,,,,,,,,221
+2025-04-14,MF,K70,Pocket Core Box,CB,1.0,SE,Bajaj Auto Ltd,High,Scan + Rep,New development tooling,New development tooling inspection,,,Found ok as per CAD model,,,,,,222
+2025-04-16,DI,Air intake Elbow 3827,Machined Casting,DI-2,2.0,EA,TATA Motors Ltd,High,Scan + Rep,Inspection,Check maching shift on DI-2 cavity,,,Found machining shift,,,,,,223
+2025-04-16,DI,Air intake Elbow 3827,Comparison,DI-2 vs 2,2.0,EA,TATA Motors Ltd,High,Report,Machined casting ok vs not ok casting inspection,Machined casting ok vs not ok casting comparison for checking shift machining problem,,,,,,,,,224
+2025-04-17,MF,DIFFUSER Flange,Casting,MF-6,10.0,EA,Highway Industries (Tenneco Pvt. Ltd.),High,Scanning,Regular inspection,Check all machining allowances for standardization of 2.5mm machining allowance,,,,,,,,,225
+2025-06-27,U3,Allu.cyl. block PF521048,Casting,MF 1,1.0,,Bajaj Auto Ltd,High,Scanning & report,New sample casting inspection,New sample casting inspection,2025-06-27,Completed,Found ok as per CAD model,,,,,,226
+2025-06-28,U3,Nvistar 7922,pattern & core box,half 2,2.0,,navistar Incorporation,,Report,New sample casting inspection,New sample casting inspection,2025-06-28,Completed,found less & excess material,,,,,,227
+2025-06-28,U3,navistar 7922,Core Box,half 1,1.0,,navistar Incorporation,,Report,New sample casting inspection,New sample casting inspection,2025-06-29,Completed,Found minor excess material & fail profile,,,,,,228
+2025-06-29,U3,navisatar rear support spring,Casting,MF-1 tO 8,8.0,,Navistar Incorporation,High,Report,New sample casting inspection,New sample casting inspection,2025-07-03,Completed,Has machining allowance,,,,,,229
+2025-07-02,DI,Genrac manifold 4538 / 4555,CORE  BOX,1 SET,1.0,,Generac,High,Scan + Rep,New Development Inspection,New Development Inspection,2025-07-03,Completed,Found ok as per CAD model,,,,,,230
+2025-07-02,DI,Genrac manifold 4538 / 4555,casting,DI - 5 & 6,6.0,,Generac,High,Scan + Rep,Inspection,compare casting and model,2025-07-04,Completed,Found ok as per CAD model,,,,,,231
+2025-07-02,DI,Genrac manifold 4538 / 4555,Die,1 SET,1.0,EA,Generac,High,Scan + Rep,deviational report,deviational report,2025-07-02,Completed,Found ok as per CAD model,,,,,,232
+2025-07-02,U3,JLR RH Deflector,Casting,ME-3,5.0,,Jaguar & Land Rover,High,Scan + Rep,deviational report,found ok as per cad model,2025-07-04,Completed,Found ok as per CAD model,,,,,,233
+2025-07-03,U3,JLR LH Deflector,Casting,ME-3,5.0,,Jaguar & Land Rover,High,Scan + Rep,deviational report,found ok as per cad model,2025-07-14,Completed,Found ok as per CAD model,,,,,,234
+2025-07-03,MF,TVS BS6 Fixture,fixture,1 SET,1.0,EA,TVS Motors Company Ltd,High,Scanning & report,New Aluminiam Casting,New Aluminiam Casting only scanning,2025-07-03,Completed,,,,,,,235
+2025-07-04,DI,Bjaja pulsar 150cc DH102406,Casting,"C1 & C2, 52",2.0,,Bajaj Auto Ltd,High,Scanning,only scanning,only scanning,2025-07-04,Completed,Found ok as per CAD machining  model  & have machining alloance upto 0.5 mm,,,,,,236
+2025-07-04,MF,NAVISTAR NPD Bracket 1397,Casting,"MF - 1,2,3,4 (each-2 )",8.0,EA,Navistar Incorporation,High,Scan + Rep,New Development,New Development Inspection,2025-07-04,Completed,Has machining allowance,,,,,,237
+2025-07-11,MF,tvs SB 167,Casting,ME-5,2.0,,TVS Motors Company Ltd,High,Scan + Rep,new tooling sample,new tooling sample,2025-07-12,Completed,Has machining allowance upto 4.4 mm on bore head,,,,,,238
+2025-07-12,MF,NAVISTAR 401 C1,Casting,1 nos,1.0,,Navistar Incorporation,High,Scan + Rep,Customer Sample,Customer Sample,2025-07-13,Completed,found  minor less & excess material & ears of casting are bend inside,,,,,,239
+2025-07-12,MF,NAVISTAR 1397 C3,Casting,1 nos,1.0,,Navistar Incorporation,High,Scan + Rep,Customer Sample,Customer Sample,2025-07-13,Completed,found  minor less & excess material,,,,,,240
+2025-07-13,MF,INLET CONE,Casting,MF 2,1.0,,Highway Industries (Tenneco Pvt. Ltd.),High,Scan + Rep,Regular inspection,Regular inspection,2025-07-13,Completed,Has machining allowance on the neck area,,,,,,241
+2025-07-14,MF,Support casting 1397 c3,Casting,MF 3 & 4,2.0,,NAvistar Incorporation,High,D. Report,"CUST, sample vs SCAN cast.",Inspection,2025-07-14,Completed,comparison of cust sample vs mutha csting,,,,,,242
+2025-07-14,MF,Support casting 1397 c3,Casting,CS-1,1.0,,NAvistar Incorporation,High,D. Report,"CAD, sample vs  CUST. sample",Inspection,2025-07-14,Completed,comparison of cust sample vs mutha csting,,,,,,243
+2025-07-14,U3,"JCB 2045,5708 & 1784",Casting,ME 1,3.0,,JCB Manufacturing Incorporation,High,Daviational Report,Inspection,Inspection,2025-07-14,Completed,reports given as per previous reports for cust audit,,,,,,244
+2025-07-16,MF,ACK CYL BLOCK,Casting,MF 37 & 38,2.0,,Hero Motocorp Ltd.,High,Scan + Rep,ODIT SAMPLE,ODIT SAMPLE,2025-07-16,Completed,Found ok as per CAD model,,,,,,245
+2025-07-17,DI,CROSS MEMBER,Casting,ME 1 to 6,6.0,,Navistar Incorporation,High,report & sheet upload,ADD DIAMENTION,ADD DIAMENTION,2025-07-17,Completed,"Found ok , reports given as per dimension required",,,,,,246
+2025-07-18,DI,CROSS MEMBER,Casting,"ME 2,3 & 4",3.0,,Navistar Incorporation,High,Report,Cust. vs Cast M.,Inspection,2025-07-18,Completed,"Found ok , reports given as per dimension required",,,,,,247
+2025-07-23,DI,CROSS MEMBER,Casting,"ME 2,3 & 5",3.0,,Navistar Incorporation,High,Daviational Report,ADD DIAMENTION,ADD DIAMENTION,2025-07-23,Completed,4 Dimention is not required,,,,,,248
+2025-07-24,U3,TATA Cover 3705,CORE  BOX,1 SET,1.0,,TATA Motors Ltd,High,D. Report,new tooling sample,new tooling sample,2025-07-24,Completed,Found ok as per CAD model,,,,,,249
+2025-07-24,U3,Bracket 3715,CORE  BOX,HALF 1,1.0,,TATA Motors Ltd,High,D. Report,new tooling sample,new tooling sample,2025-07-24,Completed,Found ok excess & less material,,,,,,250
+2025-07-24,U3,END CAP 650,CORE  BOX,HALF 1 & 2,2.0,,Mahindra & Mahindra,High,D. Report,new tooling sample,new tooling sample,2025-07-24,Completed,Found ok as per CAD model,,,,,,251
+2025-07-25,U3,rear support spring,Casting,ME 1 to 8,8.0,,Navistar Incorporation,High,Daviational Report,customer purpose only,customer purpose only,2025-07-25,Completed,sp points  are delete where blue portion is found in all cavity,,,,,,252
+2025-07-26,U3,SHACKEL,CORE  BOX,HALF 1 & 2,2.0,,TATA Motors Ltd,High,Daviational Report,new tooling sample,new tooling sample,2025-07-26,Completed,found  minor less & excess material,,,,,,253
+2025-07-26,U3,ADAPTER 3725,CORE  BOX,HALF 1 & 2,2.0,,TATA Motors Ltd,High,Daviational Report,new tooling sample,new tooling sample,2025-07-26,Completed,HAS FOUND EXCESS MATERIAL,,,,,,254
+2025-07-27,U3,seat rear spring 922,Casting,MF 1 to 8,8.0,,Navistar Incorporation,High,Daviational Report,customer purpose only,customer purpose only,2025-07-27,Completed,reports given for con call customer purpose only,,,,,,255
+2025-07-28,U3,SHACKEL 3701,pattern,1 SET,1.0,,TATA Motors Ltd,High,Daviational Report,new tooling sample,new tooling sample,2025-07-28,Completed,Found minor excess material,,,,,,256
+2025-07-30,U3,SHACKEL MATCH PLATE,pattern,cope & drage,2.0,,TATA Motors Ltd,High,Daviational Report,new tooling sample,new tooling sample,2025-07-30,Completed,Found minor excess material,,,,,,257
+2025-07-30,U3,MANIFOLD 3755,pattern,cope & drage,2.0,,TATA Motors Ltd,High,Daviational Report,new tooling sample,new tooling sample,2025-07-30,Completed,Found minor excess material,,,,,,258
+2025-07-30,U3,Bracket 3710,pattern,cope & drage,2.0,,TATA Motors Ltd,High,Daviational Report,new tooling sample,new tooling sample,2025-07-30,Completed,Found minor excess material,,,,,,259
+2025-07-30,U3,COVER 3705,CORE  BOX,HALF 1,1.0,,TATA Motors Ltd,High,Daviational Report,new tooling sample,new tooling sample,2025-07-31,Completed,Found ok as per CAD model,,,,,,260
+2025-07-31,U3,manifold 4703,Casting,ME 1 & 2,2.0,,Generac,High,Daviational Report,new tooling sample,new tooling sample,2025-07-31,Completed,Found excess material as per model,,,,,,261
+2025-07-31,U3,JCB 6489,Casting,ME 1 to 6,6.0,,JCB Manufacturing Incorporation,High,Daviational Report,new tooling sample,new tooling sample,2025-07-31,Completed,Found ok as per best fit casting shift with xyz datum,,,,,,262
+2025-07-31,U3,HUB 3711,pattern,HALF 1,1.0,,TATA Motors Ltd,High,Daviational Report,new tooling sample,new tooling sample,2025-07-31,Completed,Found minor excess material,,,,,,263
+2025-07-31,DI,navistar 7922,Casting,ME 7,1.0,,Navistar Incorporation,High,Daviational Report,one view added inthe report,one view added inthe report,2025-07-31,Completed,Found ok,,,,,,264
+2025-08-02,U3,ELBOW 3701,Casting,ME 1 & 2,2.0,,TATA Motors Ltd,High,Report,ADD DIAMENTION ON CASTING MODEL,ADD DIAMENTION ON CASTING MODEL,2025-08-02,Completed,has found excess &less material & surface profile measured 10.111 againest 2mm,,,,,,265
+2025-08-03,MF,B104D,Casting,D 1,1.0,,Bajaj Auto Ltd,High,Scan + Rep,Inspection,Inspection,2025-08-03,Completed,Found ok as per CAD model,,,,,,266
+2025-08-03,MF,150CC PUISAR,Casting,C 2,1.0,,Bajaj Auto Ltd,High,Scan + Rep,Inspection,Inspection,2025-08-03,Completed,Found ok as per CAD model,,,,,,267
+2025-08-03,MF,Platina 115CC,Casting,D 1,1.0,,Bajaj Auto Ltd,High,Scan + Rep,Inspection,Inspection,2025-08-03,Completed,Found ok as per CAD model,,,,,,268
+2025-08-04,U3,COVER 3701,pattern,HALF 1 & 2,2.0,,TATA Motors Ltd,High,Report,Inspection,Inspection,2025-08-06,Completed,found excess material upto 0.7 mm & less material upto -0.2 mm,,,,,,269
+2025-08-06,U3,2019,CORE  BOX,HALF 1,1.0,,Navistar Incorporation,High,Report,Inspection,Inspection,2025-08-06,Completed,Found minor excess material & minor less material,,,,,,270
+2025-08-06,U3,EGR PIPE 3757,Casting,"MF 15,16 & 18",3.0,,TATA Motors Ltd,High,Report,Inspection,Inspection,2025-08-06,Completed,Found minor excess material & minor less material,,,,,,271
+2025-08-07,U3,2019,CORE  BOX,HALF 2,1.0,,Navistar Incorporation,High,Report,Inspection,Inspection,2025-08-06,Completed,Found minor excess material & minor less material,,,,,,272
+2025-08-07,U3,8862 C1,Casting,"ME 1,2,3,4",4.0,,Generac,High,D. Report,Inspection only for flatness,Inspection,2025-08-07,Completed,reports given only with flatness for con call,,,,,,273
+2025-08-09,MF,HING HOOD SUPPORT 401 C1,pattern,H 1,1.0,,Navistar Incorporation,High,Scan + Rep,Inspection,Inspection,2025-08-09,Completed,Found minor excess material,,,,,,274
+2025-08-09,DI,FAN 520,Die,HALF 1 & 2,2.0,,Generac,High,D. Report,new tooling sample,InspectionI,2025-08-09,Completed,Found ok as per CAD model,,,,,,275
+2025-08-09,DI,ADAPTER 13120,Die,HALF 1 & 2,2.0,,Generac,High,D. Report,new tooling sample,Inspection,2025-08-09,Completed,Found ok as per CAD model,,,,,,276
+2025-08-09,DI,ADAPTER 13120,CORE  BOX,HALF 1 & 2,2.0,,Generac,High,D. Report,new tooling sample,Inspection,2025-08-09,Completed,Found ok as per CAD model,,,,,,277
+2025-08-14,DI,HOUSING FIYWHEEL 6207,Casting,DI 1,1.0,,Generac,High,Scanning & report,new tooling sample,new tooling sample,2025-08-14,Completed,found excess material upto 1.1mm machining alowance & -2.7 mm material less,,,,,,278
+2025-08-16,MF,HING HOOD SUPPORT 401 C1,Casting,MF 1-1 to 5,5.0,,navistar Incorporation,High,Scan + Rep,Inspection,Inspection,2025-08-17,Completed,Found excess material & less material on ear,,,,,,279
+2025-08-16,MF,CY BOS 167,pattern,cope & drage,2.0,,TVS Motors Company Ltd,High,Scan + Rep,Inspection,Inspection,2025-08-17,Completed,Found minor excess material & minor less material,,,,,,280
+2025-08-18,MF,74cc P1010119,Casting,"MF 5-G,H & MF 6-E",3.0,,TVS Motors Company Ltd,High,Scan + Rep,Inspection,Inspection for Checking wear out condition,2025-08-18,Completed,Found minor excess material & minor less material,,,,,,281
+2025-08-20,U3,Triangle plate,,A 1 & 2 & C 1 & 2,4.0,,,,Report,Inspection,Inspection,2025-08-20,,,,,,,,282
+2025-08-20,U3,Triangle plate _BAG,,A 1 & 2 & C 1 & 2,4.0,,,,Report,Inspection,Inspection,2025-08-20,,,,,,,,283
+2025-08-20,MF,Cylinder block 74cc,Casting,"ME 5-H,F,G",3.0,,TVS Motors Company Ltd,High,Scan + Rep,Inspection,Inspection for Checking wear out condition,2025-08-21,,Scanning Completed,,,,,,284
+2025-08-22,DI,Adapter oil cooler 9326,Casting,"ME- 1,2,3",3.0,,Generac,High,Scan + Rep,New Development,New Development Inspection,2025-08-22,Completed,Found minor excess material & minor less material,,,,,,285
+2025-08-23,DI,fan 520 AL_0E4891,Casting,"DI-1-1,2",2.0,,Generac,High,Scan + Rep,Inspection,Inspection,2025-08-24,Completed,reports given as per requriment to cust,,,,,,286
+2025-08-24,MF,Inlet cone 135,CORE  BOX,HALF 1 & 2,2.0,,Highway Industries (Tenneco Pvt. Ltd.),High,Scan + Rep,Inspection,Inspection,2025-08-24,Completed,Found ok as per CAD model,,,,,,287
+2025-08-24,MF,Inlet cone 135,pattern,MF 2 & 3 (cope & drag),4.0,,Highway Industries (Tenneco Pvt. Ltd.),High,Scan + Rep,Inspection,Inspection,2025-08-24,Completed,Found ok as per CAD model,,,,,,288
+2025-08-24,U3,ELBOW 6489,pattern,cope & drage,2.0,,JCB Manufacturing Incorporation,High,Report,New Development,Inspection for Checking wear out condition,2025-08-24,Completed,found less material as per CAD model,,,,,,289
+2025-08-25,MF,sedimental trap 1355,Casting,"ME1-1,ME2-2,ME3-3",6.0,,Generac,High,Scan + Rep,Inspection,Inspection,2025-08-28,Completed,Found minor excess material & minor less material,,,,,,290
+2025-08-28,U3,HUB 1084,CORE  BOX,HALF 1 & 2,2.0,,Bajaj Auto Ltd,High,Report,Inspection,Inspection,2025-08-30,Completed,Found excess material,,,,,,291
+2025-08-29,U3,HUB 1084,CORE  BOX,HALF 1 & 2,2.0,,Bajaj Auto Ltd,High,Report,Inspection,Inspection,2025-08-30,Completed,Found excess material,,,,,,292
+2025-08-30,U3,BEND PIPE 6489,CORE  BOX,HALF 1 & 2,2.0,,JCB Manufacturing Incorporation,High,Report,Inspection,Inspection,2025-08-30,Completed,Found minor excess material & minor less material,,,,,,293
+2025-08-31,U3,FLYWHEEL 36207,Casting,DI vs U3,1.0,,Generac,High,Report,Inspection,Inspection,2025-08-31,Completed,Camprison Report,,,,,,294
+2025-09-03,MF,cast Turbo,Casting,HM-1,1.0,,Highway Industries (Tenneco Pvt. Ltd.),High,Scan + Rep,Inspection,Inspection,2025-09-03,Completed,Found machining allowance & excess material,,,,,,295
+2025-09-06,U3,LP,CORE  BOX,HALF 1 & 2,2.0,,JCB Manufacturing Incorporation,High,Report,Inspection,Inspection,,,need cad model,,,,,,296
+2025-09-06,U3,MANIFOLD 405,CORE  BOX,HALF 1 & 2,2.0,,,High,Report,Inspection,Inspection,2025-09-25,Completed,found excess material upto 1mm,,,,,,297
+2025-09-06,U3,6207,pattern,cope & drage,2.0,,Generac,High,Report,Inspection,Inspection,2025-09-25,Completed,found machining allowance according to model & less material upto 0.3 mm,,,,,,298
+2025-09-08,U3,END CAP 650,Casting,ME 1 to 6,6.0,,,High,Report,Inspection,Inspection,,,need cad model,,,,,,299
+2025-09-12,U3,COVER 3701,Casting,"ME 1,18 to 24",8.0,,TATA Motors Ltd,High,Report,Inspection,Inspection,2025-09-25,Completed,need cad model,,,,,,300
+2025-09-13,DI,step thred,Casting,DI 1,1.0,,JCB Manufacturing Incorporation,High,Scan + Rep,New Development,Inspection,2025-09-25,Completed,reports given as per cust requirement,,,,,,301
+2025-09-13,U3,80800,pattern,cope & drage,2.0,,TVS Motors Company Ltd,High,Report,Inspection,Inspection,2025-09-25,Completed,Found ok as per CAD model,,,,,,302
+2025-09-13,U3,80800,Core Box,HALF 1 & 2,2.0,,TVS Motors Company Ltd,High,Report,Inspection,Inspection,2025-09-25,Completed,Found ok as per CAD model,,,,,,303
+2025-09-17,U3+DI,DI RB,CORE,RB 1 to 6,6.0,,,High,Report,Inspection,Inspection,,,need cad model,,,,,,304
+2025-09-17,U3+DI,DI B,CORE,B 1 to 4,4.0,,,High,Report,Inspection,Inspection,,,need cad model,,,,,,305
+2025-09-17,U3+DI,DI R,CORE,R 1 to 4,4.0,,,High,Report,Inspection,Inspection,,,need cad model,,,,,,306
+2025-09-17,U3,ADI 8864,pattern,cope & drage,2.0,,navistar Incorporation,High,Report,Inspection,Inspection,2025-09-26,Completed,found excess material on side surface,,,,,,307
+2025-09-17,U3+DI,DI R,CORE,R 13 to 15,3.0,,,High,Report,Inspection,Inspection,,,need cad model,,,,,,308
+2025-09-17,U3+DI,DI B,CORE,"B 12,13",2.0,,,High,Report,Inspection,Inspection,,,need cad model,,,,,,309
+2025-09-17,U3,Manifold 7385,Casting,ME 1,1.0,,Generac,High,Report,Inspection of surface profile,Inspection,2025-10-05,Completed,surface profile 3.554 mm shown as percustomer requriment,,,,,,310
+2025-09-17,U3,ADI 8862,PATTERN,cope & drage,2.0,,navistar Incorporation,High,Report,New Development,Inspection,2025-09-26,Completed,Found excess material,,,,,,311
+2025-09-17,U3,ADI 8864,PATTERN,cope & drage,2.0,,navistar Incorporation,High,Report,New Development,Inspection,2025-09-26,Completed,Found excess material,,,,,,312
+2025-09-18,U3+DI,STEP PLATE,Casting,ME 1 & 2,2.0,,,High,Report,New Development,Inspection,2025-10-22,Completed,reports given as per cust requirement,,,,,,313
+2025-09-18,U3,HUB 1688,CORE BOX,HALF 1 & 2,2.0,,,High,Report,Inspection,Inspection,,,need cad model,,,,,,314
+2025-09-21,U3,TATA Pulley 7003,CASTING,"ME 1,18 to 24",10.0,,TATA Motors Ltd,High,Report,Inspection,Inspection,,,need cad model,,,,,,315
+2025-09-20,U3,ELBOW 6489,CASTING,ME,,,JCB Manufacturing Incorporation,High,Report,Inspection of surface profile,Inspection for profile,,,profile failed not achived as per customer need,,,,,,316
+2025-09-21,U3,EGR PIPE 3757,CORE BOX,HALF 1 & 2,2.0,,,High,Report,Inspection,Inspection,,,need cad model,,,,,,317
+2025-09-21,U3,ADI 8864,CASTING,ME 1 to 4,4.0,,navistar Incorporation,High,Report,New Development,Inspection,2025-09-22,Completed,"deviational reports provided, found excess material with 1 mm tol",,,,,,318
+2025-09-21,DI,MANIFOLD 4555,FIXTURE,fixture,1.0,,Generac,High,,Inspection,Inspection,2025-09-22,Completed,devational reports provided with zero tol,,,,,,319
+2025-09-21,MF,HEAD CYL 236 CC,CASTING,DI - 1 to 4,4.0,,Bajaj Auto Ltd,High,Scanning & report,Inspection,Inspection,2025-09-25,Completed,compared with cad model and deviatioanl & dimensional reports provided,,,,,,320
+2025-09-21,U3,ADI 8862,CASTING,ME 1 to 3,3.0,,navistar Incorporation,High,Report,new develpment,New casting sample inspection,2025-09-22,Completed,found excess material on surface,,,,,,321
+2025-09-21,DI,MANIFOLD 4555,CASTING,DI - 1 to 4,8.0,,navistar Incorporation,High,Report,new tooling sample,Inspection,2025-09-23,Completed,"deviational reports provided, with zero tol",,,,,,322
+2025-09-25,U3,HUB1057,PATTERN,HALF 1 & 2,1.0,,Bajaj Auto Ltd,High,Report,Inspection,Inspection,2025-10-01,Completed,found less & excess material,,,,,,323
+2025-09-21,DI,MANIFOLD 4555,MACHINED CASTING,DI - 1 to 4,8.0,,navistar Incorporation,High,Report,New sample casting inspection,Inspection,2025-09-24,Completed,found surface profile not ok according to xyz datum,,,,,,324
+2025-09-25,U3,MANIFOLD 522,CORE BOX,HALF 1 & 2,2.0,,TATA Motors Ltd,High,Report,Inspection,Inspection,,,need cad model,,,,,,325
+2025-09-27,MF,BOXER,PATTERN,"MF-34,35 cope & drag",4.0,,Bajaj Auto Ltd,High,Scanning & report,Inspection,Inspection,2025-09-28,Completed,Found excess material & less,,,,,,326
+2025-09-28,MF,BOXER,Fin Core Box,HALF 1 & 2,2.0,,Bajaj Auto Ltd,High,Scanning & report,Inspection,Inspection,2025-09-29,Completed,Found excess material & less,,,,,,327
+2025-09-28,MF,BOXER,Pocket Core Box,HALF 1 & 2,2.0,,Bajaj Auto Ltd,High,Scanning & report,Inspection,Inspection,2025-09-29,Completed,Found excess material & less,,,,,,328
+2025-09-28,MF,BOXER,Small Fin Core Box,HALF 1 & 2,2.0,,Bajaj Auto Ltd,High,Scanning & report,Inspection,Inspection,2025-09-29,Completed,Found excess material & less,,,,,,329
+2025-09-29,MF,BOXER,Main Core Box,HALF 1 & 2,2.0,,Bajaj Auto Ltd,High,Scanning & report,Inspection,Inspection,2025-09-29,,need cad model,,,,,,330
+2025-10-01,U3,MANIFOLD 7385,CASTING,ME 1,1.0,,Generac,High,Report,Inspection of surface profile,Inspection for profile,2025-09-26,Completed,"surface profile not found ok,  given profile only for cust purpose with dimension",,,,,,331
+2025-10-02,U3,MANIFOLD 7385,CASTING,ME 1 & 2,2.0,,Generac,High,Report,New sample casting inspection,Inspection,2025-10-04,Completed,"surface profile not found ok,  given profile only for cust purpose with dimension",,,,,,332
+2025-10-04,U3,ADI 8862,CASTING,ME 1 to 4,4.0,,navistar Incorporation,High,Report,New sample castings inspection,Inspection,2025-10-05,Completed,casting has minior less material,,,,,,333
+2025-10-05,U3,DRAM (DI & U3),CASTING,ME 2 & 14,2.0,,Bajaj Auto Ltd,High,comparision report,Inspection,Inspection pf di vs hp line casting,2025-10-05,Completed,found less & excess material on hp line casting,,,,,,334
+2025-10-05,U3,CARGO DRAM,PATTERN,HALF 1 & 2,2.0,,Bajaj Auto Ltd,High,Report,Inspection,Inspection,,,need cad model,,,,,,335
+2025-10-06,U3,ADI 8864,CASTING,ME 1 to 4,4.0,,navistar Incorporation,High,Report,Inspection,Inspection,2025-10-06,Completed,Found ok as per tol. 1mm.,,,,,,336
+2025-10-08,U3,G 80800,CASTING,"ME 5,6,8,9,10,11,12,13,14,20",10.0,,TVS Motors Company Ltd,High,Report,,,,,,,,,,,337
+2025-10-09,U3,HUB 1057,CASTING,,2.0,,Bajaj Auto Ltd,High,comparision report,Inspection,Inspection,2025-10-09,Completed,found excess material upto 4mm,,,,,,338
+2025-10-09,U3,G 80800,CASTING,"ME 7,15,16,17,18,19",6.0,,TVS Motors Company Ltd,High,Report,Inspection,Inspection,,,,,,,,,339
+2025-10-10,U3,HUB 1057,CASTING,"ME 9,10,11,13,14,15,17,20",8.0,,Bajaj Auto Ltd,High,Report,Inspection,Inspection,,,,,,,,,340
+2025-10-10,MF,HEAD CYL 236 CC,CASTING,M1C1 to M1C4,4.0,,Bajaj Auto Ltd,High,Scan + Rep,Inspection,Inspection,2025-10-12,Completed,found machining allowance according to model,,,,,,341
+2025-10-11,U3,HUB 5501,PATTERN,cope & drage,2.0,,TATA Motors Ltd,High,comparision report,Inspection,Inspection,2025-10-11,Completed,found less material on new model,,,,,,342
+2025-10-11,DI,HEATTRITMENT FAN,CASTING,DI 1,1.0,,Generac,High,Scan + Rep,Inspection,Inspection,2025-10-12,Completed,found less material in inner side & all dimensions found ok,,,,,,343
+2025-10-12,DI/U3,MANIFOLD 4555,CASTING,DI 1,1.0,,Generac,High,Report,Inspection,Inspection,2025-10-15,Completed,Casting found ok as per CAD model with dimension,,,,,,344
+2025-10-12,U3,4703,CASTING,ME 1,1.0,,Generac,High,Report,Inspection,Inspection,2025-10-13,Completed,me-1 report made originally and 1 dummy report prepared (me-2) with surface profile as per u3 team suggested,,,,,,345
+2025-10-14,U3,support 692 & 693,PATTERN,lh & rh,1.0,,navistar Incorporation,High,Report,New Development,Inspection,2025-10-15,Completed,found excess material on rh,,,,,,346
+2025-10-16,DI,step thread,CASTING,DI 1,1.0,,JCB Manufacturing Incorporation,High,Scan + Rep,New Development,Inspection,2025-10-16,Completed,found ok as per cad model with dimensions,,,,,,347
+2025-10-16,U3,hub 4436,CASTING,ME 1 & 2,2.0,,navistar Incorporation,High,Report,Inspection,Inspection,2025-10-17,Completed,found less and excess material in deviation & dimensions are ok as per ct9,,,,,,348
+2025-10-17,U3,ADAPTER 2019,CASTING,"ME 1 to 7,2,9,11,12,15,18,25,26",15.0,,navistar Incorporation,High,Report,Inspection,Inspection,2025-10-19,Completed,found excess material on casting surface,,,,,,349
+2025-10-19,U3,ADAPTER 2019,CASTING,"ME 8,10,19,23,28,30",6.0,,navistar Incorporation,High,Report,Inspection,Inspection,2025-10-27,Completed,found excess material on casting surface,,,,,,350
+2025-10-27,MF,INLET CONE 454,CORE BOX,SET-3,6.0,,Highway Industries (Tenneco Pvt. Ltd.),High,Scan + Rep,Inspection,Inspection,2025-10-27,Completed,Found ok as per CAD model,,,,,,351
+2025-10-27,U3,SUPPORT 963 RH,CORE BOX,H 1,1.0,,navistar Incorporation,High,Report,,Inspection,2025-11-07,Completed,Found excess material upto 0.6 mm,,,,,,352
+2025-10-27,U3,SP,CORE BOX,HALF 1 & 2,2.0,,JCB Manufacturing Incorporation,High,Report,Inspection,Inspection,2025-11-15,Completed,FOUND EXCESS MATERIAL IN CORE BOX,,,,,,353
+2025-10-27,U3,ADAPTER 2019,CASTING,ME 1 to 32,32.0,,navistar Incorporation,High,Report,Inspection,Inspection,,Completed,Found machining allowance as per drawing and excess material on some cavity,,,,,,354
+2025-10-31,U3,TATA  rear hub 3707,CASTING,ME 2,1.0,,TATA Motors Ltd,High,Report,Inspection,Inspection,,Completed,found shift in casting,,,,,,355
+2025-10-31,U3,NAVISTAR 401 C1,CASTING,MF 1,2.0,,navistar Incorporation,High,Scan + Rep,New Development,Inspection,2025-10-31,Completed,Found machining allowance and less material on base,,,,,,356
+2025-11-02,U3,FLYWHEEL 2697,CASTING,ME 1,3.0,,Generac,High,Report,REPORT FOR CUSTOMER PURPOSE (DUMMY),Report customer purpose,2025-11-03,Completed,report given customer purpose,,,,,,357
+2025-11-02,U3,Fork Leading Link,PATTERN,cope & drage,2.0,,TVS Motors Company Ltd,High,Report,New Development,New Development Inspection,,Completed,found excess material on cavity edges,,,,,,358
+2025-11-03,U3,TML BKT 3709,PATTERN,HALF 1 & 2,1.0,,TATA Motors Ltd,High,Report,Inspection,Inspection,2025-11-03,Completed,found excess material on side surface,,,,,,359
+2025-11-03,U3,TML BKT 3709,CORE BOX,HALF 1 & 2,2.0,,TATA Motors Ltd,High,Report,Inspection,Inspection,2025-11-03,Completed,Found ok as per CAD model,,,,,,360
+2025-11-03,U3,Fork Leading Link,CORE  BOX,HALF 1 & 2,2.0,,TVS Motors Company Ltd,High,Report,Inspection,Inspection,,Completed,Found ok as per CAD model,,,,,,361
+2025-11-03,U3,BKT 3710,CORE  BOX,HALF 1 & 2,2.0,,TATA Motors Ltd,High,Report,Inspection,Inspection,2025-11-03,Completed,found excess material on edges,,,,,,362
+2025-11-03,U3,HUB 3707,CORE  BOX,HALF 1 & 2,2.0,,TATA Motors Ltd,High,Report,Inspection,Inspection,2025-11-03,Completed,found minor excess material in inner cavity,,,,,,363
+2025-11-06,U3,wheel hub 1084,CORE  BOX,HALF 1 & 2,2.0,,Bajaj Auto Ltd,High,Report,Inspection,Inspection,2025-11-06,Completed,Found ok as per CAD model,,,,,,364
+2025-11-07,MF,head cyl 236cc 1026,CASTING,cut section 7 piece,7.0,,Bajaj Auto Ltd,High,Scan + Rep,Inspection,Inspection,2025-11-08,Completed,Scanning completed,,,,,,365
+2025-11-08,MF,HEAD CYL 236 CC,CASTING,M1C1 to M1C4,4.0,,Bajaj Auto Ltd,High,Report,Inspection,Inspection,2025-11-09,Completed,reports done with casting model,,,,,,366
+2025-11-09,U3,Fork Leading Link,CASTING,ME 1 & 2,2.0,,TVS Motors Company Ltd,High,Report,Inspection,Inspection,2025-11-09,Completed,found machining allowance & excess material,,,,,,367
+2025-11-10,DI,Genrac manifold 4538 / 4555,CASTING,DI - 5 & 6,6.0,,Generac,High,Report,Inspection,Inspection,2025-11-10,Completed,date changed customer purpose only,,,,,,368
+2025-11-12,U3,Navistar hook 8210,PATTERN,cope & drage,2.0,,navistar Incorporation,High,Report,Inspection,Inspection,2025-11-12,Completed,date changed customer purpose only and made ok,,,,,,369
+2025-11-13,U3,carbo hub 1242,CASTING,ME 1 to 4,4.0,,Bajaj Auto Ltd,High,Report,IATF audit,IATF audit,2025-11-13,Completed,ok deviational report send for audit purpose,,,,,,370
+2025-11-13,U3,hub front 1084,"CASTING,tooling",all,20.0,,Bajaj Auto Ltd,High,Report,IATF audit,IATF audit,2025-11-13,Completed,all casting & tooling reports given for audit purpose,,,,,,371
+2025-11-15,U3,tata hub 3707,CASTING,ME 1,1.0,,TATA Motors Ltd,High,Report,IATF audit,IATF audit,2025-11-13,Completed,date changed for audit purpose,,,,,,372
+2025-11-19,MF,HING HOOD SUPPORT 401 C1,CASTING,ME 1,4.0,,navistar Incorporation,High,Scan + Rep,New Development,New Development Inspection,2025-11-19,Completed,found machining allowance & excess material,,,,,,373
+2025-11-22,U3,front hub,PATTERN,cope & drage,2.0,,TATA Motors Ltd,High,Report,new tooling sample,new tooling sample,2025-11-22,Completed,Found ok as per CAD model,,,,,,374
+2025-11-23,MF,HING HOOD SUPPORT 401 C1,CASTING,MF 1,2.0,,navistar Incorporation,High,Scan + Rep,Sample casting inspection,,2025-11-24,Completed,Found minor excess & less material,,,,,,375
+2025-11-23,MF,HING HOOD SUPPORT1397,CASTING,ME 1 to 4,4.0,,navistar Incorporation,High,Scan + Rep,Sample casting inspection,,2025-11-24,Completed,found less material & excess material in some cavity,,,,,,376
+2025-11-23,U3,hub 5957,PATTERN,cope & drage,2.0,,Generac,High,Report,Inspection,Inspection,2025-11-24,Completed,Found minor excess & less material,,,,,,377
+2025-11-24,DI,oil cooler cast 9326,CASTING,DI - 1 to 3,3.0,,Generac,High,Scan + Rep,Inspection,Inspection,2025-11-24,Completed,found less material & failed surface profile,,,,,,378
+2025-11-24,U3,hub 5957,Core Box,HALF 1 & 2,2.0,,Generac,High,Report,Inspection,Inspection,2025-11-27,Completed,Found ok as per CAD model,,,,,,379
+2025-11-24,DI,adapter 1198,CASTING,DI - 1 to 4,4.0,,Generac,High,Scan + Rep,Inspection,Inspection,2025-11-27,Completed,Found ok as per CAD model & failed surface profile,,,,,,380
+2025-11-24,DI,intake mfd 4538,CASTING,DI - 1 to 5,5.0,,Generac,High,Scan + Rep,Inspection,Inspection,,,,,,,,,381
+2025-11-24,DI,track pedal,CASTING,lh & rh,2.0,,JCB Manufacturing Incorporation,High,Scan + Rep,Inspection,Inspection,2025-11-27,Completed,Found ok as per CAD model,,,,,,382
+2025-11-27,MF,Cylinder block inlet,Core Box,HALF 1 & 2,2.0,,Highway Industries (Tenneco Pvt. Ltd.),High,Scan + Rep,Inspection,Inspection,2025-11-30,Completed,Found minor excess & less material,,,,,,383
+2025-11-28,MF,ACK cyl bock,Pocket Core Box,HALF 1 & 2,2.0,,Hero Motocorp Ltd.,High,Scan + Rep,Inspection,Inspection,2025-11-30,Completed,Found minor excess & less material,,,,,,384
+2025-11-28,MF,ACK cyl bock,Fin Core Box,HALF 1 & 2,2.0,,Hero Motocorp Ltd.,High,Scan + Rep,Inspection,Inspection,2025-11-30,Completed,Found minor excess & less material,,,,,,385
+2025-11-28,MF,Block cyl 5 port,CORE  BOX,HALF 1 & 2,2.0,,Bajaj Auto Ltd,High,Scan + Rep,Inspection,Inspection,2025-11-30,Completed,Found minor excess & less material,,,,,,386
+2025-11-29,MF,cyl block 125cc,CASTING,C1 & C2,2.0,,Bajaj Auto Ltd,High,Scan + Rep,Inspection,Inspection,2025-11-30,Completed,found machining allowance according to model,,,,,,387
+2025-11-29,U3,SUPPORT 963 RH,CASTING,ME 1,1.0,,navistar Incorporation,High,Report,Inspection,Inspection,2025-11-29,Completed,FOUND EXCESS & LESS MATERIAL,,,,,,388
+2025-11-29,U3,SUPPORT 964 LH,CASTING,ME 2,1.0,,navistar Incorporation,High,Report,Inspection,Inspection,2025-11-29,Completed,FOUND EXCESS & LESS MATERIAL,,,,,,389
+2025-11-30,U3,hub 5957,CASTING,ME 1 to 4,4.0,,Generac,High,Report,Inspection,Inspection,2025-11-30,Completed,FOUND EXCESS & LESS MATERIAL,,,,,,390
+2025-12-01,U3,end cap 372,CASTING,ME 1 & 2,2.0,,Mahindra & Mahindra,High,Report,Inspection,Inspection,2025-12-01,Completed,found less material,,,,,,391
+2025-12-02,U3,end cap 372,CASTING,ME 2 & 4,2.0,,Mahindra & Mahindra,High,Report,Inspection,Inspection,2025-12-01,Completed,found less material,,,,,,392
+2025-12-03,U3,satalite 3704,CASTING,ME 1 & 2,2.0,,,,Report,Inspection,InspectionI,,,,,,,,,393
+2025-12-03,U3,ADAPTER 2019,CASTING,ME 1 & 2,2.0,,navistar Incorporation,High,Report,Inspection,Inspection,2025-12-03,Completed,found excess material in some casting at as cast area,,,,,,394
+2025-12-06,MF,KCC,Fin Core Box,HALF 1 & 2,2.0,,Hero Motocorp Ltd.,High,Scan + Rep,Inspection,Inspection,2025-12-06,Completed,FOUND EXCESS & LESS MATERIAL,,,,,,395
+2025-12-07,U3,LP,CORE,,1.0,,JCB Manufacturing Incorporation,High,Report,Inspection,Inspection,,,Found ok as per CAD model,,,,,,396
+2025-12-08,MF,kcc,CASTING,mf 38 & 39 - 2,4.0,,Hero Motocorp Ltd.,High,Scan + Rep,Sample casting inspection,Inspection,2025-12-10,Completed,found less material,,,,,,397
+2025-12-11,U3,ELBOW 3460,CASTING,"me 1,3,4,5",4.0,,JCB Manufacturing Incorporation,High,Report,Inspection,Inspection,2025-12-12,Completed,,,,,,,398
+2025-12-13,U3+DI,fan 390 SAE alternator,CASTING,DI 1 to 5,5.0,,Generac,High,Report,Inspection,Inspection,,Completed,Found ok as per CAD model,,,,,,399
+2025-12-14,U3,ATD FRAME MOUNT HX,CASTING,ME 1 & 4,2.0,,navistar Incorporation,High,Scan + Rep,Sample casting inspection,Inspection,2025-12-15,Completed,Found ok as per CAD model,,,,,,400
+2025-12-14,U3,ATD FRAME MOUNT LT,CASTING,ME1 & 3,2.0,,navistar Incorporation,High,Scan + Rep,Sample casting inspection,Inspection,2025-12-15,Completed,Found ok as per CAD model,,,,,,401
+2025-12-15,U3,FLANG 1361,CASTING,ME 1,1.0,,HAMM,High,Report,Inspection,Inspection,,,,,,,,,402
+2025-12-18,U3,SEAT U BOLT FRG SPG,CASTING,"ME 1,2-1_2,4",4.0,,navistar Incorporation,High,Scan + Rep,Inspection,Inspection,2025-12-18,Completed,FOUND EXCESS & LESS MATERIAL,,,,,,403
+2025-12-20,U3,ELBOW 3460,CASTING,ME 1 & 5,5.0,,JCB Manufacturing Incorporation,High,Report,Inspection,Inspection,,,found less material on inner cavity & excess material,,,,,,404
+2025-12-20,U3,end cap 396,CASTING,ME 2,1.0,,Mahindra & Mahindra,High,Report,Inspection,Inspection,,,,,,,,,405
+2025-12-21,MF,Activa kpl,CORE BOX,H 1 & 2,2.0,,Hero Motocorp Ltd.,High,Scan + Rep,Inspection,Inspection,2025-12-22,Completed,found less material & excess material in some cavity,,,,,,406
+2025-12-21,MF,Activa het,CORE BOX,H 1 & 2,2.0,,Hero Motocorp Ltd.,High,Scan + Rep,Inspection,Inspection,2025-12-22,Completed,found less material & excess material in some cavity,,,,,,407
+2025-12-21,MF,Activa kwpg,CORE BOX,H 1 & 2,2.0,,Hero Motocorp Ltd.,High,Scan + Rep,Inspection,Inspection,2025-12-22,Completed,found less material & excess material in some cavity,,,,,,408
+2025-12-21,MF,Activa het,PATTERN,H 1 & 2,2.0,,Hero Motocorp Ltd.,High,Scan + Rep,Inspection,Inspection,2025-12-22,Completed,found less material & excess material in some cavity,,,,,,409
+2025-12-22,MF,Activa kpl,PATTERN,H 1 & 2,2.0,,Hero Motocorp Ltd.,High,Scan + Rep,Inspection,Inspection,2025-12-22,Completed,found less material & excess material in some cavity,,,,,,410
+2025-12-24,MF,Platina 110cc,PATTERN,H 1 & 2,2.0,,Bajaj Auto Ltd,High,Scan + Rep,Inspection,Inspection,2025-12-24,Completed,found less material & excess material in some cavity,,,,,,411
+2025-12-24,MF,CORE,CORE,1 cavity,1.0,,Bajaj Auto Ltd,High,Scan + Rep,Inspection,Inspection,2025-12-24,Completed,FOUND OK,,,,,,412
+2025-12-25,U3,FLANGE 1361,CASTING,ME 1,1.0,,HAMM,High,Report,Inspection,Inspection,2025-12-25,Completed,found less & excess material,,,,,,413
+2025-12-24,U3,FLANGE 3143,CASTING,ME 1,1.0,,HAMM,High,Report,Inspection,Inspection,2025-12-25,Completed,found less & excess material,,,,,,414
+2025-12-24,U3,crossmember,CASTING,ME 1 to 6,6.0,,navistar Incorporation,High,Report,Inspection,New Development Inspection,2025-12-25,Completed,Found ok as per CAD model (casting model),,,,,,415
+2025-12-25,MF,JACKET & ROCKER,CORE BOX,COMPARISION,4.0,,Bajaj Auto Ltd,High,Report,Inspection,Inspection,2025-12-25,Completed,FOUND OK,,,,,,416
+2025-12-27,U3,DRUM 1106,CASTING,"ME 4-1,2,3, 6,7,8",6.0,,Bajaj Auto Ltd,High,Report,New Development,New Development Inspection,,,,,,,,,417
+2025-12-27,U3,Fork Leading Link,CASTING,COMPARISION,2.0,,TVS Motors Company Ltd,High,Report,Inspection,Inspection,2025-12-27,Completed,found less & excess material,,,,,,418
+2025-12-27,MF,Inlet cone 135,CASTING,ME 4,1.0,,Highway Industries (Tenneco Pvt. Ltd.),High,Scan + Rep,Inspection,Inspection,2025-12-27,Completed,found excess material on both boss,,,,,,419
+2025-12-28,MF,Inlet cone 135,PATTERN,cope & drage,2.0,,Highway Industries (Tenneco Pvt. Ltd.),High,Scan + Rep,Inspection,Inspection,2025-12-28,Completed,found less material both boss,,,,,,420
+2026-01-02,U3,Inlet cone 135,CASTING,MF 6,1.0,EA,Highway Industries (Tenneco Pvt. Ltd.),High,Scan + Rep,Inspection,Inspection,2026-01-02,Completed,found excess material & has machining allowance,,,,,,421
+2026-01-02,U3,wheel hub,CASTING,ME 1,1.0,EA,Bajaj Auto Ltd,High,Scan + Rep,Inspection,Inspection,,,,,,,,,422
+2026-01-04,MF,TVS 74CC,CASTING,MF 5,1.0,EA,TVS Motors Company Ltd,High,Scan + Rep,Inspection,Inspection,2026-01-05,Completed,inspection for fixture,,,,,,423
+2026-01-05,MSL,UPPER BRACKET,CASTING,3 CAVITY,3.0,EA,Bajaj Auto Ltd,High,Scan + Rep,New Development Inspection,New Development Inspection,2026-01-05,Completed,FOUND EXCESS & LESS MATERIAL other than machining allowance,,,,,,424
+2026-01-05,MSL,HANDEL HOLDER LH&RH,CASTING,4 CAVITY,4.0,EA,Bajaj Auto Ltd,High,Scan + Rep,New Development Inspection,New Development Inspection,2026-01-05,Completed,FOUND EXCESS & LESS MATERIAL other than machining allowance,,,,,,425
+2026-01-08,U3,crossmember,CASTING,6 CAVITY,6.0,EA,navistar Incorporation,High,Scan + Rep,New Development Inspection,New Development Inspection,2026-01-07,Completed,found shift in drill in some cavity,,,,,,426
+2026-01-09,MSL,UPPER BRACKET,DIE,H 1 & 2,1.0,SE,Bajaj Auto Ltd,High,Scan + Rep,Inspection,Inspection,2026-01-11,Completed,found excess material,,,,,,427
+2026-01-09,MSL,HANDEL HOLDER LH&RH,DIE,H 1 & 2,1.0,SE,Bajaj Auto Ltd,High,Scan + Rep,Inspection,Inspection,2026-01-11,Completed,Found ok as per CAD model,,,,,,428
+2026-01-09,U3,Adapter 2019,CASTING,ME 1,1.0,EA,navistar Incorporation,High,Scan + Rep,New Development Inspection,New Development Inspection,2026-01-11,Completed,FOUND excess material,,,,,,429
+2026-01-10,MF,Cylinder Block BOXER,BIG FIN CORE BOX,H 1 & 2,2.0,SE,Bajaj Auto Ltd,High,Scan + Rep,New Development Inspection,New Development Inspection,2026-01-12,Completed,FOUND OK,,,,,,430
+2026-01-10,MF,Cylinder Block BOXER,SMALL FIN CORE BOX,H1 & 2,3.0,SE,Bajaj Auto Ltd,High,Scan + Rep,New Development Inspection,New Development Inspection,2026-01-12,Completed,found excess material in some half,,,,,,431
+2026-01-10,MF,Cylinder Block BOXER,POCKET CORE BOX,H1 & 2,3.0,SE,Bajaj Auto Ltd,High,Scan + Rep,New Development Inspection,New Development Inspection,2026-01-12,Completed,found excess material in some half,,,,,,432
+2026-01-10,MF,Cylinder Block BOXER,Main CORE BOX,H 1 & 2,1.0,SE,Bajaj Auto Ltd,High,Scan + Rep,New Development Inspection,New Development Inspection,2026-01-12,Completed,FOUND OK,,,,,,433
+2026-01-10,MF,Cylinder Block BOXER,PATTERN,H 1 & 2,6.0,SE,Bajaj Auto Ltd,High,Scan + Rep,New Development Inspection,New Development Inspection,2026-01-12,Completed,FOUND EXCESS & LESS MATERIAL,,,,,,434
+2026-01-10,MSL,SPARK CORE CORE BOX 256CC,CORE BOX,H 1 & 2,1.0,SE,Bajaj Auto Ltd,High,Scan + Rep,New Development Inspection,New Development Inspection,2026-01-12,Completed,found less material,,,,,,435
+2026-01-10,MSL,INLET CORE BOX 256CC,CORE BOX,H 1 & 2,1.0,SE,Bajaj Auto Ltd,High,Scan + Rep,New Development Inspection,New Development Inspection,2026-01-12,Completed,found excess and less material,,,,,,436
+2026-01-18,MSL,cyl block 236cc,CASTING,2 cavity,4.0,EA,Bajaj Auto Ltd,High,Scan + Rep,New Development,New Development Inspection,2026-01-21,Completed,found machining allowance & less material in some casting on fin,,,,,,437
+2026-01-18,MF,INLET CONE,CASTING,MF 6,1.0,EA,Highway Industries (Tenneco Pvt. Ltd.),High,Scan + Rep,Inspection,Inspection,2026-01-18,Completed,scanning completed,,,,,,438
+2026-01-18,MF,TVS 74CC,CASTING,1 nos,1.0,EA,TVS Motors Company Ltd,High,Scan + Rep,Inspection,Inspection,2026-01-19,Completed,"scanning completed , machining model not available",,,,,,439
+2026-01-22,MF,Activa kwpg,CASTING,"MF 1,2",4.0,EA,Hero Motocorp Ltd.,High,Scan + Rep,Inspection,Inspection,2026-01-22,Completed,found machining allowance & excess material,,,,,,440
+2026-01-22,DI,AIR INTAKE PIPE 3870,CASTING,D 1,2.0,EA,TATA Motors Ltd,High,Scan + Rep,New Development Inspection,New Development Inspection,2026-01-22,Completed,FOUND EXCESS & LESS MATERIAL,,,,,,441
+2026-01-23,DI,fan 390 SAE alternator,CASTING,MF 1,2.0,EA,Generac,High,Scan + Rep,New Development Inspection,New Development Inspection,2026-01-23,Completed,found less material,,,,,,442
+2026-01-23,MF,activa kpl,CASTING,"MF 1,2",4.0,EA,Hero Motocorp Ltd.,High,Scan + Rep,Inspection,Inspection,2026-01-28,Completed,found less material on fins & excess material,,,,,,443
+2026-01-28,U3,tata hub 3707,CASTING,ME 1 & 2,2.0,,TATA Motors Ltd,High,Report,customer purpose only,customer purpose only,2026-01-28,Completed,Maching allowance available,,,,,,444
+2026-02-02,U3,HUB 605,PATTERN,cope & drag,4.0,,Bajaj Auto Ltd,High,Scan + Rep,COMPARISION OLD VS NEW,Inspection,2026-02-02,Completed,,,,,,,445
+2026-02-02,MF,Platina 110cc,CASTING,"MF 5 & 6 - 1,2",4.0,,Bajaj Auto Ltd,High,Scan + Rep,Inspection,Inspection,2026-02-04,Completed,,,,,,,446
+2026-02-04,MF,KCC,CASTING,"MF 48 & 49 -1,2",4.0,,Hero Motocorp Ltd.,High,Scan + Rep,Inspection,Inspection,2026-02-05,Completed,,,,,,,447
+2026-02-08,U3,MANIFOLD 598,CASTING,ME 1,1.0,,Generac,High,Scan + Rep,New Development,New Development Inspection,2026-02-14,Completed,,,,,,,448
+2026-02-11,U3,sp 6020,CASTING,me-1,1.0,,JCB Manufacturing Incorporation,High,Report,COMPARISION OLD VS NEW,Inspection,2026-02-11,Completed,FOUND EXCESS & LESS MATERIAL,,,,,,449
+2026-02-16,DI,adapter upper cl 0333,CASTING,DI 1,1.0,,TATA Motors Ltd,High,Scan + Rep,,,,,,,,,,,450
+2026-02-16,DI,air intake pipe 3858,CASTING,DI 1,1.0,,TATA Motors Ltd,High,Scan + Rep,,,,,,,,,,,451
+2026-02-16,DI,deckel 2624,CASTING,DI 1,2.0,,TATA Motors Ltd,High,Scan + Rep,,,,Completed,,,,,,,452
+2026-02-16,DI,upper cooling water pipe assy,CASTING,DI 1,1.0,,TATA Motors Ltd,High,Scan + Rep,,,,,,,,,,,453
+2026-02-16,DI,air intake pipe 3818,CASTING,DI 1,1.0,,TATA Motors Ltd,High,Scan + Rep,,,,,,,,,,,454
+2026-02-16,DI,pipe tc to intercooler,CASTING,DI 1,1.0,,TATA Motors Ltd,High,Scan + Rep,,,,,,,,,,,455
+2026-02-18,DI,flywheel sp 4957,CASTING,ME 2,1.0,,TATA Motors Ltd,High,Scan + Rep,Inspection,Inspection,2026-02-19,Completed,found excess and less material,,,,,,456
+2026-02-21,U3,manifold 598,CASTING,ME 2,1.0,,Generac,High,Scan + Rep,New Development,Inspection,2026-02-21,Completed,FOUND EXCESS & LESS MATERIAL,,,,,,457
+2026-02-25,MF,cyl head AF101910,CORE BOX,H 1 & 2,2.0,,Bajaj Auto Ltd,High,Scan + Rep,Inspection,Inspection,2026-02-28,Completed,FOUND OK,,,,,,458
+2026-02-26,U3,CROSS MEMBER,PATTERN,ME 1 to 6,12.0,,navistar Incorporation,High,Report,ODIT REQUIRMENT,ODIT REQUIRMENT,2026-02-26,Completed,SIMULATED DATA,,,,,,459
+2026-02-27,U3,Adapter 2019,PATTERN,cope & drag,2.0,,navistar Incorporation,High,Report,ODIT REQUIRMENT,ODIT REQUIRMENT,2026-02-27,Completed,SIMULATED DATA,,,,,,460
+2026-03-01,U3,SP 6020,CORE  BOX,H 1 & 2,2.0,,JCB Manufacturing Incorporation,High,Report,new model comparision,new model comparision,2026-03-01,Completed,Found minor excess & less material,,,,,,461
+,,,,,,,,,,,,,,,,,,,,462
+,,,,,,,,,,,,,,,,,,,,463
+,,,,,,,,,,,,,,,,,,,,464
+,,,,,,,,,,,,,,,,,,,,465
+,,,,,,,,,,,,,,,,,,,,466
+,,,,,,,,,,,,,,,,,,,,467
+,,,,,,,,,,,,,,,,,,,,468
+,,,,,,,,,,,,,,,,,,,,469
+,,,,,,,,,,,,,,,,,,,,470
+,,,,,,,,,,,,,,,,,,,,471
+,,,,,,,,,,,,,,,,,,,,472
+,,,,,,,,,,,,,,,,,,,,473
+,,,,,,,,,,,,,,,,,,,,474
+,,,,,,,,,,,,,,,,,,,,475
+,,,,,,,,,,,,,,,,,,,,476
+,,,,,,,,,,,,,,,,,,,,477
