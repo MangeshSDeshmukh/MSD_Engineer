@@ -104,6 +104,44 @@ body{background:#eef5fb}
 .audit-remark-input{min-width:210px}.audit-small-input{min-width:120px}
 @media(max-width:1000px){.audit-meta-grid{grid-template-columns:repeat(2,1fr)}.audit-kpis{grid-template-columns:repeat(3,1fr)}.audit-filterbar{grid-template-columns:1fr 1fr}}
 @media(max-width:650px){.audit-meta-grid,.audit-kpis,.audit-filterbar{grid-template-columns:1fr}}
+/* v13 - Development Gantt + Level 3 Documents */
+.gantt-summary{padding:14px}.gantt-toolbar,.level3-toolbar{display:flex;gap:10px;align-items:center;margin-bottom:14px}.gantt-toolbar input,.level3-toolbar input,.level3-toolbar select{flex:1;min-width:180px}.level3-toolbar .result-count{margin-left:auto;font-size:12px;color:#607080;font-weight:700}.gantt-wrap{overflow:auto;max-height:70vh;border:1px solid #dce5ec;border-radius:10px}.gantt-table{border-collapse:separate;border-spacing:0;width:max-content;min-width:100%;font-size:12px}.gantt-table th,.gantt-table td{border-right:1px solid #e6edf2;border-bottom:1px solid #e6edf2;padding:8px;text-align:center;white-space:nowrap}.gantt-table thead th{position:sticky;top:0;background:#f2f7fb;color:#17365d;z-index:2}.gantt-table .gantt-no{position:sticky;left:0;z-index:4;background:#f2f7fb;width:45px}.gantt-table .gantt-activity{position:sticky;left:45px;z-index:4;background:#f2f7fb;text-align:left;min-width:300px}.gantt-table td:first-child{position:sticky;left:0;background:#fff;z-index:1}.gantt-table .gantt-activity-cell{position:sticky;left:45px;background:#fff;text-align:left;z-index:1;min-width:300px}.gantt-plan{background:#dceeff!important;color:#075c93;font-weight:800}.gantt-plan span{display:inline-block;padding:4px 8px;border-radius:999px;background:#0b6da8;color:#fff;font-size:9px;letter-spacing:.5px}.gantt-note{margin-top:10px;color:#71808d}.subtabs{display:flex;gap:8px;border-bottom:1px solid #dce5ec;margin:-6px -6px 16px;padding:0 6px}.subtab{border:0;background:transparent;padding:10px 15px;border-bottom:3px solid transparent;color:#607080;font-weight:700;cursor:pointer}.subtab.active{color:#075c93;border-bottom-color:#075c93;background:#f4f9fd;border-radius:8px 8px 0 0}.level3-tablewrap{max-height:68vh}.level3-tablewrap table{min-width:1050px}.wi-detail-modal{max-width:900px;width:94vw}.wi-detail-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid #e0e6eb;border-radius:10px;margin:18px}.wi-detail-grid>div{padding:14px;border-right:1px solid #edf0f2;border-bottom:1px solid #edf0f2}.wi-detail-grid label{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.5px;color:#788692;font-weight:800;margin-bottom:6px}.wi-detail-grid b{color:#17365d;font-size:13px}.wi-detail-grid p{margin:0;color:#354452;line-height:1.55;font-size:13px}.wi-detail-grid .full{grid-column:1/-1}.wi-detail-modal .actions{display:flex;justify-content:flex-end;gap:10px;padding:16px 18px;border-top:1px solid #e5e9ed;background:#fafbfc;position:sticky;bottom:0}.wi-detail-modal .actions a{text-decoration:none}@media(max-width:900px){.wi-detail-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:650px){.gantt-toolbar,.level3-toolbar{flex-wrap:wrap}.level3-toolbar .result-count{margin-left:0;width:100%}.wi-detail-grid{grid-template-columns:1fr}.wi-detail-grid .full{grid-column:auto}.wi-detail-modal .actions{flex-wrap:wrap}}
 
-/* v11 smart suggestions retained and extended to 3D Scanning DWM/OEE */
-.scan-smart-field{position:relative;z-index:1}.scan-smart-field .field-hint{display:block;font-size:9px;color:#82909c;margin-top:4px}.scan-smart-field .smart-input-wrap{position:relative}.scan-smart-field textarea{width:100%;min-height:90px;resize:vertical}.scan-smart-suggestions{z-index:11000}
+/* v14 - Excel-style Gantt + controlled Level 3 creation */
+.gantt-excel-wrap{overflow:auto;max-height:72vh;border:1px solid #d9e2ec;border-radius:10px;background:#fff}
+.gantt-excel-table{min-width:1180px;border-collapse:separate;border-spacing:0}
+.gantt-excel-table th,.gantt-excel-table td{border-right:1px solid #d8e0e8;border-bottom:1px solid #d8e0e8;text-align:center;padding:7px 6px;white-space:nowrap}
+.gantt-excel-table thead th{background:#eaf0f6;color:#173b63;position:sticky;top:0;z-index:3}
+.gantt-excel-table thead tr:first-child th{top:0;height:42px}
+.gantt-excel-table thead .gantt-subhead th{top:42px;height:28px;font-size:11px;font-weight:600;color:#607286}
+.gantt-excel-table .gantt-no{width:48px;min-width:48px}
+.gantt-excel-table .gantt-activity{width:330px;min-width:330px;text-align:left}
+.gantt-excel-table .gantt-type{width:52px;min-width:52px}
+.gantt-excel-table tbody td:first-child,.gantt-excel-table tbody td:nth-child(2),.gantt-excel-table tbody td:nth-child(3){position:sticky;z-index:2;background:#fff}
+.gantt-excel-table tbody td:first-child{left:0}
+.gantt-excel-table tbody td:nth-child(2){left:48px;text-align:left}
+.gantt-excel-table tbody td:nth-child(3){left:378px}
+.gantt-excel-table .gantt-plan-row td{height:32px}
+.gantt-excel-table .gantt-actual-row td{height:27px;background:#fbfcfd}
+.gantt-excel-table .gantt-plan-row td.gantt-plan{background:#d8e9fb;font-weight:700;color:#174a7a}
+.gantt-excel-table .gantt-plan-row td.gantt-plan span{font-size:10px}
+.gantt-excel-table .gantt-actual-row .gantt-actual-cell{background:#f8fafc}
+.gantt-excel-table .gantt-type-cell{font-weight:700}
+.gantt-legend{display:flex;gap:10px;margin-left:auto;align-items:center}
+.legend-plan,.legend-actual{padding:4px 9px;border-radius:5px;font-size:11px;font-weight:700}
+.legend-plan{background:#d8e9fb;color:#174a7a}.legend-actual{background:#f0f2f5;color:#687585}
+.wi-form-modal{max-width:980px!important}
+.wi-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:20px}
+.wi-form-grid .full{grid-column:1/-1}
+.wi-form-grid label{display:block;font-weight:700;margin-bottom:6px;color:#244668}
+.wi-form-grid input,.wi-form-grid select,.wi-form-grid textarea{width:100%;box-sizing:border-box;border:1px solid #cbd6e2;border-radius:7px;padding:10px;font:inherit;background:#fff}
+.wi-form-grid textarea{resize:vertical}
+.history-copy{background:#f4f8fc;border:1px solid #d7e4f0;border-radius:9px;padding:13px}
+.history-copy small{display:block;color:#68798b;margin-top:6px}
+@media(max-width:800px){.wi-form-grid{grid-template-columns:1fr}.wi-form-grid .full{grid-column:auto}}
+
+/* v15 - Export and dashboard analytics */
+.export-grid{display:grid;grid-template-columns:repeat(4,minmax(180px,1fr));gap:10px}.export-grid .btn{width:100%}
+.dashboard-analysis{overflow:hidden}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.analysis-card{border:1px solid #dfe7ee;border-radius:12px;padding:16px;background:linear-gradient(180deg,#fff,#f8fbfd)}.analysis-card.wide{grid-column:1/-1}.analysis-card h3{margin:0 0 14px;color:#17365d;font-size:15px}.analysis-bar{margin:10px 0}.analysis-label{display:flex;justify-content:space-between;gap:12px;font-size:12px;color:#43576b}.analysis-label b{color:#17365d}.analysis-track{height:8px;background:#edf2f6;border-radius:999px;overflow:hidden;margin-top:5px}.analysis-track i{display:block;height:100%;background:#2b6f9f;border-radius:999px}.dashboard-analysis+.panel{margin-top:14px}
+@media(max-width:900px){.analysis-grid{grid-template-columns:1fr}.analysis-card.wide{grid-column:auto}.export-grid{grid-template-columns:repeat(2,minmax(160px,1fr))}}
+@media(max-width:600px){.export-grid{grid-template-columns:1fr}}
