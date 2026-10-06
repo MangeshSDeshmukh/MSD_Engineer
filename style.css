@@ -140,8 +140,23 @@ body{background:#eef5fb}
 .history-copy small{display:block;color:#68798b;margin-top:6px}
 @media(max-width:800px){.wi-form-grid{grid-template-columns:1fr}.wi-form-grid .full{grid-column:auto}}
 
-/* v15 - Export and dashboard analytics */
-.export-grid{display:grid;grid-template-columns:repeat(4,minmax(180px,1fr));gap:10px}.export-grid .btn{width:100%}
-.dashboard-analysis{overflow:hidden}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.analysis-card{border:1px solid #dfe7ee;border-radius:12px;padding:16px;background:linear-gradient(180deg,#fff,#f8fbfd)}.analysis-card.wide{grid-column:1/-1}.analysis-card h3{margin:0 0 14px;color:#17365d;font-size:15px}.analysis-bar{margin:10px 0}.analysis-label{display:flex;justify-content:space-between;gap:12px;font-size:12px;color:#43576b}.analysis-label b{color:#17365d}.analysis-track{height:8px;background:#edf2f6;border-radius:999px;overflow:hidden;margin-top:5px}.analysis-track i{display:block;height:100%;background:#2b6f9f;border-radius:999px}.dashboard-analysis+.panel{margin-top:14px}
-@media(max-width:900px){.analysis-grid{grid-template-columns:1fr}.analysis-card.wide{grid-column:auto}.export-grid{grid-template-columns:repeat(2,minmax(160px,1fr))}}
-@media(max-width:600px){.export-grid{grid-template-columns:1fr}}
+/* v16 analytics / plant registers / workbook viewer */
+.register-subtabs{overflow-x:auto;flex-wrap:nowrap;margin-bottom:14px}.register-subtabs .subtab{white-space:nowrap}
+.compact-title{margin-bottom:8px}.analysis-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:12px 0}.analysis-cards>div{background:#fff;border:1px solid #dfe6ec;border-radius:10px;padding:14px;text-align:center;box-shadow:0 3px 10px #17365d08}.analysis-cards b{display:block;font-size:25px;color:#17365d}.analysis-cards span{font-size:11px;color:#71808d}.analysis-plant-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}.analysis-mini{border:1px solid #e1e7ec;border-radius:8px;padding:10px;background:#f8fbfd}.analysis-mini b,.analysis-mini span{display:block}.analysis-mini span{font-size:11px;color:#667788;margin-top:3px}.plant-analysis{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.plant-analysis>div{border:1px solid #e1e7ec;border-radius:8px;padding:10px;background:#f8fbfd}.plant-analysis span{display:block;font-size:11px;color:#667788;margin-top:4px}.workbook-modal{width:96vw;max-width:1500px;max-height:94vh}.sheet-tabs{display:flex;gap:6px;overflow-x:auto;padding:8px 12px;border-bottom:1px solid #e1e7ec;background:#f7fafc}.sheet-tabs .subtab{white-space:nowrap}.workbook-sheet-content{padding:12px}.workbook-toolbar{display:flex;justify-content:space-between;align-items:center;padding:8px 0;color:#17365d}.workbook-toolbar span{font-size:11px;color:#71808d}.workbook-tablewrap{max-height:65vh;overflow:auto}.workbook-tablewrap table{min-width:max-content;border-collapse:collapse;font-size:11px}.workbook-tablewrap th,.workbook-tablewrap td{border:1px solid #dce4eb;padding:6px 8px;white-space:nowrap;vertical-align:top}.workbook-tablewrap th{background:#eaf1f6;position:sticky;top:0;z-index:2}.wls-analysis-panel{background:linear-gradient(135deg,#f7fbff,#fff)}
+@media(max-width:1100px){.analysis-cards{grid-template-columns:repeat(2,1fr)}.analysis-plant-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:650px){.analysis-cards,.analysis-plant-grid,.plant-analysis{grid-template-columns:1fr}.register-subtabs{display:flex}}
+
+/* V16 Daily Work Management */
+.dwm-kpis{grid-template-columns:repeat(5,1fr)}
+.dwm-user-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.dwm-user-card{border:1px solid #dce5ec;border-radius:10px;padding:12px;background:#f8fbfd}
+.dwm-user-card b,.dwm-user-card span,.dwm-user-card strong{display:block}
+.dwm-user-card span{font-size:11px;color:#687887;margin:5px 0}
+.dwm-user-card strong{font-size:15px;color:#17365d}
+.dwm-date-label{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:600}
+.dwm-date-label input{margin-left:2px}
+.dwm-postpone-box{background:#f7fafc;border:1px solid #dce5ec;border-radius:9px;padding:12px;margin-top:12px}
+.dwm-postpone-box label{display:block;margin-bottom:8px}
+.dwm-postpone-box textarea{width:100%;min-height:70px}
+@media(max-width:1200px){.dwm-kpis{grid-template-columns:repeat(3,1fr)}.dwm-user-summary{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.dwm-kpis,.dwm-user-summary{grid-template-columns:1fr}}
