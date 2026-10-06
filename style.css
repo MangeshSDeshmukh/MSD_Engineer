@@ -171,3 +171,5 @@ body{background:#eef5fb}
 .dwm-green{background:#16803a!important;color:#fff!important}.dwm-yellow{background:#d39b00!important;color:#fff!important}.dwm-red{background:#c62828!important;color:#fff!important}.dwm-hold{background:#5f6368!important;color:#fff!important}
 .gantt-status{display:inline-flex;padding:4px 8px;border-radius:999px;font-size:12px;font-weight:700;white-space:nowrap}
 .gantt-status-completed{background:#d9f3df;color:#176b31}.gantt-status-progress{background:#fff1c7;color:#8a6200}.gantt-status-planned{background:#e6f0fb;color:#1d5f91}.gantt-status-delayed{background:#fde0e0;color:#a32626}
+.assignment-hint{margin:8px 0 14px;padding:10px 14px;border:1px solid #dbe7f2;border-radius:10px;background:#f7fbff;color:#4b6278;font-size:13px}
+.multi-select{width:100%;min-height:145px;padding:8px;border:1px solid #cbd5e1;border-radius:8px;background:#fff;font:inherit}
