@@ -519,3 +519,161 @@ html.theme-dark,body.theme-dark{background:#101923;color:#edf3f8}html.theme-dark
 }
 
 .v28-collapse-menu{position:fixed;left:10px;top:74px;z-index:1200;width:36px;height:36px;border:1px solid rgba(8,58,94,.18);border-radius:8px;background:#fff;color:#174a73;box-shadow:0 3px 12px rgba(0,0,0,.14);cursor:pointer;font-size:17px;font-weight:700}.v28-collapse-menu:hover{background:#eef6fb}.v246-menu-collapsed .v28-collapse-menu{left:10px}
+
+
+/* V29 COMPACT BOOKMARK BAR */
+.v246-quickbar{
+  min-height:40px!important;
+  padding:4px 8px!important;
+  gap:4px 5px!important;
+  align-content:center!important;
+}
+.v246-bookmark-label{display:none!important}
+.v246-quickbar .v246-bookmark-btn,
+.v246-quickbar .v246-utility-btn{
+  height:26px!important;
+  min-height:26px!important;
+  padding:3px 7px!important;
+  font-size:10px!important;
+  line-height:18px!important;
+  border-radius:6px!important;
+  font-weight:600!important;
+}
+.v246-quickbar .v246-utility-btn{
+  min-width:28px!important;
+  width:28px!important;
+  padding:3px 5px!important;
+}
+.v246-quickbar .v246-bookmark-btn{
+  letter-spacing:-.05px;
+}
+@media(max-width:1100px){
+  .v246-quickbar{
+    min-height:38px!important;
+    padding:4px 7px!important;
+    gap:3px 4px!important;
+  }
+  .v246-quickbar .v246-bookmark-btn,
+  .v246-quickbar .v246-utility-btn{
+    height:25px!important;
+    min-height:25px!important;
+    font-size:9.5px!important;
+    padding:3px 6px!important;
+  }
+}
+@media(max-width:760px){
+  .v246-quickbar{
+    min-height:36px!important;
+    padding:3px 5px!important;
+    gap:3px!important;
+  }
+  .v246-quickbar .v246-bookmark-btn{
+    font-size:9px!important;
+    padding:3px 5px!important;
+  }
+}
+
+
+/* V30 STABLE PROFESSIONAL HEADER / BOOKMARK BAR */
+.v246-quickbar{
+  position:sticky!important;
+  top:0!important;
+  z-index:80!important;
+  width:100%!important;
+  height:36px!important;
+  min-height:36px!important;
+  max-height:36px!important;
+  display:flex!important;
+  flex-wrap:nowrap!important;
+  align-items:center!important;
+  gap:4px!important;
+  padding:4px 8px!important;
+  overflow-x:auto!important;
+  overflow-y:hidden!important;
+  white-space:nowrap!important;
+  scrollbar-width:thin!important;
+}
+.v246-quickbar .v246-bookmark-btn,
+.v246-quickbar .v246-utility-btn{
+  flex:0 0 auto!important;
+  height:26px!important;
+  min-height:26px!important;
+  max-height:26px!important;
+  padding:3px 7px!important;
+  margin:0!important;
+  font-size:10px!important;
+  line-height:18px!important;
+  border-radius:6px!important;
+  white-space:nowrap!important;
+  transform:none!important;
+}
+.v246-quickbar .v246-utility-btn{
+  width:28px!important;
+  min-width:28px!important;
+  padding:3px 4px!important;
+}
+.v246-quickbar .v246-utility-btn[data-action="back"]{
+  margin-left:auto!important;
+}
+.v246-quickbar .v246-bookmark-btn:hover,
+.v246-quickbar .v246-utility-btn:hover{
+  transform:none!important;
+}
+.v246-quickbar .active-bookmark{
+  background:#ffffff!important;
+  color:#0b416f!important;
+  border-color:#ffffff!important;
+}
+
+/* Sidebar tooltip: same dark-blue family as bookmark bar */
+.sidebar .navbtn:hover::after{
+  background:#0b416f!important;
+  color:#ffffff!important;
+  border:1px solid rgba(255,255,255,.22)!important;
+  box-shadow:0 5px 16px rgba(7,43,73,.28)!important;
+  font-size:11px!important;
+  font-weight:600!important;
+  padding:6px 9px!important;
+  border-radius:6px!important;
+  white-space:nowrap!important;
+}
+
+/* Stable page shell: prevent header/content jumping when tabs change */
+html,body{
+  overflow-x:hidden!important;
+}
+body{
+  min-width:0!important;
+}
+.main{
+  min-width:0!important;
+  overflow-x:auto!important;
+}
+.v246-quickbar + *{
+  min-width:0;
+}
+
+/* Keep the top header stable */
+.topbar{
+  min-height:62px!important;
+  height:62px!important;
+  flex-wrap:nowrap!important;
+}
+
+/* Smaller screens: same fixed bar height, horizontal scroll instead of wrapping */
+@media(max-width:900px){
+  .v246-quickbar{
+    height:34px!important;
+    min-height:34px!important;
+    max-height:34px!important;
+    padding:4px 6px!important;
+  }
+  .v246-quickbar .v246-bookmark-btn,
+  .v246-quickbar .v246-utility-btn{
+    height:24px!important;
+    min-height:24px!important;
+    max-height:24px!important;
+    font-size:9px!important;
+    padding:3px 6px!important;
+  }
+}

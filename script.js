@@ -1125,7 +1125,7 @@ async function deletePortalMaster(id){if(!admin())return;if(!confirm('Delete thi
     const top=document.querySelector('.topbar'); if(!top)return;
     if(!document.getElementById('v246_quickbar')){
       const q=document.createElement('div');q.id='v246_quickbar';q.className='v246-quickbar';
-      q.innerHTML=`<button onclick="go('dashboard')">📊 Dashboard</button><button onclick="go('scanning')">📡 Scanning</button><button onclick="go('oee')">📈 OEE</button><button onclick="go('layout')">📐 Layout</button><button onclick="go('gantt')">📊 Gantt</button><button onclick="go('knowledge')">📖 Knowledge</button><span class="v246-spacer"></span><button title="Back" onclick="v246Back()">‹</button><button title="Full screen" onclick="v246Fullscreen()">⛶</button><button title="Collapse menu" onclick="document.body.classList.toggle('v246-menu-collapsed')">☰</button>`;
+      q.innerHTML=`<button onclick="go('dashboard')">📊 Dashboard</button><button onclick="go('scanning')">📡 Scanning</button><button onclick="go('oee')">📈 OEE</button><button onclick="go('layout')">📐 Layout</button><button onclick="go('gantt')">📊 Gantt</button><button onclick="go('knowledge')">📖 Knowledge</button><button title="Back" onclick="v246Back()">‹</button><button title="Full screen" onclick="v246Fullscreen()">⛶</button><button title="Collapse menu" onclick="document.body.classList.toggle('v246-menu-collapsed')">☰</button>`;
       top.after(q);
     }
     const side=document.querySelector('.sidebar'); if(side&&!side.dataset.v246){side.dataset.v246='1';side.addEventListener('mouseenter',()=>document.body.classList.add('v246-menu-hover'));side.addEventListener('mouseleave',()=>document.body.classList.remove('v246-menu-hover'));}
@@ -1137,7 +1137,7 @@ async function deletePortalMaster(id){if(!admin())return;if(!confirm('Delete thi
   window.v246PageTools=function(){
     const main=document.getElementById('main'); if(!main)return;
     if(!main.querySelector('.v246-page-tools')){
-      const bar=document.createElement('div');bar.className='v246-page-tools';bar.innerHTML=`<span>Portal Workspace</span><span class="v246-spacer"></span><button onclick="v246Fullscreen()">⛶ Full Screen</button><button onclick="v246Back()">‹ Back</button>`;main.prepend(bar);
+      const bar=document.createElement('div');bar.className='v246-page-tools';bar.innerHTML=`<span>Portal Workspace</span><button onclick="v246Fullscreen()">⛶ Full Screen</button><button onclick="v246Back()">‹ Back</button>`;main.prepend(bar);
     }
   };
   window.v246Celebrate=function(){
@@ -1265,9 +1265,9 @@ async function deletePortalMaster(id){if(!admin())return;if(!confirm('Delete thi
     const defaults=['dashboard','daily_activities','gantt','wls','layout','dwm','oee','knowledge','data_entry'];
     const b=get('bookmarks',defaults).filter(k=>defaults.includes(k));
     const labels={dashboard:'📊 Dashboard',daily_activities:'☑️ To-Do',gantt:'📊 Gantt',wls:'🔦 WLS',layout:'📐 Layout',dwm:'📅 DWM',oee:'📈 OEE',knowledge:'📖 Knowledge',data_entry:'📝 Data Entry'};
-    q.innerHTML='<span class="v246-bookmark-label">BOOKMARKS</span>'+
+    q.innerHTML=
       b.map(k=>`<button type="button" class="v246-bookmark-btn" data-portal-page="${k}" title="${esc(labels[k]||k)}">${labels[k]||k}</button>`).join('')+
-      '<span class="v246-spacer"></span><button type="button" title="Back" class="v246-utility-btn" data-action="back">‹</button><button type="button" title="Full screen" class="v246-utility-btn" data-action="fullscreen">⛶</button>';
+      '<button type="button" title="Back" class="v246-utility-btn" data-action="back">‹</button><button type="button" title="Full screen" class="v246-utility-btn" data-action="fullscreen">⛶</button>';
     q.querySelectorAll('[data-portal-page]').forEach(btn=>{
       btn.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();window.go(btn.dataset.portalPage);});
     });
