@@ -1189,7 +1189,7 @@ async function deletePortalMaster(id){if(!admin())return;if(!confirm('Delete thi
    if(q&&!document.getElementById('v246_ticker')){const t=document.createElement('div');t.id='v246_ticker';t.className='v246-ticker';t.innerHTML='<span>✨ MUTHA GROUP NPD PORTAL <b>•</b> Quality • Development • NPD • 3D Scanning • OEE • Audit • Inspection Planning • Knowledge</span>';q.after(t);}
    if(document.querySelector('.sidebar')&&!document.body.classList.contains('v246-menu-hover'))document.body.classList.add('v246-menu-collapsed');
  }
- setTimeout(shellExtras,250);new MutationObserver(()=>setTimeout(shellExtras,80)).observe(document.body,{childList:true,subtree:true});
+ setTimeout(shellExtras,250);/* V31: removed recursive body MutationObserver to prevent screen blinking */
 })();
 /* V24.7 UX / To-Do / Notification / Mobile enhancements */
 (function(){
@@ -1314,7 +1314,7 @@ async function deletePortalMaster(id){if(!admin())return;if(!confirm('Delete thi
 
   // Mobile and shell setup.
   function setup(){addShellControls();v247RefreshBookmarks();document.body.classList.add('v247-ready');}
-  setTimeout(setup,300);new MutationObserver(()=>setTimeout(setup,80)).observe(document.body,{childList:true,subtree:true});
+  setTimeout(setup,300);/* V31: removed recursive body MutationObserver to prevent screen blinking */
   document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('dailyModal')?.remove();});
 })();
 
@@ -1374,7 +1374,7 @@ async function deletePortalMaster(id){if(!admin())return;if(!confirm('Delete thi
   }
   window.v247RepairBookmarks=repairBookmarks;
   setTimeout(repairBookmarks,350);
-  new MutationObserver(()=>setTimeout(repairBookmarks,20)).observe(document.body,{childList:true,subtree:true});
+  /* V31: removed recursive body MutationObserver to prevent screen blinking */
 })();
 
 /* V26 CONSOLIDATED: smooth tab switching + internal navigation stack */
@@ -1459,7 +1459,7 @@ async function deletePortalMaster(id){if(!admin())return;if(!confirm('Delete thi
     q.querySelector('[data-action="fullscreen"]')?.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();window.v246Fullscreen();});
   };
   setTimeout(window.v247RepairBookmarks,100);
-  new MutationObserver(()=>setTimeout(window.v247RepairBookmarks,30)).observe(document.body,{childList:true,subtree:true});
+  /* V31: removed recursive body MutationObserver to prevent screen blinking */
 })();
 
 /* V26 sidebar icon/tooltip enhancement */
@@ -1482,7 +1482,7 @@ async function deletePortalMaster(id){if(!admin())return;if(!confirm('Delete thi
   }
   window.v26EnhanceSidebar=enhanceSidebar;
   setTimeout(enhanceSidebar,100);
-  new MutationObserver(()=>setTimeout(enhanceSidebar,30)).observe(document.body,{childList:true,subtree:true});
+  /* V31: removed recursive body MutationObserver to prevent screen blinking */
 })();
 
 setTimeout(()=>{try{addShellControls();v247RefreshBookmarks?.();v26EnhanceSidebar?.();}catch(e){}},450);
@@ -1591,9 +1591,60 @@ setTimeout(()=>{try{addShellControls();v247RefreshBookmarks?.();v26EnhanceSideba
     ensureCollapseButton();
     window.v27BuildBookmarks();
   }
-
   setTimeout(sync,350);
-  setTimeout(sync,900);
-  setTimeout(sync,1800);
-  new MutationObserver(()=>setTimeout(sync,40)).observe(document.body,{childList:true,subtree:true});
+  /* V31: removed recursive body MutationObserver to prevent screen blinking */
+})();
+
+
+/* V31 STABLE INIT: one-time shell/bookmark/sidebar setup; no body-wide observer */
+(function(){
+  let ran=false;
+  function initStable(){
+    if(ran) return;
+    ran=true;
+    try{
+      if(typeof addShellControls==='function') addShellControls();
+      if(typeof window.v247RefreshBookmarks==='function') window.v247RefreshBookmarks();
+      if(typeof window.v26EnhanceSidebar==='function') window.v26EnhanceSidebar();
+      if(typeof window.v27BuildBookmarks==='function') window.v27BuildBookmarks();
+      if(typeof window.v27RepairSidebar==='function') window.v27RepairSidebar();
+    }catch(e){console.warn('V31 stable init:',e);}
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',()=>setTimeout(initStable,180),{once:true});
+  else setTimeout(initStable,180);
+})();
+
+/* V32 SIDEBAR: always icons; top-left menu button toggles titles */
+(function(){
+  function applySidebarMode(expanded){
+    document.body.classList.toggle('v32-menu-expanded', !!expanded);
+    document.body.classList.toggle('v246-menu-collapsed', !expanded);
+    try{localStorage.setItem('mutha_menu_expanded', expanded?'1':'0')}catch(e){}
+  }
+  function ensureMenuButton(){
+    let b=document.getElementById('v32-menu-toggle');
+    if(!b){
+      b=document.createElement('button');
+      b.id='v32-menu-toggle';
+      b.type='button';
+      b.className='v32-menu-toggle';
+      b.title='Show menu titles';
+      b.setAttribute('aria-label','Show menu titles');
+      b.innerHTML='☰';
+      b.addEventListener('click',function(e){
+        e.preventDefault(); e.stopPropagation();
+        const expanded=!document.body.classList.contains('v32-menu-expanded');
+        applySidebarMode(expanded);
+        b.title=expanded?'Hide menu titles':'Show menu titles';
+        b.setAttribute('aria-label',b.title);
+      });
+      document.body.appendChild(b);
+    }
+    applySidebarMode(false);
+  }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',()=>setTimeout(ensureMenuButton,180),{once:true});
+  }else{
+    setTimeout(ensureMenuButton,180);
+  }
 })();
