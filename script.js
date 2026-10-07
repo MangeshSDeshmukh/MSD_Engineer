@@ -460,7 +460,7 @@ function renderGantt(){
  <div class="gantt-wrap gantt-excel-wrap"><table class="gantt-table gantt-excel-table"><thead><tr><th rowspan="2" class="gantt-no">No.</th><th rowspan="2" class="gantt-activity">Activity planned</th><th rowspan="2">Plant / Unit</th><th rowspan="2">Department</th><th rowspan="2">Responsible</th><th rowspan="2">Status</th><th rowspan="2" class="gantt-type">Frequency</th>${(g.weeks||[]).map((w,i)=>`<th><div>${esc((g.months||[])[i]||'')}</div><b>${esc(w)}</b></th>`).join('')}<th rowspan="2">Action</th></tr><tr class="gantt-subhead">${(g.weeks||[]).map(()=>'<th>Week</th>').join('')}</tr></thead><tbody id="gantt_rows"></tbody></table></div>
  <div class="small gantt-note">Select <b>Frequency first</b>. Daily uses Start/End Date, Weekly uses Start/End Week, and Monthly uses Start/End Month. Dropdown values come from Portal Master where available.</div></div>`;renderGanttRows();
 }
-function renderGanttRows(){const g=window._ganttData||DEVELOPMENT_GANTT;const q=String($('gantt_q')?.value||'').toLowerCase();const rows=(g.activities||[]).filter(x=>!q||[x.activity,x.responsible,x.status,x.department,x.plant_unit,x.customer,x.process].join(' ').toLowerCase().includes(q));$('gantt_rows').innerHTML=rows.map(x=>{const plan=x.weeks||[];const status=x.status||'Planned';const timeline=x.frequency==='Daily'?`${x.start_date||''} → ${x.end_date||''}`:x.frequency==='Monthly'?`${x.start_month||''} → ${x.end_month||''}`:(x.start_week!==undefined?`${(g.months||[])[x.start_week]||''} ${(g.weeks||[])[x.start_week]||''} → ${(g.months||[])[x.end_week]||''} ${(g.weeks||[])[x.end_week]||''}`:'');return `<tr class="gantt-plan-row"><td rowspan="2">${esc(x.no)}</td><td rowspan="2" class="gantt-activity-cell"><b>${esc(x.activity)}</b><br><small>${esc(x.customer||'')} ${x.part_no?`• ${esc(x.part_no)}`:''}</small>${x.replan_reason?`<br><small>Replan: ${esc(x.replan_reason)}</small>`:''}</td><td rowspan="2">${esc(x.plant_unit||'-')}</td><td rowspan="2">${esc(x.department||'-')}</td><td rowspan="2">${esc(x.responsible||'-')}</td><td rowspan="2"><span class="gantt-status ${ganttStatusClass(status)}">${esc(status)}</span><br><small>${esc(x.frequency||'')}</small><br><small>${esc(timeline)}</small></td><td class="gantt-type-cell"><b>P</b></td>${plan.map(v=>`<td class="${v==='Plan'?'gantt-plan':''}">${v==='Plan'?'<span>PLAN</span>':''}</td>`).join('')}<td rowspan="2"><button class="btn btn-secondary" onclick="openGanttUpdate(${x.no})">Update / Replan</button></td></tr><tr class="gantt-actual-row"><td class="gantt-type-cell"><b>A</b></td>${plan.map(()=>`<td class="gantt-actual-cell"></td>`).join('')}</tr>`}).join('')||'<tr><td colspan="25" class="empty">No matching activities.</td></tr>'}
+function renderGanttRows(){const g=window._ganttData||DEVELOPMENT_GANTT;const q=String($('gantt_q')?.value||'').toLowerCase();const rows=(g.activities||[]).filter(x=>!q||[x.activity,x.responsible,x.status,x.department,x.plant_unit,x.customer,x.process].join(' ').toLowerCase().includes(q));$('gantt_rows').innerHTML=rows.map(x=>{const plan=x.weeks||[];const status=x.status||'Planned';const timeline=x.frequency==='Daily'?`${x.start_date||''} → ${x.end_date||''}`:x.frequency==='Monthly'?`${x.start_month||''} → ${x.end_month||''}`:(x.start_week!==undefined?`${(g.months||[])[x.start_week]||''} ${(g.weeks||[])[x.start_week]||''} → ${(g.months||[])[x.end_week]||''} ${(g.weeks||[])[x.end_week]||''}`:'');return `<tr class="gantt-plan-row"><td rowspan="2">${esc(x.no)}</td><td rowspan="2" class="gantt-activity-cell"><b>${esc(x.activity)}</b><br><small>${esc(x.customer||'')} ${x.part_no?`• ${esc(x.part_no)}`:''}</small>${x.replan_reason?`<br><small>Replan: ${esc(x.replan_reason)}</small>`:''}</td><td rowspan="2">${esc(x.plant_unit||'-')}</td><td rowspan="2">${esc(x.department||'-')}</td><td rowspan="2">${esc(x.responsible||'-')}</td><td rowspan="2"><span class="gantt-status ${ganttStatusClass(status)}">${esc(status)}</span><br><small>${esc(x.frequency||'')}</small><br><small>${esc(timeline)}</small></td><td class="gantt-type-cell"><b>P</b></td>${plan.map(v=>`<td class="${v==='Plan'?'gantt-plan':''}">${v==='Plan'?'<span>PLAN</span>':''}</td>`).join('')}<td rowspan="2"><button class="btn btn-secondary" onclick="openGanttUpdate(${x.no})">Update / Replan</button></td></tr><tr class="gantt-actual-row"><td class="gantt-type-cell"><b>A</b></td>${plan.map((w)=>`<td class=\"gantt-actual-cell\">${window.v36RenderActualCell(task,w.key,w.label)}</td>`).join('')}</tr>`}).join('')||'<tr><td colspan="25" class="empty">No matching activities.</td></tr>'}
 function openGanttActivityForm(){const g=window._ganttData||DEVELOPMENT_GANTT;$('app').insertAdjacentHTML('beforeend',`<div class="modal-bg" id="modal"><div class="modal wide-modal"><div class="modal-header"><div><h2>＋ Prepare Gantt Activity</h2><p class="small">Select Frequency first. The date fields change automatically.</p></div><button class="close" onclick="closeM()">×</button></div><div class="grid2"><div class="form-group full"><label>Frequency *</label><select id="ga_frequency" onchange="ganttFrequencyChanged()"><option value="">Select Frequency First</option>${ganttFrequencyOptions()}</select></div><div class="form-group"><label>Plant / Unit</label><select id="ga_plant" disabled>${masterOptions('plant_unit','','Select Plant / Unit')}</select></div><div class="form-group"><label>Department *</label><select id="ga_department" disabled>${masterOptions('department','','Select Department')}</select></div><div class="form-group"><label>Process</label><select id="ga_process" disabled>${masterOptions('process','','Select Process')}</select></div><div class="form-group"><label>Customer / Line</label><select id="ga_customer" disabled>${masterOptions('line','','Select Customer / Line')}</select></div><div class="form-group"><label>Part No.</label><input id="ga_part_no" placeholder="Part No." disabled></div><div class="form-group full"><label>Activity *</label><input id="ga_name" placeholder="e.g. Pattern Manufacturing" disabled></div><div class="form-group"><label>Responsible</label><input id="ga_owner" disabled></div><div class="form-group"><label>Status</label><select id="ga_status" disabled>${ganttStatusOptions()}</select></div><div id="ga_timeline" class="grid2 full">${ganttTimelineFields('')}</div><div class="form-group full"><label>Remarks</label><textarea id="ga_remark" placeholder="Planning remarks" disabled></textarea></div></div><div class="actions"><button class="btn btn-secondary" onclick="closeM()">Cancel</button><button class="btn btn-primary" onclick="saveGanttActivity()">Prepare Activity</button></div></div></div>`)}
 function ganttFrequencyChanged(){const v=$('ga_frequency')?.value;['ga_plant','ga_department','ga_process','ga_customer','ga_part_no','ga_name','ga_owner','ga_status','ga_remark'].forEach(id=>{if($(id))$(id).disabled=!v;});const wrap=$('ga_timeline');if(wrap)wrap.innerHTML=ganttTimelineFields(v);}
 function saveGanttActivity(){const g=window._ganttData||DEVELOPMENT_GANTT;const freq=$('ga_frequency')?.value;if(!freq)return alert('Please select Frequency first: Daily, Weekly or Monthly.');const a=$('ga_name')?.value.trim();if(!a)return alert('Activity is required.');let st=0,en=Math.max(0,(g.weeks||[]).length-1),extra={};if(freq==='Daily'){extra.start_date=$('ga_start_date')?.value;extra.end_date=$('ga_end_date')?.value;if(!extra.start_date||!extra.end_date)return alert('Please select Start Date and End Date.');if(extra.end_date<extra.start_date)return alert('End Date cannot be before Start Date.');}else if(freq==='Monthly'){extra.start_month=$('ga_start_month')?.value;extra.end_month=$('ga_end_month')?.value;if(!extra.start_month||!extra.end_month)return alert('Please select Start Month and End Month.');if(extra.end_month<extra.start_month)return alert('End Month cannot be before Start Month.');}else{st=Number($('ga_start')?.value||0);en=Number($('ga_end')?.value||st);if(en<st)[st,en]=[en,st];extra.start_week=st;extra.end_week=en;}g.activities=[...(g.activities||[]),{no:(g.activities?.length||0)+1,activity:a,weeks:ganttPlanWeeks(st,en),plant_unit:$('ga_plant')?.value||'',department:$('ga_department')?.value||'',process:$('ga_process')?.value||'',customer:$('ga_customer')?.value||'',part_no:$('ga_part_no')?.value.trim()||'',responsible:$('ga_owner')?.value||'',status:$('ga_status')?.value||'Planned',frequency:freq,remark:$('ga_remark')?.value||'',replan_reason:'',...extra}];window._ganttData=g;localStorage.setItem('mutha_gantt_data',JSON.stringify(g));closeM();renderGantt()}
@@ -1742,4 +1742,247 @@ window.v34Put=function(k,v){try{localStorage.setItem('mutha_v247_'+k+'_'+(window
   const oldDE=window.renderDataEntry;window.renderDataEntry=function(){oldDE?.apply(this,arguments);setTimeout(()=>{createDataTable();},10);};
 
   setTimeout(()=>{addManualNav();addV34Developer();v34RefreshBookmarks();},650);
+})();
+
+
+/* V36 GANTT: exact ACTUAL cell logic */
+(function(){
+  window.v36ParseActualWeek = function(value){
+    if(!value) return null;
+    const s=String(value).trim();
+    // Supported stored forms: YYYY-MM-DD, YYYY-MM-DD|week, or week label.
+    const dateMatch=s.match(/^(\d{4})-(\d{2})-(\d{2})/);
+    if(dateMatch) return {date:new Date(+dateMatch[1],+dateMatch[2]-1,+dateMatch[3]), raw:s};
+    return {raw:s};
+  };
+  window.v36WeekKey = function(d){
+    if(!(d instanceof Date) || isNaN(d)) return '';
+    const day=d.getDay();
+    const monday=new Date(d); monday.setDate(d.getDate()-(day===0?6:day-1));
+    monday.setHours(0,0,0,0);
+    return monday.toISOString().slice(0,10);
+  };
+  window.v36ActualKeyForTask = function(task){
+    if(!task) return '';
+    const candidates=[
+      task.actual_completion_date, task.actualDate, task.actual_date,
+      task.completed_date, task.completion_date, task.actual_week_date
+    ];
+    for(const v of candidates){
+      const p=window.v36ParseActualWeek(v);
+      if(p && p.date) return window.v36WeekKey(p.date);
+    }
+    // If explicitly stored as a week label, use it as-is.
+    return String(task.actual_week || task.actualWeek || task.actual_cell || '').trim();
+  };
+  window.v36RenderActualCell = function(task, cellWeekKey, cellLabel){
+    const actual=window.v36ActualKeyForTask(task);
+    if(!actual) return '';
+    const status=String(task.status||task.Status||'').toLowerCase();
+    if(status!=='completed' && status!=='complete' && status!=='closed') return '';
+    const same = actual===cellWeekKey || actual===cellLabel || actual===String(cellLabel||'').trim();
+    return same ? '<span class="gantt-actual-badge">ACTUAL</span>' : '';
+  };
+})();
+
+/* V36: Actual completion week field for Gantt update/replan */
+(function(){
+  window.v36EnsureActualWeekField = function(root){
+    root=root||document;
+    const status = root.querySelector('select[name="status"], #ganttStatus, select[data-field="status"]');
+    if(!status || root.querySelector('#v36_actual_completion_week')) return;
+    const wrap=document.createElement('div');
+    wrap.className='v36-actual-week-wrap';
+    wrap.innerHTML='<label>Actual Completion Week <span style="font-weight:400;color:#667085">(required when Completed)</span></label>'+
+      '<input id="v36_actual_completion_week" name="actual_completion_date" type="date">';
+    status.closest('.form-group,.field,.form-row')?.parentElement?.appendChild(wrap);
+    status.addEventListener('change',function(){
+      const v=String(status.value||'').toLowerCase();
+      wrap.style.display=(v==='completed'||v==='complete'||v==='closed')?'block':'none';
+    });
+    wrap.style.display=['completed','complete','closed'].includes(String(status.value||'').toLowerCase())?'block':'none';
+  };
+})();
+
+/* V36: safely persist actual completion date when a Gantt task is completed */
+(function(){
+  document.addEventListener('change',function(e){
+    const t=e.target;
+    if(!t || !t.matches('select[name="status"], #ganttStatus, select[data-field="status"]')) return;
+    const modal=t.closest('.modal,.dialog,form')||document;
+    if(typeof window.v36EnsureActualWeekField==='function') window.v36EnsureActualWeekField(modal);
+  }, true);
+  document.addEventListener('click',function(e){
+    const b=e.target.closest('button');
+    if(!b) return;
+    const text=(b.textContent||'').trim().toLowerCase();
+    if(!/save|update|replan|complete/.test(text)) return;
+    const modal=b.closest('.modal,.dialog,form')||document;
+    const status=modal.querySelector('select[name="status"], #ganttStatus, select[data-field="status"]');
+    const date=modal.querySelector('#v36_actual_completion_week');
+    if(status && date && ['completed','complete','closed'].includes(String(status.value||'').toLowerCase())){
+      // Attach to the form as a standard field; existing save handlers can pick it up.
+      date.setAttribute('data-v36-actual-date','1');
+    }
+  }, true);
+})();
+
+/* V37: developer details are not shown after login. */
+
+/* V37: remove developer branding/details from the authenticated portal header */
+(function(){
+  function cleanPortalHeader(){
+    document.querySelectorAll('.v36-developer-portal-name').forEach(el=>el.remove());
+    const selectors=[
+      '.portal-developer','.developer-details','.developer-info',
+      '[data-developer-details]','.header-developer'
+    ];
+    selectors.forEach(s=>document.querySelectorAll(s).forEach(el=>el.remove()));
+  }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',()=>setTimeout(cleanPortalHeader,120),{once:true});
+  }else{
+    setTimeout(cleanPortalHeader,120);
+  }
+})();
+
+
+/* =========================================================
+   V38 TO-DO CALENDAR — ALL YEARS + WORKING MONTH ARROWS
+   ========================================================= */
+(function(){
+  const V38 = {
+    state: { year: new Date().getFullYear(), month: new Date().getMonth() },
+    getCalendarRoot(){
+      return document.querySelector('[data-todo-calendar], .todo-calendar, #todoCalendar, .calendar-grid')?.closest('.card,section,.panel,div') || document;
+    },
+    findMonthLabel(root){
+      return root.querySelector('[data-calendar-month], #calendarMonth, .calendar-month, .month-title, .calendar-title');
+    },
+    setMonth(year, month){
+      const d = new Date(year, month, 1);
+      this.state.year = d.getFullYear();
+      this.state.month = d.getMonth();
+      return d;
+    },
+    render(){
+      // Use existing calendar renderer if the portal exposes one, but always
+      // pass the explicit year/month so arrows work across year boundaries.
+      const y=this.state.year, m=this.state.month;
+      const names=['January','February','March','April','May','June','July','August','September','October','November','December'];
+      const root=this.getCalendarRoot();
+      const label=this.findMonthLabel(root);
+      if(label) label.textContent=`${names[m]} ${y}`;
+
+      const grid=root.querySelector('.calendar-grid, [data-calendar-grid], #calendarGrid');
+      if(!grid) return;
+
+      // Do not replace custom task rendering if an existing renderer is available.
+      const renderers=[
+        window.renderTodoCalendar, window.renderToDoCalendar,
+        window.renderCalendar, window.renderDailyTodoCalendar,
+        window.buildTodoCalendar
+      ].filter(fn=>typeof fn==='function' && fn!==this.render);
+
+      if(renderers.length){
+        try{
+          renderers[0](y,m);
+          return;
+        }catch(e){
+          console.warn('V38 calendar renderer fallback:',e);
+        }
+      }
+      this.fallbackGrid(grid, y, m);
+    },
+    fallbackGrid(grid, year, month){
+      const first=new Date(year,month,1);
+      const last=new Date(year,month+1,0);
+      const start=(first.getDay()+7)%7;
+      const days=last.getDate();
+      grid.innerHTML='';
+      for(let i=0;i<start;i++){
+        const cell=document.createElement('div');
+        cell.className='calendar-day empty';
+        grid.appendChild(cell);
+      }
+      for(let day=1;day<=days;day++){
+        const cell=document.createElement('div');
+        cell.className='calendar-day';
+        cell.dataset.date=`${year}-${String(month+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
+        cell.innerHTML=`<div class="calendar-date">${day}</div>`;
+        grid.appendChild(cell);
+      }
+    },
+    change(delta){
+      this.setMonth(this.state.year, this.state.month + delta);
+      this.render();
+    },
+    bind(){
+      // Delegated handlers survive tab/page rerenders and don't depend on
+      // exact button IDs/classes from older versions.
+      document.addEventListener('click',(e)=>{
+        const b=e.target.closest(
+          '[data-calendar-prev], [data-month-prev], #calendarPrev, #prevMonth, .calendar-prev, .month-prev, [aria-label*="Previous Month" i], [title*="Previous Month" i]'
+        );
+        if(b){
+          e.preventDefault();
+          e.stopPropagation();
+          this.change(-1);
+          return;
+        }
+        const n=e.target.closest(
+          '[data-calendar-next], [data-month-next], #calendarNext, #nextMonth, .calendar-next, .month-next, [aria-label*="Next Month" i], [title*="Next Month" i]'
+        );
+        if(n){
+          e.preventDefault();
+          e.stopPropagation();
+          this.change(1);
+          return;
+        }
+      }, true);
+
+      // If the existing calendar is initialized later, sync to the current
+      // displayed month when it becomes visible.
+      document.addEventListener('click',(e)=>{
+        const nav=e.target.closest('[data-nav="todo"], .bookmark-btn, .navbtn');
+        if(nav) setTimeout(()=>this.syncFromVisible(),80);
+      }, true);
+    },
+    syncFromVisible(){
+      const root=this.getCalendarRoot();
+      const label=this.findMonthLabel(root);
+      if(!label) return;
+      const text=(label.textContent||'').trim();
+      const m=text.match(/^(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{4})$/i);
+      if(m){
+        const names=['january','february','march','april','may','june','july','august','september','october','november','december'];
+        this.state.month=names.indexOf(m[1].toLowerCase());
+        this.state.year=Number(m[2]);
+      }
+    }
+  };
+
+  window.v38TodoCalendar=V38;
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',()=>V38.bind(),{once:true});
+  }else{
+    V38.bind();
+  }
+})();
+
+/* V38: tag common calendar arrow buttons for delegated navigation */
+(function(){
+  function tag(){
+    document.querySelectorAll('button,a').forEach(b=>{
+      const t=(b.textContent||'').trim();
+      const aria=(b.getAttribute('aria-label')||'')+' '+(b.getAttribute('title')||'');
+      const s=(t+' '+aria).toLowerCase();
+      if((s==='‹'||s==='<'||s.includes('previous month')||s.includes('prev month')) && !b.dataset.calendarPrev)
+        b.dataset.calendarPrev='1';
+      if((s==='›'||s==='>'||s.includes('next month')) && !b.dataset.calendarNext)
+        b.dataset.calendarNext='1';
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',()=>setTimeout(tag,200),{once:true});
+  else setTimeout(tag,200);
 })();
