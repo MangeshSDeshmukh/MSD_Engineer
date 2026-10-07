@@ -1191,3 +1191,105 @@ async function deletePortalMaster(id){if(!admin())return;if(!confirm('Delete thi
  }
  setTimeout(shellExtras,250);new MutationObserver(()=>setTimeout(shellExtras,80)).observe(document.body,{childList:true,subtree:true});
 })();
+/* V24.7 UX / To-Do / Notification / Mobile enhancements */
+(function(){
+  const KEY=(s)=>'mutha_v247_'+s+'_'+(currentUser?.id||'guest');
+  const get=(k,d)=>{try{return JSON.parse(localStorage.getItem(KEY(k))||'null')??d}catch(e){return d}};
+  const put=(k,v)=>localStorage.setItem(KEY(k),JSON.stringify(v));
+
+  window.v247Toast=function(msg,type='success'){
+    let t=document.getElementById('v247_toast');
+    if(!t){t=document.createElement('div');t.id='v247_toast';document.body.appendChild(t)}
+    t.className='v247-toast '+type;t.innerHTML='<span>✓</span> '+esc(msg);t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200);
+  };
+  window.v247Notify=function(title,body,priority='Normal'){
+    const a=get('notifications',[]);a.unshift({id:Date.now(),title,body,priority,read:false,created_at:new Date().toISOString()});put('notifications',a.slice(0,200));v247RenderBell();
+  };
+  window.v247ReadAll=function(){const a=get('notifications',[]).map(x=>({...x,read:true}));put('notifications',a);v247RenderBell();renderSettings();};
+  window.v247Read=function(id){const a=get('notifications',[]).map(x=>x.id===id?{...x,read:true}:x);put('notifications',a);v247RenderBell();};
+  window.v247DeleteNotification=function(id){put('notifications',get('notifications',[]).filter(x=>x.id!==id));v247RenderBell();renderSettings();};
+  window.v247RenderBell=function(){
+    const unread=get('notifications',[]).filter(x=>!x.read).length;
+    const b=document.getElementById('v247_bell'); if(b)b.innerHTML='🔔'+(unread?`<span class="v247-badge">${unread}</span>`:'');
+  };
+  window.v247ShowNotifications=function(){go('settings');setTimeout(()=>document.getElementById('v247_notification_panel')?.scrollIntoView({behavior:'smooth'}),250)};
+
+  function addShellControls(){
+    const top=document.querySelector('.topbar'); if(!top)return;
+    let right=top.querySelector('.v247-top-right');
+    if(!right){
+      right=document.createElement('div');right.className='v247-top-right';
+      right.innerHTML='<button id="v247_bell" class="v247-icon-btn" title="Notifications" onclick="v247ShowNotifications()">🔔</button><button class="v247-icon-btn" title="Full screen" onclick="v246Fullscreen()">⛶</button><button class="v247-collapse-btn" title="Collapse menu" onclick="document.body.classList.toggle(\'v247-menu-collapsed\')">☰</button>';
+      top.appendChild(right);
+    }
+    let dev=top.querySelector('.v247-dev-card');
+    if(!dev){
+      dev=document.createElement('div');dev.className='v247-dev-card';dev.innerHTML='<img src="assets/developer-photo.png"><div><b>Mangesh Suresh Deshmukh</b><small>Portal Developer • Quality & Development</small><a href="https://www.linkedin.com/in/mangesh-deshmukh-a15229373" target="_blank">LinkedIn</a></div>';
+      top.appendChild(dev);
+    }
+    v247RenderBell();
+  }
+
+  const oldRenderSettings=window.renderSettings;
+  window.renderSettings=function(){
+    oldRenderSettings.apply(this,arguments);
+    setTimeout(()=>{
+      const main=document.getElementById('main');if(!main)return;
+      const b=get('bookmarks',['daily_activities','gantt','wls','layout']);
+      const labels={dashboard:'📊 Dashboard',daily_activities:'☑️ To-Do',gantt:'📊 Gantt',wls:'🔦 WLS',layout:'📐 Layout',dwm:'📅 DWM',oee:'📈 OEE',knowledge:'📖 Knowledge',data_entry:'📝 Data Entry'};
+      const opts=Object.entries(labels).map(([k,l])=>`<label class="v247-check"><input type="checkbox" value="${k}" ${b.includes(k)?'checked':''}> ${l}</label>`).join('');
+      const panel=document.createElement('div');panel.className='panel v247-settings-panel';panel.innerHTML=`<h3>🔖 Top Bookmark Tabs</h3><p class="small">Choose the common tabs you want at the top of every page.</p><div class="v247-bookmark-grid">${opts}</div><div class="actions"><button class="btn btn-primary" onclick="v247ApplyBookmarks()">Apply Bookmarks</button><button class="btn btn-secondary" onclick="v247ResetBookmarks()">Reset Default</button></div>`;
+      main.insertBefore(panel,main.firstChild);
+      const np=document.createElement('div');np.id='v247_notification_panel';np.className='panel v247-notification-panel';
+      const ns=get('notifications',[]);np.innerHTML=`<div class="panel-title"><div><h3>🔔 Notification Center</h3><p>All portal notifications are managed here.</p></div><div class="actions-inline"><b>${ns.filter(x=>!x.read).length} unread</b><button class="btn btn-secondary btn-sm" onclick="v247ReadAll()">Mark all read</button></div></div><div class="v247-notification-list">${ns.map(x=>`<div class="v247-note ${x.read?'read':'unread'}"><div><b>${esc(x.title)}</b><p>${esc(x.body)}</p><small>${new Date(x.created_at).toLocaleString('en-IN')} • ${esc(x.priority)}</small></div><div class="actions-inline"><button class="btn btn-secondary btn-sm" onclick="v247Read(${x.id});renderSettings()">${x.read?'Read':'Mark read'}</button><button class="btn btn-danger btn-sm" onclick="v247DeleteNotification(${x.id})">×</button></div></div>`).join('')||'<div class="empty">No notifications.</div>'}</div>`;
+      main.appendChild(np);
+    },40);
+  };
+  window.v247ApplyBookmarks=function(){const arr=[...document.querySelectorAll('.v247-bookmark-grid input:checked')].map(x=>x.value);put('bookmarks',arr);v247RefreshBookmarks();v247Toast('Top bookmarks applied');};
+  window.v247ResetBookmarks=function(){put('bookmarks',['daily_activities','gantt','wls','layout']);v247RefreshBookmarks();v247Toast('Top bookmarks reset');renderSettings();};
+  window.v247RefreshBookmarks=function(){
+    const q=document.getElementById('v246_quickbar');if(!q)return;const b=get('bookmarks',['daily_activities','gantt','wls','layout']);const labels={dashboard:'📊 Dashboard',daily_activities:'☑️ To-Do',gantt:'📊 Gantt',wls:'🔦 WLS',layout:'📐 Layout',dwm:'📅 DWM',oee:'📈 OEE',knowledge:'📖 Knowledge',data_entry:'📝 Data Entry'};
+    q.innerHTML=b.map(k=>`<button onclick="go('${k}')">${labels[k]||k}</button>`).join('')+'<span class="v246-spacer"></span><button title="Back" onclick="v246Back()">‹</button><button title="Full screen" onclick="v246Fullscreen()">⛶</button>';
+  };
+
+  // Add a short-title + details model using existing remarks as long description storage.
+  const oldOpen=window.openDailyActivityForm;
+  window.openDailyActivityForm=function(id){
+    oldOpen.apply(this,arguments);
+    setTimeout(()=>{
+      const modal=document.getElementById('dailyModal');if(!modal)return;
+      const x=(window._dailyRows||[]).find(a=>String(a.id)===String(id))||{};
+      const rg=document.createElement('div');rg.className='form-group';rg.innerHTML=`<label>Long Description <span class="small">(shown only in Details 👁)</span></label><textarea id="da_long_desc" rows="4" placeholder="Optional detailed description">${esc(x.remarks||'')}</textarea>`;
+      const actions=modal.querySelector('.actions'); if(actions)modal.querySelector('.modal > div')?.insertBefore(rg,actions); else modal.querySelector('.modal')?.appendChild(rg);
+      if(id){
+        const del=document.createElement('button');del.type='button';del.className='btn btn-danger';del.textContent='Delete';del.onclick=()=>v247DeleteTodo(id);actions?.insertBefore(del,actions.firstChild);
+        const eye=document.createElement('button');eye.type='button';eye.className='btn btn-secondary';eye.textContent='👁 Details';eye.onclick=()=>v247TodoDetails(id);actions?.insertBefore(eye,actions.firstChild);
+      }
+      const save=modal.querySelector('button.btn-primary'); if(save){save.onclick=()=>v247SaveTodo(id);}
+    },30);
+  };
+  window.v247SaveTodo=async function(id){
+    const assignedId=$('da_assigned')?.value||currentUser?.id||null,type=$('da_type')?.value||'TODO',date=$('da_date')?.value||'',today=new Date().toISOString().slice(0,10);
+    if(date<today)return alert('Backdated To-Do / Week Off / Leave is not allowed.');
+    const status=type==='WEEK_OFF'?'WEEK_OFF':type==='LEAVE'?'LEAVE':($('da_status')?.value||'R');const reason=$('da_replan_reason')?.value.trim()||'',activity=$('da_activity')?.value.trim()||'';
+    if(type==='TODO'&&!activity)return alert('Short Activity Title is required.');if(!assignedId)return alert('Please select an assigned user.');
+    const payload={activity:activity|| (type==='WEEK_OFF'?'Week Off':'Leave'),plant_unit:$('da_plant').value.trim(),department:$('da_dept').value.trim(),assigned_to:assignedId,target_date:date,priority:$('da_priority').value,status,original_target_date:status==='REPLAN'?(date||null):null,replanned_date:null,replan_reason:status==='REPLAN'?reason:null,hold_reason:status==='H'?reason:null,resume_date:null,remarks:$('da_long_desc')?.value.trim()||$('da_remarks').value.trim(),updated_at:new Date().toISOString()};
+    const r=id?await sb.from('portal_daily_activities').update(payload).eq('id',id):await sb.from('portal_daily_activities').insert({...payload,created_by:currentUser?.id});if(r.error)return alert(r.error.message);
+    document.getElementById('dailyModal')?.remove();v247Notify('To-Do updated',`${payload.activity} • ${date}`);v247Toast(id?'To-Do updated':'To-Do added');daily_activities();
+  };
+  window.v247DeleteTodo=async function(id){if(!confirm('Delete this To-Do?'))return;const r=await sb.from('portal_daily_activities').delete().eq('id',id);if(r.error)return alert(r.error.message);document.getElementById('dailyModal')?.remove();v247Notify('To-Do deleted','A daily activity was deleted.');v247Toast('To-Do deleted');daily_activities();};
+  window.v247TodoDetails=function(id){const x=(window._dailyRows||[]).find(a=>String(a.id)===String(id));if(!x)return;document.getElementById('dailyModal')?.remove();$('app').insertAdjacentHTML('beforeend',`<div class="modal-bg" id="modal"><div class="modal"><div class="modal-header"><div><h2>👁 Activity Details</h2><p class="small">${esc(x.target_date||'')}</p></div><button class="close" onclick="closeM()">×</button></div><div class="v247-detail-grid"><div><span>Short Title</span><b>${esc(x.activity||'-')}</b></div><div><span>Status</span><b>${esc(x.status||'-')}</b></div><div><span>Plant</span><b>${esc(x.plant_unit||'-')}</b></div><div><span>Department</span><b>${esc(x.department||'-')}</b></div><div><span>Priority</span><b>${esc(x.priority||'-')}</b></div><div><span>Assigned To</span><b>${esc((window._dailyUsers||[]).find(u=>String(u.id)===String(x.assigned_to))?.employee_name||x.assigned_to||'-')}</b></div></div><div class="panel"><h3>Long Description</h3><p class="v247-long-desc">${esc(x.remarks||'No long description provided.')}</p></div><div class="actions"><button class="btn btn-secondary" onclick="closeM()">Close</button><button class="btn btn-primary" onclick="closeM();openDailyActivityForm('${id}')">Update</button></div></div></div>`);};
+
+  // Due/overdue notifications from To-Do data.
+  window.v247ScanDue=function(){
+    const today=new Date().toISOString().slice(0,10), rows=window._dailyRows||[]; const seen=get('dueSeen',{});
+    rows.forEach(x=>{if(['G','WEEK_OFF','LEAVE'].includes(x.status))return;const d=String(x.target_date||'').slice(0,10);if(!d)return;if(d<=today){const key=String(x.id)+'_'+d;if(!seen[key]){v247Notify(d<today?'Overdue To-Do':'Due Today',`${x.activity||'Activity'} • ${d}`,'High');seen[key]=1;}}});put('dueSeen',seen);
+  };
+  const oldDaily=window.daily_activities;window.daily_activities=async function(){await oldDaily.apply(this,arguments);v247ScanDue();setTimeout(v247AddTodoSummary,30);};
+  function v247AddTodoSummary(){const main=document.getElementById('main');if(!main||main.querySelector('.v247-todo-summary'))return;const rows=window._dailyRows||[];const c={R:0,Y:0,G:0,H:0,REPLAN:0,WEEK_OFF:0,LEAVE:0};rows.forEach(x=>c[x.status]=(c[x.status]||0)+1);const p=document.createElement('div');p.className='panel v247-todo-summary';p.innerHTML=`<div class="panel-title"><div><h3>📌 To-Do Summary</h3><p>Quick status overview</p></div></div><div class="v247-summary-grid"><div>🔴 <b>${c.R}</b><span>Pending</span></div><div>🟡 <b>${c.Y}</b><span>In Process</span></div><div>🟢 <b>${c.G}</b><span>Completed</span></div><div>🔵 <b>${c.H}</b><span>Hold</span></div><div>🟠 <b>${c.REPLAN}</b><span>Re-plan</span></div></div>`;main.insertBefore(p,main.children[1]||null);}
+
+  // Mobile and shell setup.
+  function setup(){addShellControls();v247RefreshBookmarks();document.body.classList.add('v247-ready');}
+  setTimeout(setup,300);new MutationObserver(()=>setTimeout(setup,80)).observe(document.body,{childList:true,subtree:true});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('dailyModal')?.remove();});
+})();
