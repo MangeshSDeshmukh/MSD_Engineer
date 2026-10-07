@@ -1247,9 +1247,25 @@ async function deletePortalMaster(id){if(!admin())return;if(!confirm('Delete thi
   };
   window.v247ApplyBookmarks=function(){const arr=[...document.querySelectorAll('.v247-bookmark-grid input:checked')].map(x=>x.value);put('bookmarks',arr);v247RefreshBookmarks();v247Toast('Top bookmarks applied');};
   window.v247ResetBookmarks=function(){put('bookmarks',['daily_activities','gantt','wls','layout']);v247RefreshBookmarks();v247Toast('Top bookmarks reset');renderSettings();};
+  window.v247ToggleMenu=function(){
+    document.body.classList.toggle('v246-menu-collapsed');
+    document.body.classList.remove('v247-menu-collapsed');
+    const btn=document.getElementById('v247_menu_toggle');
+    if(btn){
+      const collapsed=document.body.classList.contains('v246-menu-collapsed');
+      btn.textContent=collapsed?'☰':'✕';
+      btn.title=collapsed?'Expand menu':'Collapse menu';
+      btn.setAttribute('aria-label',btn.title);
+    }
+  };
   window.v247RefreshBookmarks=function(){
-    const q=document.getElementById('v246_quickbar');if(!q)return;const b=get('bookmarks',['daily_activities','gantt','wls','layout']);const labels={dashboard:'📊 Dashboard',daily_activities:'☑️ To-Do',gantt:'📊 Gantt',wls:'🔦 WLS',layout:'📐 Layout',dwm:'📅 DWM',oee:'📈 OEE',knowledge:'📖 Knowledge',data_entry:'📝 Data Entry'};
-    q.innerHTML=b.map(k=>`<button onclick="go('${k}')">${labels[k]||k}</button>`).join('')+'<span class="v246-spacer"></span><button title="Back" onclick="v246Back()">‹</button><button title="Full screen" onclick="v246Fullscreen()">⛶</button>';
+    const q=document.getElementById('v246_quickbar');if(!q)return;
+    const b=get('bookmarks',['daily_activities','gantt','wls','layout']);
+    const labels={dashboard:'📊 Dashboard',daily_activities:'☑️ To-Do',gantt:'📊 Gantt',wls:'🔦 WLS',layout:'📐 Layout',dwm:'📅 DWM',oee:'📈 OEE',knowledge:'📖 Knowledge',data_entry:'📝 Data Entry'};
+    const collapsed=document.body.classList.contains('v246-menu-collapsed');
+    q.innerHTML=`<button id="v247_menu_toggle" class="v247-menu-bar-toggle" title="${collapsed?'Expand menu':'Collapse menu'}" aria-label="${collapsed?'Expand menu':'Collapse menu'}" onclick="v247ToggleMenu()">${collapsed?'☰':'✕'}</button>`+
+      b.map(k=>`<button onclick="go('${k}')">${labels[k]||k}</button>`).join('')+
+      '<span class="v246-spacer"></span><button title="Back" onclick="v246Back()">‹</button><button title="Full screen" onclick="v246Fullscreen()">⛶</button>';
   };
 
   // Add a short-title + details model using existing remarks as long description storage.
@@ -1292,4 +1308,63 @@ async function deletePortalMaster(id){if(!admin())return;if(!confirm('Delete thi
   function setup(){addShellControls();v247RefreshBookmarks();document.body.classList.add('v247-ready');}
   setTimeout(setup,300);new MutationObserver(()=>setTimeout(setup,80)).observe(document.body,{childList:true,subtree:true});
   document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('dailyModal')?.remove();});
+})();
+
+/* V24.7.1 Navigation repair: bookmark buttons + in-portal Back stack */
+(function(){
+  const baseGo=window.go;
+  if(typeof baseGo!=='function') return;
+  const stack=window.__muthaNavStack||[];
+  if(!stack.length) stack.push(currentPage||'dashboard');
+  window.__muthaNavStack=stack;
+  window.__muthaBaseGo=baseGo;
+
+  window.go=async function(page){
+    if(!page) return;
+    const target=String(page);
+    const current=String(window.currentPage||currentPage||'dashboard');
+    if(target!==current){
+      if(stack[stack.length-1]!==current) stack.push(current);
+      stack.push(target);
+    }
+    return baseGo.call(this,target);
+  };
+
+  window.v246Back=function(){
+    const st=window.__muthaNavStack||[];
+    const current=String(window.currentPage||currentPage||'dashboard');
+    while(st.length>1 && st[st.length-1]===current) st.pop();
+    if(st.length>1){
+      const target=st.pop();
+      return baseGo.call(window,target);
+    }
+    if(current!=='dashboard'){
+      st.length=0; st.push('dashboard');
+      return baseGo.call(window,'dashboard');
+    }
+    return baseGo.call(window,'dashboard');
+  };
+
+  function repairBookmarks(){
+    const q=document.getElementById('v246_quickbar');
+    if(!q) return;
+    const buttons=q.querySelectorAll('button');
+    buttons.forEach(btn=>{
+      const txt=(btn.textContent||'').trim();
+      if(['‹','⛶','☰','✕'].includes(txt)) return;
+      const m=(btn.getAttribute('onclick')||'').match(/go\(['"]([^'"]+)['"]\)/);
+      if(m){
+        btn.dataset.portalPage=m[1];
+        btn.removeAttribute('onclick');
+        btn.onclick=function(e){e.preventDefault();e.stopPropagation();window.go(this.dataset.portalPage);};
+      }
+    });
+    const back=[...buttons].find(b=>(b.getAttribute('title')||'')==='Back');
+    if(back){back.removeAttribute('onclick');back.onclick=function(e){e.preventDefault();e.stopPropagation();window.v246Back();};}
+    const menu=document.getElementById('v247_menu_toggle');
+    if(menu){menu.removeAttribute('onclick');menu.onclick=function(e){e.preventDefault();e.stopPropagation();window.v247ToggleMenu();};}
+  }
+  window.v247RepairBookmarks=repairBookmarks;
+  setTimeout(repairBookmarks,350);
+  new MutationObserver(()=>setTimeout(repairBookmarks,20)).observe(document.body,{childList:true,subtree:true});
 })();
