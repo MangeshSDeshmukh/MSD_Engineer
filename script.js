@@ -71,7 +71,7 @@ async function daily_activities(){
  }
  while(cells.length%7) cells.push('<div class="daily-cal-cell empty"></div>');
  const title=month.toLocaleString('en-IN',{month:'long',year:'numeric'});
- $('main').innerHTML=`<div class="page-title"><div><h1>📅 Daily To-Do Calendar</h1><p>Short daily plan — click a future/today date to add a To-Do.</p></div><div class="actions-inline"><button class="btn btn-primary" onclick="openDailyActivityForm('')">＋ Add To-Do</button></div></div><div class="panel daily-calendar-panel"><div class="daily-cal-toolbar"><button class="btn btn-secondary btn-sm" onclick="window._dailyCalendarMonth=new Date(y,m-1,1);daily_activities()">‹</button><button class="btn btn-secondary btn-sm" onclick="window._dailyCalendarMonth=new Date();daily_activities()">Today</button><b>${esc(title)}</b><button class="btn btn-secondary btn-sm" onclick="window._dailyCalendarMonth=new Date(y,m+1,1);daily_activities()">›</button></div><div class="daily-cal-legend"><span>🔴 R Pending</span><span>🟡 Y In Process</span><span>🟢 G Completed</span><span>🔵 H Hold</span><span>🟠 Re-plan</span><span>🏖️ Week Off</span><span>🌴 Leave</span></div><div class="daily-cal-week">${['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map(x=>`<div>${x}</div>`).join('')}</div><div class="daily-cal-grid">${cells.join('')}</div></div>`;
+ $('main').innerHTML=`<div class="page-title"><div><h1>📅 Daily To-Do Calendar</h1><p>Short daily plan — click a future/today date to add a To-Do.</p></div><div class="actions-inline"><button class="btn btn-primary" onclick="openDailyActivityForm('')">＋ Add To-Do</button></div></div><div class="panel daily-calendar-panel"><div class="daily-cal-toolbar"><button type="button" class="btn btn-secondary btn-sm" data-daily-cal-prev aria-label="Previous Month" title="Previous Month">‹</button><button type="button" class="btn btn-secondary btn-sm" onclick="window._dailyCalendarMonth=new Date();daily_activities()">Today</button><b data-daily-calendar-month>${esc(title)}</b><button type="button" class="btn btn-secondary btn-sm" data-daily-cal-next aria-label="Next Month" title="Next Month">›</button></div><div class="daily-cal-legend"><span>🔴 R Pending</span><span>🟡 Y In Process</span><span>🟢 G Completed</span><span>🔵 H Hold</span><span>🟠 Re-plan</span><span>🏖️ Week Off</span><span>🌴 Leave</span></div><div class="daily-cal-week">${['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map(x=>`<div>${x}</div>`).join('')}</div><div class="daily-cal-grid">${cells.join('')}</div></div>`;
 }
 function openDailyActivityForm(id){
  const x=(window._dailyRows||[]).find(a=>String(a.id)===String(id))||{}; const isEdit=!!id;
@@ -1284,7 +1284,7 @@ async function deletePortalMaster(id){if(!admin())return;if(!confirm('Delete thi
       const modal=document.getElementById('dailyModal');if(!modal)return;
       const x=(window._dailyRows||[]).find(a=>String(a.id)===String(id))||{};
       const rg=document.createElement('div');rg.className='form-group';rg.innerHTML=`<label>Long Description <span class="small">(shown only in Details 👁)</span></label><textarea id="da_long_desc" rows="4" placeholder="Optional detailed description">${esc(x.remarks||'')}</textarea>`;
-      const actions=modal.querySelector('.actions'); if(actions)modal.querySelector('.modal > div')?.insertBefore(rg,actions); else modal.querySelector('.modal')?.appendChild(rg);
+      const actions=modal.querySelector('.actions'); if(actions && actions.parentNode)actions.parentNode.insertBefore(rg,actions); else modal.querySelector('.modal')?.appendChild(rg);
       if(id){
         const del=document.createElement('button');del.type='button';del.className='btn btn-danger';del.textContent='Delete';del.onclick=()=>v247DeleteTodo(id);actions?.insertBefore(del,actions.firstChild);
         const eye=document.createElement('button');eye.type='button';eye.className='btn btn-secondary';eye.textContent='👁 Details';eye.onclick=()=>v247TodoDetails(id);actions?.insertBefore(eye,actions.firstChild);
@@ -1847,6 +1847,14 @@ window.v34Put=function(k,v){try{localStorage.setItem('mutha_v247_'+k+'_'+(window
 })();
 
 
+/* V39: safe Daily To-Do month navigation (no inline scoped variables) */
+window.changeDailyCalendarMonth = function(delta){
+  const current = window._dailyCalendarMonth instanceof Date && !isNaN(window._dailyCalendarMonth)
+    ? window._dailyCalendarMonth : new Date();
+  window._dailyCalendarMonth = new Date(current.getFullYear(), current.getMonth() + Number(delta || 0), 1);
+  if(typeof window.daily_activities === 'function') window.daily_activities();
+};
+
 /* =========================================================
    V38 TO-DO CALENDAR — ALL YEARS + WORKING MONTH ARROWS
    ========================================================= */
@@ -1922,21 +1930,31 @@ window.v34Put=function(k,v){try{localStorage.setItem('mutha_v247_'+k+'_'+(window
       // exact button IDs/classes from older versions.
       document.addEventListener('click',(e)=>{
         const b=e.target.closest(
-          '[data-calendar-prev], [data-month-prev], #calendarPrev, #prevMonth, .calendar-prev, .month-prev, [aria-label*="Previous Month" i], [title*="Previous Month" i]'
+          '[data-daily-cal-prev], [data-calendar-prev], [data-month-prev], #calendarPrev, #prevMonth, .calendar-prev, .month-prev, [aria-label*="Previous Month" i], [title*="Previous Month" i]'
         );
         if(b){
           e.preventDefault();
           e.stopPropagation();
-          this.change(-1);
+          if(b.closest('.daily-calendar-panel') && typeof window.changeDailyCalendarMonth==='function'){
+            window.changeDailyCalendarMonth(-1);
+          }else{
+            this.syncFromVisible();
+            this.change(-1);
+          }
           return;
         }
         const n=e.target.closest(
-          '[data-calendar-next], [data-month-next], #calendarNext, #nextMonth, .calendar-next, .month-next, [aria-label*="Next Month" i], [title*="Next Month" i]'
+          '[data-daily-cal-next], [data-calendar-next], [data-month-next], #calendarNext, #nextMonth, .calendar-next, .month-next, [aria-label*="Next Month" i], [title*="Next Month" i]'
         );
         if(n){
           e.preventDefault();
           e.stopPropagation();
-          this.change(1);
+          if(n.closest('.daily-calendar-panel') && typeof window.changeDailyCalendarMonth==='function'){
+            window.changeDailyCalendarMonth(1);
+          }else{
+            this.syncFromVisible();
+            this.change(1);
+          }
           return;
         }
       }, true);
