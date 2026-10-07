@@ -1648,3 +1648,94 @@ setTimeout(()=>{try{addShellControls();v247RefreshBookmarks?.();v26EnhanceSideba
     setTimeout(ensureMenuButton,180);
   }
 })();
+
+
+/* ================= V34 REAL FUNCTIONAL FIXES ================= */
+(function(){
+  // ---------- User Manual ----------
+  window.renderUserManual=function(){
+    const sections=[
+      ['🏠 Dashboard','Live register counts, capacity status, DWM status and overall portal records. Use the cards and Open DWM shortcuts.'],
+      ['☑️ Daily Activities / To-Do','Add, update, delete and review daily activities. Use R Pending, Y In Process, G Completed, H Hold and REPLAN status. Calendar colors identify task status.'],
+      ['📊 Gantt Chart','Create development activities, define PLAN weeks and select one exact ACTUAL week/cell when work is completed. Update/Replan records the reason.'],
+      ['🔦 WLS Report Register','Maintain White Light Scanning reports, plant/unit, customer, part, status and related report information.'],
+      ['📐 Engineering Drawing Register','Manage controlled engineering drawing records, revisions, plants and approval/sharing information.'],
+      ['🧩 Plant-wise Master Part List','Maintain master part information by plant/unit and use Add/Update controls according to permissions.'],
+      ['📡 3D Scanning Planning','Plan scanning tasks, manage engineers, cycle-time master and daily work management.'],
+      ['📄 Document Request','Raise and track document requests and their approval/status.'],
+      ['📅 Daily Work Management','Plan work by date/shift/person, track status and completed work.'],
+      ['📈 OEE Calculator & History','Calculate OEE and retain calculation/history records.'],
+      ['📐 Layout Inspection','Maintain layout inspection records and inspection status.'],
+      ['📋 Development Internal Audit','Review audit checkpoints, findings, responsibility, target dates, evidence and closure.'],
+      ['📚 Level 3 Documents','Create new work instructions, copy a previous history record, edit/update, view and delete portal-created documents.'],
+      ['⚙️ Settings & Notifications','Apply personal settings, theme, notification preferences and bookmark preferences.'],
+      ['📖 Knowledge','Use manuals, learning references and authorized uploaded documents.'],
+      ['👥 User Access & Approvals','Admin manages users, role/access and approval workflow.'],
+      ['⚙️ Portal Master','Maintain controlled master values used by dropdowns and portal modules.'],
+      ['🕘 Admin History & Audit Log','Review record changes, user/permission history and notification queue.'],
+      ['☰ Sidebar / Bookmarks','Sidebar stays icon-only. Click the top-left ☰ button to show titles. Bookmark buttons switch tabs without a browser reload.'],
+      ['🔔 Notifications','Unread notification count is shown at the right side of the bookmark bar. Click the bell to open Settings & Notifications.'],
+    ];
+    $('main').innerHTML=`<div class="page-title"><div><h1>📘 Portal User Manual & Guidelines</h1><p>Step-by-step guidance for using every Mutha Group NPD Portal module.</p></div></div><div class="manual-guideline-grid">${sections.map((s,i)=>`<div class="panel manual-guide-card"><h3>${esc(s[0])}</h3><p>${esc(s[1])}</p><div class="small"><b>Tip:</b> Use the bookmark bar for fast navigation and the Back button to return to the previous portal page.</div></div>`).join('')}</div>`;
+  };
+
+  // ---------- To-Do calendar status highlighting ----------
+  function paintTodoCalendar(){
+    const rows=window._dailyRows||[];
+    document.querySelectorAll('.daily-cal-cell').forEach(cell=>{
+      cell.classList.remove('v34-red','v34-yellow','v34-green');
+      const d=cell.querySelector('.daily-cal-date')?.textContent?.trim(); if(!d)return;
+      const key=cell.getAttribute('data-date'); if(!key)return;
+      const rs=rows.filter(x=>String(x.target_date||'').slice(0,10)===key);
+      if(!rs.length)return;
+      if(rs.some(x=>x.status==='G')) cell.classList.add('v34-green');
+      else if(rs.some(x=>x.status==='Y')) cell.classList.add('v34-yellow');
+      else if(rs.some(x=>!['WEEK_OFF','LEAVE'].includes(x.status))) cell.classList.add('v34-red');
+    });
+  }
+  const oldDailyV34=window.daily_activities;
+  if(oldDailyV34){window.daily_activities=async function(){await oldDailyV34.apply(this,arguments);document.querySelectorAll('.daily-cal-cell').forEach(cell=>{const dateEl=cell.querySelector('.daily-cal-date');if(!dateEl)return;const day=dateEl.textContent.trim();const m=window._dailyCalendarMonth||new Date();const key=`${m.getFullYear()}-${String(m.getMonth()+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;cell.setAttribute('data-date',key)});paintTodoCalendar();};}
+
+  // ---------- Data Entry row actions ----------
+  window.v34DataRows=function(){return [...document.querySelectorAll('#de_table tbody tr')];};
+  window.createDataTable=function(){const cols=String($('de_cols')?.value||'').split(',').map(x=>x.trim()).filter(Boolean);window._dataEntryCols=cols;const t=$('de_table');if(!t)return;t.querySelector('thead').innerHTML='<tr>'+cols.map(c=>`<th>${esc(c)}</th>`).join('')+'<th>Action</th></tr>';if(!t.querySelector('tbody').children.length)addDataRow();};
+  window.addDataRow=function(values=[]){const t=$('de_table');const cols=window._dataEntryCols||String($('de_cols')?.value||'').split(',').map(x=>x.trim()).filter(Boolean);if(!t||!cols.length)return;const tr=document.createElement('tr');tr.innerHTML=cols.map((c,i)=>`<td><input class="de-cell" data-col="${i}" value="${esc(values[i]??'')}" placeholder="${esc(c)}"></td>`).join('')+`<td class="de-actions"><button type="button" class="btn btn-success btn-sm" onclick="v34UpdateRow(this)">✓ Update</button><button type="button" class="btn btn-danger btn-sm" onclick="v34DeleteRow(this)">🗑 Delete</button></td>`;t.querySelector('tbody').appendChild(tr);};
+  window.v34UpdateRow=function(btn){const tr=btn.closest('tr');if(!tr)return;tr.classList.add('v34-row-updated');setTimeout(()=>tr.classList.remove('v34-row-updated'),700);localStorage.setItem('mutha_dataentry_draft',JSON.stringify(dataEntryRows()));v247Toast?.('Row updated');};
+  window.v34DeleteRow=function(btn){const tr=btn.closest('tr');if(!tr)return;if(!confirm('Delete this row?'))return;tr.remove();localStorage.setItem('mutha_dataentry_draft',JSON.stringify(dataEntryRows()));v247Toast?.('Row deleted');};
+  window.dataEntryRows=function(){return [...document.querySelectorAll('#de_table tbody tr')].map(tr=>[...tr.querySelectorAll('input.de-cell')].map(x=>x.value));};
+
+  // ---------- Gantt exact ACTUAL cell ----------
+  window.renderGanttRows=function(){
+    const g=window._ganttData||DEVELOPMENT_GANTT;const q=String($('gantt_q')?.value||'').toLowerCase();
+    const rows=(g.activities||[]).filter(x=>!q||[x.activity,x.responsible,x.status,x.department,x.plant_unit,x.customer,x.process].join(' ').toLowerCase().includes(q));
+    $('gantt_rows').innerHTML=rows.map(x=>{
+      const plan=x.weeks||[], status=x.status||'Planned';
+      const timeline=x.frequency==='Daily'?`${x.start_date||''} → ${x.end_date||''}`:x.frequency==='Monthly'?`${x.start_month||''} → ${x.end_month||''}`:(x.start_week!==undefined?`${(g.months||[])[x.start_week]||''} ${(g.weeks||[])[x.start_week]||''} → ${(g.months||[])[x.end_week]||''} ${(g.weeks||[])[x.end_week]||''}`:'');
+      const aw=Number.isFinite(Number(x.actual_week))?Number(x.actual_week):-1;
+      return `<tr class="gantt-plan-row"><td rowspan="2">${esc(x.no)}</td><td rowspan="2" class="gantt-activity-cell"><b>${esc(x.activity)}</b><br><small>${esc(x.customer||'')} ${x.part_no?`• ${esc(x.part_no)}`:''}</small>${x.replan_reason?`<br><small>Replan: ${esc(x.replan_reason)}</small>`:''}</td><td rowspan="2">${esc(x.plant_unit||'-')}</td><td rowspan="2">${esc(x.department||'-')}</td><td rowspan="2">${esc(x.responsible||'-')}</td><td rowspan="2"><span class="gantt-status ${ganttStatusClass(status)}">${esc(status)}</span><br><small>${esc(x.frequency||'')}</small><br><small>${esc(timeline)}</small></td><td class="gantt-type-cell"><b>P</b></td>${plan.map(v=>`<td class="${v==='Plan'?'gantt-plan':''}">${v==='Plan'?'<span>PLAN</span>':''}</td>`).join('')}<td rowspan="2"><button class="btn btn-warning" onclick="openGanttUpdate(${x.no})">Update / Replan</button></td></tr><tr class="gantt-actual-row"><td class="gantt-type-cell"><b>A</b></td>${plan.map((v,i)=>`<td class="gantt-actual-cell">${status==='Completed'&&aw===i?'<span class="v246-actual-mark">ACTUAL</span>':''}</td>`).join('')}</tr>`;
+    }).join('')||'<tr><td colspan="25" class="empty">No matching activities.</td></tr>';
+  };
+  window.openGanttUpdate=function(no){
+    const g=window._ganttData||DEVELOPMENT_GANTT,x=(g.activities||[]).find(a=>Number(a.no)===Number(no));if(!x)return;
+    const first=Math.max(0,(x.weeks||[]).findIndex(v=>v==='Plan')),last=Math.max(first,(x.weeks||[]).map(v=>v==='Plan').lastIndexOf(true));
+    const actualOptions=(g.weeks||[]).map((w,i)=>`<option value="${i}" ${Number(x.actual_week)===i?'selected':''}>${esc((g.months||[])[i]||'')} ${esc(w)}</option>`).join('');
+    $('app').insertAdjacentHTML('beforeend',`<div class="modal-bg" id="modal"><div class="modal wide-modal"><div class="modal-header"><div><h2>🔄 Update / Replan Activity</h2><p class="small">${esc(x.activity)}</p></div><button class="close" onclick="closeM()">×</button></div><div class="grid2"><div class="form-group"><label>Plant / Unit</label><select id="gu_plant">${masterOptions('plant_unit',x.plant_unit,'Select Plant / Unit')}</select></div><div class="form-group"><label>Department *</label><select id="gu_department">${masterOptions('department',x.department,'Select Department')}</select></div><div class="form-group"><label>Process</label><select id="gu_process">${masterOptions('process',x.process,'Select Process')}</select></div><div class="form-group"><label>Customer / Line</label><select id="gu_customer">${masterOptions('line',x.customer,'Select Customer / Line')}</select></div><div class="form-group"><label>Part No.</label><input id="gu_part_no" value="${esc(x.part_no||'')}"></div><div class="form-group full"><label>Activity</label><input id="gu_name" value="${esc(x.activity)}"></div><div class="form-group"><label>Responsible</label><input id="gu_owner" value="${esc(x.responsible||'')}"></div><div class="form-group"><label>Status</label><select id="gu_status">${ganttStatusOptions(x.status||'Planned')}</select></div><div class="form-group full"><label>Exact ACTUAL Week / Cell <span class="small">(required when Completed)</span></label><select id="gu_actual_week"><option value="">— Select exact ACTUAL cell —</option>${actualOptions}</select></div><div id="gu_timeline" class="grid2 full">${ganttTimelineFields(x.frequency||'Weekly',{...x,start_week:first,end_week:last},'gu')}</div><div class="form-group full"><label>Update / Replan Reason *</label><textarea id="gu_reason" required placeholder="Reason for timing / sequence / target change"></textarea></div></div><div class="actions"><button class="btn btn-secondary" onclick="closeM()">Cancel</button><button class="btn btn-warning" onclick="saveGanttUpdate(${x.no})">Save Update / Replan</button></div></div></div>`);
+  };
+  window.saveGanttUpdate=function(no){const g=window._ganttData||DEVELOPMENT_GANTT,x=(g.activities||[]).find(a=>Number(a.no)===Number(no));if(!x)return;const reason=$('gu_reason')?.value.trim();if(!reason)return alert('Please enter the update / replan reason.');const status=$('gu_status').value;x.activity=$('gu_name').value.trim()||x.activity;x.plant_unit=$('gu_plant').value;x.department=$('gu_department').value;x.process=$('gu_process').value;x.customer=$('gu_customer').value;x.part_no=$('gu_part_no').value.trim();x.responsible=$('gu_owner').value.trim();x.status=status;x.replan_reason=reason;x.updated_at=new Date().toISOString();const aw=$('gu_actual_week')?.value;x.actual_week=(status==='Completed'&&aw!=='')?Number(aw):null;const freq=x.frequency||'Weekly';if(freq==='Daily'){x.start_date=$('gu_start_date')?.value||x.start_date;x.end_date=$('gu_end_date')?.value||x.end_date}else if(freq==='Monthly'){x.start_month=$('gu_start_month')?.value||x.start_month;x.end_month=$('gu_end_month')?.value||x.end_month}else{let st=Number($('gu_start')?.value||0),en=Number($('gu_end')?.value||st);if(en<st)[st,en]=[en,st];x.start_week=st;x.end_week=en;x.weeks=ganttPlanWeeks(st,en)}window._ganttData=g;localStorage.setItem('mutha_gantt_data',JSON.stringify(g));closeM();renderGantt();};
+
+  // ---------- Notification + bookmarks ----------
+  window.v34RefreshBookmarks=function(){const q=document.getElementById('v246_quickbar');if(!q)return;const defaults=['dashboard','daily_activities','gantt','wls','layout','dwm','oee','knowledge','data_entry','level3','user_manual'];const labels={dashboard:'📊 Dashboard',daily_activities:'☑ To-Do',gantt:'📊 Gantt',wls:'🔦 WLS',layout:'📐 Layout',dwm:'📅 DWM',oee:'📈 OEE',knowledge:'📖 Knowledge',data_entry:'📝 Data Entry',level3:'📚 Level 3',user_manual:'📘 User Manual'};let b=get('bookmarks',defaults).filter(k=>defaults.includes(k));q.innerHTML=b.map(k=>`<button type="button" class="v246-bookmark-btn" data-v34-page="${k}" title="${esc(labels[k])}">${labels[k]}</button>`).join('')+`<span class="v34-bookmark-spacer"></span><button type="button" class="v34-bell" title="Notifications" onclick="go('settings')">🔔 <span id="v34_bell_count">0</span></button><button type="button" title="Back" class="v246-utility-btn" data-action="back">‹</button><button type="button" title="Full screen" class="v246-utility-btn" data-action="fullscreen">⛶</button>`;q.querySelectorAll('[data-v34-page]').forEach(btn=>btn.onclick=e=>{e.preventDefault();e.stopPropagation();const p=btn.dataset.v34Page;if(p==='user_manual')renderUserManual();else window.go(p);});q.querySelector('[data-action="back"]')?.addEventListener('click',e=>{e.preventDefault();window.v246Back?.()});q.querySelector('[data-action="fullscreen"]')?.addEventListener('click',e=>{e.preventDefault();window.v246Fullscreen?.()});v34UpdateBell();};
+  window.v34UpdateBell=function(){const el=document.getElementById('v34_bell_count');if(el)el.textContent=String(get('notifications',[]).filter(x=>!x.read).length);};
+  window.v247RefreshBookmarks=window.v34RefreshBookmarks;
+
+  // ---------- Header developer details ----------
+  function addV34Developer(){const top=document.querySelector('.topbar');if(!top)return;let d=document.getElementById('v34-dev-details');if(d)return;d=document.createElement('div');d.id='v34-dev-details';d.className='v34-dev-details';d.innerHTML='<span>Portal Developer</span><b>Mangesh Suresh Deshmukh</b><small>Quality & Development</small><a href="https://www.linkedin.com/in/mangesh-deshmukh-a15229373" target="_blank" rel="noopener">LinkedIn</a>';top.appendChild(d);}
+
+  // ---------- User Manual navigation item ----------
+  function addManualNav(){const nav=document.getElementById('navlist');if(!nav||document.getElementById('n_user_manual'))return;const b=document.createElement('button');b.className='navbtn';b.id='n_user_manual';b.innerHTML='<span class="nav-icon">📘</span><span class="nav-label">User Manual & Guidelines</span>';b.setAttribute('data-label','User Manual & Guidelines');b.onclick=()=>renderUserManual();nav.appendChild(b);}
+
+  // ---------- Data entry render override ----------
+  const oldDE=window.renderDataEntry;window.renderDataEntry=function(){oldDE?.apply(this,arguments);setTimeout(()=>{createDataTable();},10);};
+
+  setTimeout(()=>{addManualNav();addV34Developer();v34RefreshBookmarks();},650);
+})();
