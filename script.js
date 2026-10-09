@@ -334,35 +334,55 @@ function detailGroups(type,fs){
   ];
 }
 
-function renderUsers(){let q=($('user_q')?.value||'').toLowerCase(),d=$('user_dept')?.value||'',p=$('user_plant')?.value||'';let a=(window._portalUsers||[]).filter(u=>(!d||u.department===d)&&(!p||u.plant_unit===p)&&(!q||JSON.stringify(u).toLowerCase().includes(q)));$('user_rows').innerHTML=a.map(u=>`<tr><td><b>${esc(u.employee_name)}</b><br><small>ID: ${esc(u.employee_id||'-')}<br>${esc(u.official_email||'-')}<br>WA: ${esc(u.mobile_no||'-')}</small></td><td><select id="plant_${u.id}">${(window._userPlants||DEFAULT_PLANTS).map(x=>`<option ${u.plant_unit===x?'selected':''}>${esc(x)}</option>`).join('')}</select></td><td><select id="dept_${u.id}">${(window._userDepts||DEFAULT_DEPARTMENTS).map(x=>`<option ${u.department===x?'selected':''}>${esc(x)}</option>`).join('')}</select></td><td><select id="role_${u.id}">${['Employee','Manager','QA','Development','Viewer','Admin'].map(x=>`<option ${u.role===x?'selected':''}>${x}</option>`).join('')}</select></td><td><select id="st_${u.id}">${['Pending','Approved','Rejected'].map(x=>`<option ${u.approval_status===x?'selected':''}>${x}</option>`).join('')}</select></td><td><label><input id="wa_${u.id}" type="checkbox" ${u.whatsapp_opt_in!==false?'checked':''}> WhatsApp</label><br><label><input id="em_${u.id}" type="checkbox" ${u.email_opt_in!==false?'checked':''}> Email</label></td><td>${['engineering_drawing','wls','master_part','scanning_dwm'].map(m=>`<div><b>${m}</b> <label><input id="${u.id}_${m}_view" type="checkbox" ${u._perms[m]?.can_view?'checked':''}>V</label> <label><input id="${u.id}_${m}_add" type="checkbox" ${u._perms[m]?.can_add?'checked':''}>A</label> <label><input id="${u.id}_${m}_edit" type="checkbox" ${u._perms[m]?.can_edit?'checked':''}>E</label></div>`).join('')}</td><td><button class="btn btn-primary" onclick="saveAccess('${u.id}')">Save</button></td></tr>`).join('')||'<tr><td colspan="8" class="empty">No users found.</td></tr>'}
+function renderUsers(){
+ const q=($('user_q')?.value||'').toLowerCase(),d=$('user_dept')?.value||'',p=$('user_plant')?.value||'',st=$('user_status')?.value||'';
+ const modules=[['engineering_drawing','Engineering Drawing Register'],['wls','WLS Report Register'],['master_part','Master Part List'],['scanning_dwm','3D Scanning Planning']];
+ const a=(window._portalUsers||[]).filter(u=>(!d||u.department===d)&&(!p||u.plant_unit===p)&&(!st||u.approval_status===st)&&(!q||JSON.stringify(u).toLowerCase().includes(q)));
+ $('user_rows').innerHTML=a.map(u=>`<article class="ua-user-card">
+  <div class="ua-user-head"><div class="ua-avatar">${esc((u.employee_name||'?').trim().slice(0,1).toUpperCase())}</div><div class="ua-identity"><h3>${esc(u.employee_name||'Unnamed user')}</h3><div class="ua-subline"><span><b>Employee ID:</b> ${esc(u.employee_id||'-')}</span><span><b>Email:</b> ${esc(u.official_email||'-')}</span><span><b>Mobile:</b> ${esc(u.mobile_no||'-')}</span></div></div><span class="ua-status ua-${String(u.approval_status||'Pending').toLowerCase()}">${esc(u.approval_status||'Pending')}</span></div>
+  <div class="ua-user-fields"><label>Plant / Unit<select id="plant_${u.id}">${(window._userPlants||DEFAULT_PLANTS).map(x=>`<option value="${esc(x)}" ${u.plant_unit===x?'selected':''}>${esc(x)}</option>`).join('')}</select></label><label>Department<select id="dept_${u.id}">${(window._userDepts||DEFAULT_DEPARTMENTS).map(x=>`<option value="${esc(x)}" ${u.department===x?'selected':''}>${esc(x)}</option>`).join('')}</select></label><label>Role<select id="role_${u.id}">${['Employee','Manager','QA','Development','Viewer','Admin'].map(x=>`<option ${u.role===x?'selected':''}>${x}</option>`).join('')}</select></label><label>Account status<select id="st_${u.id}">${['Pending','Approved','Rejected'].map(x=>`<option ${u.approval_status===x?'selected':''}>${x}</option>`).join('')}</select></label></div>
+  <div class="ua-section"><div class="ua-section-title"><div><h4>Module access</h4><p>Untick a permission to revoke it. Changes apply after Save.</p></div><div class="ua-legend"><span>V = View</span><span>A = Add</span><span>E = Edit</span></div></div><div class="ua-module-grid">${modules.map(([m,label])=>`<div class="ua-module"><b>${label}</b><div class="ua-checks"><label><input id="${u.id}_${m}_view" type="checkbox" ${u._perms[m]?.can_view?'checked':''}> View</label><label><input id="${u.id}_${m}_add" type="checkbox" ${u._perms[m]?.can_add?'checked':''}> Add</label><label><input id="${u.id}_${m}_edit" type="checkbox" ${u._perms[m]?.can_edit?'checked':''}> Edit</label></div></div>`).join('')}</div></div>
+  <div class="ua-footer"><div class="ua-notifications"><b>Notifications</b><label><input id="wa_${u.id}" type="checkbox" ${u.whatsapp_opt_in!==false?'checked':''}> WhatsApp</label><label><input id="em_${u.id}" type="checkbox" ${u.email_opt_in!==false?'checked':''}> Email</label></div><div class="ua-actions"><button class="btn btn-secondary" onclick="resetUserPasswordEmail('${u.id}')">Send password reset email</button><button class="btn btn-primary" onclick="saveAccess('${u.id}')">Save user & access</button></div></div>
+  <p class="ua-security-note">For security, passwords are never viewable by administrators. Use the reset email action if the user needs a new password.</p>
+ </article>`).join('')||'<div class="ua-empty">No users match these filters.</div>';
+}
 async function users(seq=navSeq){
-  if(!admin()){ return $('main').innerHTML='<div class="alert alert-error">Admin access required.</div>'; }
-  $('main').innerHTML='<div class="panel"><div class="small">Loading User Access & Approvals...</div></div>';
-  const [u,p,m]=await Promise.all([
-    sb.from('user_profiles').select('*').order('employee_name'),
-    sb.from('user_module_permissions').select('*'),
-    getRegistrationMasters()
-  ]);
-  if(seq!==navSeq)return;
-   if(u.error)return $('main').innerHTML=`<div class="alert alert-error">${esc(u.error.message)}</div>`;
-  if(p.error)return $('main').innerHTML=`<div class="alert alert-error">${esc(p.error.message)}</div>`;
-  window._userPlants=m.plants; window._userDepts=m.depts;
-  const perms={}; (p.data||[]).forEach(x=>{perms[x.user_id]??={}; perms[x.user_id][x.module]=x});
-  window._portalUsers=(u.data||[]).map(x=>({...x,_perms:perms[x.id]||{}}));
-  $('main').innerHTML=`<div class="page-title"><div><h1>User Access & Approvals</h1><p>Admin control for user approval, role, plant, department, notifications and module permissions.</p></div></div>
-  <div class="panel"><div class="searchbar advanced-searchbar"><input id="user_q" placeholder="Search employee, ID or email..." oninput="userFilters()"><select id="user_dept" onchange="userFilters()"><option value="">All Departments</option>${m.depts.map(x=>`<option>${esc(x)}</option>`).join('')}</select><select id="user_plant" onchange="userFilters()"><option value="">All Plants</option>${m.plants.map(x=>`<option>${esc(x)}</option>`).join('')}</select></div></div>
-  <div class="panel"><div class="tablewrap"><table><thead><tr><th>Employee</th><th>Plant</th><th>Department</th><th>Role</th><th>Approval</th><th>Notifications</th><th>Module Access<br><span class="small">V=View A=Add E=Edit</span></th><th>Action</th></tr></thead><tbody id="user_rows"></tbody></table></div></div>`;
-  renderUsers();
+ if(!admin()){ return $('main').innerHTML='<div class="alert alert-error">Admin access required.</div>'; }
+ $('main').innerHTML='<div class="panel"><div class="small">Loading User Access & Approvals...</div></div>';
+ const [u,p,m]=await Promise.all([sb.from('user_profiles').select('*').order('employee_name'),sb.from('user_module_permissions').select('*'),getRegistrationMasters()]);
+ if(seq!==navSeq)return;
+ if(u.error)return $('main').innerHTML=`<div class="alert alert-error">${esc(u.error.message)}</div>`;
+ if(p.error)return $('main').innerHTML=`<div class="alert alert-error">${esc(p.error.message)}</div>`;
+ window._userPlants=m.plants; window._userDepts=m.depts;
+ const perms={}; (p.data||[]).forEach(x=>{perms[x.user_id]??={};perms[x.user_id][x.module]=x});
+ window._portalUsers=(u.data||[]).map(x=>({...x,_perms:perms[x.id]||{}}));
+ const total=window._portalUsers.length,pendingCount=window._portalUsers.filter(x=>x.approval_status==='Pending').length,approvedCount=window._portalUsers.filter(x=>x.approval_status==='Approved').length,rejectedCount=window._portalUsers.filter(x=>x.approval_status==='Rejected').length;
+ $('main').innerHTML=`<div class="page-title ua-page-title"><div><h1>👥 User Access & Approvals</h1><p>Review employee details, approve accounts, change roles and manage module permissions at any time.</p></div></div>
+ <div class="ua-summary"><div><span>Total users</span><b>${total}</b></div><div><span>Pending approval</span><b>${pendingCount}</b></div><div><span>Approved</span><b>${approvedCount}</b></div><div><span>Rejected / blocked</span><b>${rejectedCount}</b></div></div>
+ <div class="panel ua-filter-panel"><div class="ua-filter-heading"><div><h3>Find users</h3><p>Search by employee name, ID, email or mobile number.</p></div><button class="btn btn-secondary" onclick="users()">↻ Refresh</button></div><div class="ua-filters"><input id="user_q" placeholder="Search employee, ID, email or mobile…" oninput="userFilters()"><select id="user_status" onchange="userFilters()"><option value="">All account statuses</option><option>Pending</option><option>Approved</option><option>Rejected</option></select><select id="user_dept" onchange="userFilters()"><option value="">All departments</option>${m.depts.map(x=>`<option>${esc(x)}</option>`).join('')}</select><select id="user_plant" onchange="userFilters()"><option value="">All plants</option>${m.plants.map(x=>`<option>${esc(x)}</option>`).join('')}</select></div></div>
+ <div class="ua-help"><b>How to manage access:</b> 1. Select role and status. 2. Choose View / Add / Edit permissions. 3. Click <b>Save user & access</b>. To block portal access, set status to <b>Rejected</b>; to restore access, set it to <b>Approved</b>. Changes are saved to Supabase.</div><div id="user_rows" class="ua-user-list"></div>`;
+ renderUsers();
 }
 function userFilters(){renderUsers()}
+async function resetUserPasswordEmail(id){
+ const u=(window._portalUsers||[]).find(x=>String(x.id)===String(id));
+ if(!u?.official_email)return alert('No official email is recorded for this user. Update the email first.');
+ if(!confirm(`Send a password reset email to ${u.official_email}?`))return;
+ const r=await sb.auth.resetPasswordForEmail(u.official_email.trim(),{redirectTo:location.origin+location.pathname});
+ if(r.error)return alert('Unable to send reset email: '+r.error.message);
+ alert('Password reset email requested for '+u.official_email+'. The user must use the secure link to set a new password.');
+}
 async function saveAccess(id){
- const r=await sb.from("user_profiles").update({plant_unit:$(`plant_${id}`).value,department:$(`dept_${id}`).value,role:$(`role_${id}`).value,approval_status:$(`st_${id}`).value,whatsapp_opt_in:$(`wa_${id}`).checked,email_opt_in:$(`em_${id}`).checked}).eq("id",id);
- if(r.error)return alert("Could not save user profile: "+r.error.message);
- for(const m of ["engineering_drawing","wls","master_part","scanning_dwm"]){
-   const x=await sb.from("user_module_permissions").upsert({user_id:id,module:m,can_view:$(`${id}_${m}_view`).checked,can_add:$(`${id}_${m}_add`).checked,can_edit:$(`${id}_${m}_edit`).checked},{onConflict:"user_id,module"});
-   if(x.error)return alert("Profile saved, but module permissions were blocked by Supabase Row Level Security. Run V40_AUTH_ACCESS_FIX.sql in Supabase SQL Editor. Details: "+x.error.message)
+ const status=$(`st_${id}`).value, role=$(`role_${id}`).value;
+ if(role==='Admin'&&!confirm('This gives the user administrator privileges. Continue?'))return;
+ if(status==='Rejected'&&!confirm('This blocks the user from portal access after the change is saved. Continue?'))return;
+ const r=await sb.from('user_profiles').update({plant_unit:$(`plant_${id}`).value,department:$(`dept_${id}`).value,role,approval_status:status,whatsapp_opt_in:$(`wa_${id}`).checked,email_opt_in:$(`em_${id}`).checked}).eq('id',id);
+ if(r.error)return alert('Could not save user profile: '+r.error.message);
+ for(const m of ['engineering_drawing','wls','master_part','scanning_dwm']){
+  const x=await sb.from('user_module_permissions').upsert({user_id:id,module:m,can_view:$(`${id}_${m}_view`).checked,can_add:$(`${id}_${m}_add`).checked,can_edit:$(`${id}_${m}_edit`).checked},{onConflict:'user_id,module'});
+  if(x.error)return alert('Profile saved, but module permissions were blocked by Supabase Row Level Security. Run V40_AUTH_ACCESS_FIX.sql in Supabase SQL Editor. Details: '+x.error.message);
  }
- alert("User profile and module permissions saved.");users()
+ alert('User profile, approval status and module permissions saved.');await users();
 }
 
 async function requests(seq=navSeq){
